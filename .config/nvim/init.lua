@@ -1,112 +1,36 @@
-require("packer").startup(function(use)
-	use "wbthomason/packer.nvim"
-
-	use 'folke/tokyonight.nvim'
-	use "hrsh7th/cmp-nvim-lsp"
-	use "hrsh7th/nvim-cmp"
-	use "jose-elias-alvarez/null-ls.nvim"
-	use "kyazdani42/nvim-web-devicons"
-	use "L3MON4D3/LuaSnip"
-	use "lewis6991/gitsigns.nvim"
-	use "neovim/nvim-lspconfig"
-	use "nvim-lua/plenary.nvim"
-	use "nvim-lualine/lualine.nvim"
-	use "nvim-telescope/telescope.nvim"
-	use "nvim-telescope/telescope-file-browser.nvim"
-	use "nvim-treesitter/nvim-treesitter"
-	use "onsails/lspkind-nvim"
-	use "ryanoasis/vim-devicons"
-	use "saadparwaiz1/cmp_luasnip"
-	use "simrat39/rust-tools.nvim"
-	use "tpope/vim-commentary"
-	use "williamboman/nvim-lsp-installer"
-	use "windwp/nvim-autopairs"
-	use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+vim.cmd([[packadd packer.nvim]])
+require("packer").startup(function()
+  use("wbthomason/packer.nvim")
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/nvim-cmp"
+  use "L3MON4D3/LuaSnip"
+  use "neovim/nvim-lspconfig"
+  use "onsails/lspkind-nvim"
+  use "williamboman/nvim-lsp-installer"
+  use "windwp/nvim-autopairs"
+  use 'folke/tokyonight.nvim'
+  vim.cmd[[colorscheme tokyonight]]
+ 
+  use("nvim-lualine/lualine.nvim")
+  require("lualine").setup({
+    options = {
+      icons_enabled = false,
+      theme = "tokyonight",
+    },
+  })
 end)
 
 -- basics
-vim.o.clipboard = "unnamedplus"
-vim.o.termguicolors = true
-vim.o.nu = true
+vim.opt.number = true
+vim.opt.list = true
+vim.opt.listchars:append("tab:> ")
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.swapfile = false
 
--- tokyonight theme
-vim.cmd[[colorscheme tokyonight]]
-vim.g.tokyonight_style = "night"
-
--- lualine
-require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'tokyonight',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = {
-      statusline = {},
-      winbar = {},
-    },
-    ignore_focus = {},
-    always_divide_middle = true,
-    globalstatus = false,
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
-    }
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  winbar = {},
-  inactive_winbar = {},
-  extensions = {}
-}
-
-local lang_maps = {
-	cpp = { build = "g++ % -o %:r", exec = "./%:r" },
-	typescript = { build = "deno compile %", exec = "deno run %" },
-	javascript = { build = "deno compile %", exec = "deno run %" },
-	python = { exec = "python %" },
-	java = { build = "javac %", exec = "java %:r" },
-	sh = { exec = "./%" },
-	go = { build = "go build", exec = "go run %" },
-	rust = { exec = "cargo run" },
-	arduino = {
-		build = "arduino-cli compile --fqbn arduino:avr:uno %:r",
-		exec = "arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno %:r",
-	},
-}
-for lang, data in pairs(lang_maps) do
-	if data.build ~= nil then
-		vim.api.nvim_create_autocmd(
-			"FileType",
-			{ command = "nnoremap <Leader>b :!" .. data.build .. "<CR>", pattern = lang }
-		)
-	end
-	vim.api.nvim_create_autocmd(
-		"FileType",
-		{ command = "nnoremap <Leader>e :split<CR>:terminal " .. data.exec .. "<CR>", pattern = lang }
-	)
-end
-vim.api.nvim_create_autocmd("BufWritePre", {
-	command = "lua vim.lsp.buf.formatting_sync(nil, 1000)",
-	pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml",
-})
-
-
+-- lsp
 local luasnip = require "luasnip"
 local cmp = require "cmp"
 cmp.setup {
@@ -198,55 +122,6 @@ null_ls.setup {
 		null_ls.builtins.formatting.stylua,
 	},
 }
-
-require("gitsigns").setup {
-	signs = {
-		add = { text = "+" },
-		change = { text = "~" },
-		delete = { text = "_" },
-		topdelete = { text = "‾" },
-		changedelete = { text = "~" },
-	},
-}
-
-local telescope = require "telescope"
-telescope.setup {
-	defaults = {
-		mappings = { n = { ["o"] = require("telescope.actions").select_default } },
-		initial_mode = "normal",
-		hidden = true,
-		file_ignore_patterns = { ".git/", "node_modules/", "target/" },
-	},
-	extensions = { file_browser = { hidden = true } },
-}
-telescope.load_extension "file_browser"
-vim.keymap.set("n", "<Leader>n", telescope.extensions.file_browser.file_browser)
-vim.keymap.set("n", "<Leader>f", require("telescope.builtin").find_files)
-vim.keymap.set("n", "<Leader>t", require("telescope.builtin").treesitter)
-
-require("nvim-treesitter.configs").setup {
-	ensure_installed = {
-		"bash",
-		"cpp",
-		"css",
-		"go",
-		"html",
-		"lua",
-		"make",
-		"python",
-		"rust",
-		"tsx",
-		"typescript",
-		"yaml",
-	},
-	highlight = { enable = true },
-}
-
-require("rust-tools").setup {}
-
-vim.keymap.set({ "n", "v" }, "<Leader>c", ":Commentary<CR>", { silent = true })
-
-require("nvim-autopairs").setup {}
 
 require("lsp_lines").setup {}
 vim.keymap.set("n", "<Leader>x", require("lsp_lines").toggle)
