@@ -123,5 +123,6 @@ null_ls.setup {
 	},
 }
 
+require("nvim-autopairs").setup {}
 require("lsp_lines").setup {}
 vim.keymap.set("n", "<Leader>x", require("lsp_lines").toggle)
