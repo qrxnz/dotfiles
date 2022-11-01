@@ -1,36 +1,3 @@
-vim.cmd([[packadd packer.nvim]])
-require("packer").startup(function()
-  use("wbthomason/packer.nvim")
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/nvim-cmp"
-  use "L3MON4D3/LuaSnip"
-  use "neovim/nvim-lspconfig"
-  use "onsails/lspkind-nvim"
-  use "williamboman/nvim-lsp-installer"
-  use "windwp/nvim-autopairs"
-  use 'folke/tokyonight.nvim'
-  vim.cmd[[colorscheme tokyonight]]
- 
-  use("nvim-lualine/lualine.nvim")
-  require("lualine").setup({
-    options = {
-      icons_enabled = false,
-      theme = "tokyonight",
-    },
-  })
-end)
-
--- basics
-vim.opt.number = true
-vim.opt.list = true
-vim.opt.listchars:append("tab:> ")
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
-vim.opt.swapfile = false
-
--- lsp
 local luasnip = require "luasnip"
 local cmp = require "cmp"
 cmp.setup {
@@ -123,6 +90,5 @@ null_ls.setup {
 	},
 }
 
-require("nvim-autopairs").setup {}
 require("lsp_lines").setup {}
 vim.keymap.set("n", "<Leader>x", require("lsp_lines").toggle)
