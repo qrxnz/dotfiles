@@ -35,3 +35,4 @@ alias ymri="sudo yum reinstall -y"
 alias tree='exa -l -a --icons --tree'
 alias ll='exa -l'
 alias l='exa -l -a'
+alias connect='kitty +kitten ssh'
