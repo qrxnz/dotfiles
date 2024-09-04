@@ -1,3 +1,4 @@
 --target=~/.config
 --ignore=.stowrc
 --ignore=vscode.code-profile
+--ignore=.editorconfig
