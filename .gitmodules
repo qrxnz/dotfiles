@@ -1,3 +1,6 @@
 [submodule "files/zshrc"]
 	path = files/zshrc
 	url = https://github.com/qrxnz/zshrc.git
+[submodule "files/nvim"]
+	path = files/nvim
+	url = https://github.com/qrxnz/neovim.git
