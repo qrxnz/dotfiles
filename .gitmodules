@@ -1,6 +1,0 @@
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/qrxnz/neovim
-[submodule "zshrc"]
-	path = zshrc
-	url = https://github.com/qrxnz/zshrc.git
