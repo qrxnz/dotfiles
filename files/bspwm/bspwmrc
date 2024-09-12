@@ -28,7 +28,7 @@ bspc rule -a Screenkey manage=off
 picom -b &
 
 # wallpaper
-feh --bg-fill ~/.config/bspwm/wallpaper/61.png &
+feh --bg-fill ~/.dotfiles/wallpapers/mods.png &
 
 # bar
 $HOME/.config/polybar/launch.sh &
