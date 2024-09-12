@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-stow ./files/.
+stow files --adopt
