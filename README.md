@@ -3,5 +3,5 @@
 ## Installation
 
 ```sh
-git clone https://github.com/qrxnz/dotfiles  ~/.dotfiles
+git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles
 ```
