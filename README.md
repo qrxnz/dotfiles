@@ -4,7 +4,7 @@
 
 soon ...
 
-### Important Dependencies ⚠️
+### ⚠️ Important Dependencies 
 
 ### Other dependencies
 
