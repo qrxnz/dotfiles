@@ -1,5 +1,13 @@
 # dotfiles
 
+## Dependencies
+
+soon ...
+
+### Important Dependencies ⚠️
+
+### Other dependencies
+
 ## Installation
 
 ```sh
