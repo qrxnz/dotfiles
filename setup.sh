@@ -5,8 +5,3 @@ stow files --adopt
 echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
 
 echo "source-file ~/.config/tmux/tmux.conf" > ~/.tmux.conf
-
-cat <<EOF> ~/.xinitrc
-sxhkd &
-exec bspwm
-EOF
