@@ -18,3 +18,11 @@ cd ~/.dotfiles &&\
 chmod +x setup.sh &&\
 ./setup.sh
 ```
+## Credits
+
+### Inspiration
+
+I was inspired by:
+- [jazzpiazz](https://github.com/jazzpizazz/zsh-aliases)
+- [ptrcnull](https://github.com/ptrcnull/dotfiles)
+- [Ja.KooLit](https://github.com/JaKooLit/Hyprland-Dots)
