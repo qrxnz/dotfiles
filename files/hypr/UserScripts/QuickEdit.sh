@@ -2,7 +2,7 @@
 # Rofi menu for Quick Edit/View of Settings (SUPER E)
 
 # Define preferred text editor and terminal
-edit=${EDITOR:-nano}
+edit=${EDITOR:-nvim}
 tty=kitty
 
 # Paths to configuration directories
