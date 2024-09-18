@@ -14,7 +14,7 @@
 }
 
 window#waybar {
-    background: #040406;
+    background: #1E1E2E;
     border-radius: 30px;
     color: #cba6f7;
 
@@ -50,8 +50,8 @@ tooltip {
 }
 
 .modules-center {
-    border-left: 1px solid #ffd700;
-    border-right: 1px solid #ffd700;
+    border-left: 1px solid #89B4FA;
+    border-right: 1px solid #89B4FA;
     border-radius: 20px;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -80,7 +80,7 @@ tooltip {
 
 #taskbar button.active,
 #workspaces button.active {
-    color: #ffd700;
+    color: #89B4FA;
     border-radius: 50%;
     background-color: black;
     border-radius: 15px 15px 15px 15px;
@@ -101,7 +101,7 @@ tooltip {
 
 #taskbar button:hover,
 #workspaces button:hover {
-    color: #ffd700;
+    color: #89B4FA;
     border-radius: 15px;
  	padding-left: 2px;
     padding-right: 2px;
