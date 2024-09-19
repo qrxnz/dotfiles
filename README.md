@@ -1,12 +1,10 @@
 # dotfiles
 
-## Dependencies
+## ⚠️ Prerequisite
 
 soon ...
 
-### ⚠️ Important Dependencies 
-
-### Other dependencies
+### Dependencies 
 
 ## ⌨️ Keybinds
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
