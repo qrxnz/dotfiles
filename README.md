@@ -1,6 +1,6 @@
 # dotfiles
 
-## ⚠️ Prerequisite
+## ❗ Prerequisite
 
 soon ...
 
