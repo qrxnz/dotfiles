@@ -16,9 +16,8 @@ Most of the keyboard shortcuts in my hyprland are compatible with the default bs
 ## ⚒️ Installation
 ```sh
 git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
-cd ~/.dotfiles &&\
-chmod +x setup.sh &&\
-./setup.sh
+chmod +x ~/.dotfiles/setup.sh &&\
+~/.dotfiles/setup.sh
 ```
 ## 🗒️ Credits
 
