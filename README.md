@@ -1,6 +1,6 @@
 # dotfiles
 
-## Gallery
+## 🖼️ Gallery
 
 ![screenshot](./.github/assets/img/screenshot.jpg)
 
@@ -8,21 +8,21 @@
 
 soon ...
 
-### Dependencies
+### 📦 Dependencies
 
 ## ⌨️ Keybinds
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
 
-## Installation
+## 📐 Installation
 ```sh
 git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
 cd ~/.dotfiles &&\
 chmod +x setup.sh &&\
 ./setup.sh
 ```
-## Credits
+## 🗒️ Credits
 
-### Inspiration
+### 🎨 Inspiration
 
 I was inspired by:
 - [jazzpiazz](https://github.com/jazzpizazz/zsh-aliases)
