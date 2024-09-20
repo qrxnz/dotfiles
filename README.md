@@ -1,10 +1,14 @@
 # dotfiles
 
+## Gallery
+
+![screenshot](./.github/assets/img/screenshot.jpg)
+
 ## ❗ Prerequisite
 
 soon ...
 
-### Dependencies 
+### Dependencies
 
 ## ⌨️ Keybinds
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
