@@ -27,4 +27,3 @@ chmod +x setup.sh &&\
 I was inspired by:
 - [jazzpiazz](https://github.com/jazzpizazz/zsh-aliases)
 - [ptrcnull](https://github.com/ptrcnull/dotfiles)
-- [Ja.KooLit](https://github.com/JaKooLit/Hyprland-Dots)
