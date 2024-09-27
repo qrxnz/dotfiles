@@ -27,6 +27,7 @@ chmod +x setup.sh &&\
 I was inspired by:
 - [jazzpiazz](https://github.com/jazzpizazz/zsh-aliases)
 - [ptrcnull](https://github.com/ptrcnull/dotfiles)
+- [omerxx](https://github.com/omerxx/dotfiles)
 
 ### ❤️ Special thanks
 - To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
