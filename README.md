@@ -29,6 +29,7 @@ I was inspired by:
 - [ptrcnull](https://github.com/ptrcnull/dotfiles)
 - [omerxx](https://github.com/omerxx/dotfiles)
 - [IogaMaster](https://github.com/IogaMaster/neovim)
+- [ryan4yin](https://github.com/ryan4yin/nix-config)
 
 ### ❤️ Special thanks
 - To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
