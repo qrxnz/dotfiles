@@ -31,5 +31,8 @@ I was inspired by:
 - [IogaMaster](https://github.com/IogaMaster/neovim)
 - [ryan4yin](https://github.com/ryan4yin/nix-config)
 
+### 🐱 Theme
+I use [Catppuccin](https://catppuccin.com/) in every part of my config!
+
 ### ❤️ Special thanks
 - To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
