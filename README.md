@@ -35,4 +35,4 @@ I was inspired by:
 I use [Catppuccin](https://catppuccin.com/) in every part of my config!
 
 ### ❤️ Special thanks
-- To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
+To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
