@@ -6,9 +6,13 @@
 
 ## ❗ Prerequisite
 
-soon ...
+### 🔌 Plugin manager
+- [zplug](https://github.com/zplug/zplug)
+- [tpm](https://github.com/tmux-plugins/tpm)
 
 ### 📦 Dependencies
+
+soon ..
 
 ## ⌨️ Keybinds
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
