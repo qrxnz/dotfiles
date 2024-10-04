@@ -6,7 +6,7 @@
 
 ## ❗ Prerequisite
 
-### 🔌 Plugin manager
+### 🔌 Plugin managers
 - [zplug](https://github.com/zplug/zplug)
 - [tpm](https://github.com/tmux-plugins/tpm)
 
