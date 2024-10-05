@@ -1,5 +1,4 @@
 --target=~/.config
 --ignore=.stowrc
---ignore=vscode.code-profile
 --ignore=.editorconfig
---ignore=snowfiles
+--ignore=flake.nix
