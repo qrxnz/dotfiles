@@ -16,7 +16,8 @@ soon ...
 
 #### 📝 Editor (neovim)
 - lsp
-  - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls) [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
+  - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
+  - [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
   - [vuels](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#vuels)
   - [emmet-ls](https://github.com/aca/emmet-ls)
   - [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd)
