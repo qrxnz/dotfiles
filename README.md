@@ -52,7 +52,6 @@ soon ...
 - [nmap](https://nmap.org/)
 - [metasploit](https://www.metasploit.com/)
 - [wfuzz](https://github.com/xmendez/wfuzz)
-- [catch](https://github.com/jazzpizazz/catch)
 - [hexyl](https://github.com/sharkdp/hexyl)
 - [seclists](https://github.com/danielmiessler/SecLists)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
