@@ -15,17 +15,29 @@
 soon ...
 
 #### 📝 Editor (neovim)
-- [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
-- [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
-- [vuels](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#vuels)
-- [emmet-ls](https://github.com/aca/emmet-ls)
-- [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd)
-- [tailwindcss-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tailwindcss)
-- [gopls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls)
-- [sqls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#sqls)
-- [basedpyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#basedpyright)
-- [delve](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#go-using-delve-directly)
-- [codelldb](https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb))
+- lsp
+  - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls) [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
+  - [vuels](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#vuels)
+  - [emmet-ls](https://github.com/aca/emmet-ls)
+  - [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd)
+  - [tailwindcss-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tailwindcss)
+  - [gopls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls)
+  - [sqls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#sqls)
+  - [basedpyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#basedpyright)
+
+- debug adapters
+  - [delve](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#go-using-delve-directly)
+  - [codelldb](https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb))
+
+- formatters
+  - clang-format
+  - gofmt
+  - sql-formatter
+  - stylua
+  - alejandra
+  - black
+  - mdformat
+  - prettier
 
 #### 💲 Shell (zsh)
 - [git](https://git-scm.com/)
