@@ -168,7 +168,7 @@ py3rev () {
 shrev () {
   if [ "$#" -ne 2 ];
     then
-      echo "[i] Usage: py3rev ip port"
+      echo "[i] Usage: shrev ip port"
     else
       SHELL=`cat ~/.config/zshrc/zsh/revshells/shrev.sh | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g`
       echo "$SHELL" | wl-copy
