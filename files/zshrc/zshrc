@@ -72,8 +72,8 @@ alias pwc='bunx playwright codegen'
 alias pwr='bunx playwright show-report'
 
 # tty upgrades
-alias uptty="echo '/usr/bin/script -qc /bin/bash /dev/null'| wl-copy"
-alias fixtty="stty raw -echo; fg; reset | wl-copy"
+alias uptty="echo '/usr/bin/script -qc /bin/bash /dev/null'| $CLIPBOARD"
+alias fixtty="stty raw -echo; fg; reset | $CLIPBOARD"
 
 # hexyl (modern hexdump replacement)
 hexdump() {
@@ -151,7 +151,7 @@ pwshrev () {
       echo "[i] Usage: pwshrev ip port"
     else
       SHELL=`cat ~/.config/zshrc/zsh/revshells/pwshrev.ps1 | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g | iconv -f utf8 -t utf16le | base64 -w 0`
-      echo "powershell -ec $SHELL" | wl-copy
+      echo "powershell -ec $SHELL" | $CLIPBOARD
   fi
 }
 
@@ -161,7 +161,7 @@ py3rev () {
       echo "[i] Usage: py3rev ip port"
     else
       SHELL=`cat ~/.config/zshrc/zsh/revshells/py3rev.py | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g`
-      echo "$SHELL" | wl-copy
+      echo "$SHELL" | $CLIPBOARD
   fi
 }
 
@@ -171,7 +171,7 @@ shrev () {
       echo "[i] Usage: shrev ip port"
     else
       SHELL=`cat ~/.config/zshrc/zsh/revshells/shrev.sh | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g`
-      echo "$SHELL" | wl-copy
+      echo "$SHELL" | $CLIPBOARD
   fi
 }
 
