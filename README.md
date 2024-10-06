@@ -62,6 +62,8 @@ soon ...
 - [nix](https://nixos.org/download/)
 
 ## ⌨️ Keybinds
+
+### 🏞️ Hyprland
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
 
 ## ⚒️ Installation
