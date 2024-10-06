@@ -2,6 +2,7 @@
 
 ## 🖼️ Gallery
 
+### 🏞️ Hyprland
 ![screenshot](./.github/assets/img/screenshot.jpg)
 
 ## ❗ Prerequisite
