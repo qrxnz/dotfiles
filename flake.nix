@@ -14,7 +14,7 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./configuration.nix
+        ./snowy/hosts/mentay
         # inputs.home-manager.nixosModules.default
       ];
     };
