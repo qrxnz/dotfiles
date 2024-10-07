@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/virtualisation/qemu
+      ../../modules/virtualisation/podman
       ../../modules/virtualisation/waydroid
     ];
 
