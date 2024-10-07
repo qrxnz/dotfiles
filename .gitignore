@@ -3,4 +3,3 @@ plugins/
 .direnv/
 *.qcow2
 result*
-flake.lock
