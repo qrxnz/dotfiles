@@ -5,6 +5,10 @@
 ### 💧 Hyprland
 ![screenshot](./.github/assets/img/screenshot.jpg)
 
+## 🖥️ Machines
+
+soon ...
+
 ## ❗ Prerequisite
 
 ### 🔌 Plugin managers
