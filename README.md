@@ -72,13 +72,16 @@ soon ...
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
 
 ## ⚒️ Installation
-```sh
-git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
-cd ~/.dotfiles
-```
+
 ### 🐧 non-nixos machines
 ```sh
-chmod +x ./setup.sh && ./setup.sh
+git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
+cd ~/.dotfiles &&\
+chmod +x ./setup.sh
+```
+
+```sh
+./setup.sh
 ```
 
 ### ❄️ nixos machines
