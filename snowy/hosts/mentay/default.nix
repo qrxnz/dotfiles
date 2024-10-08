@@ -89,6 +89,15 @@
     #  thunderbird
     ];
   };
+  
+home-manager.users.qrxnz = { pkgs, ... }: {
+  home.packages = [ pkgs.atool pkgs.httpie ];
+  programs.bash.enable = true;
+
+  # The state version is required and should stay at the version you
+  # originally installed.
+  home.stateVersion = "24.11";
+};
 
   # Install firefox.
   programs.firefox.enable = true;
