@@ -79,11 +79,11 @@ git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
 cd ~/.dotfiles &&\
 chmod +x ./setup.sh
 ```
-- Hyprland dotfiles
+- 💧 Hyprland dotfiles
 ```sh
 ./setup.sh --hyprland-default
 ```
-- Full kali linux setup
+- 🐲 Full kali linux setup
 ```sh
 ./setup.sh --kali-linux
 ```
