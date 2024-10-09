@@ -5,6 +5,9 @@
 ### 💧 Hyprland
 ![screenshot](./.github/assets/img/screenshot.jpg)
 
+### 🐲 Kali linux
+![screenshot](./.github/assets/img/kali.png)
+
 ## 🖥️ Machines
 
 soon ...
@@ -83,7 +86,7 @@ chmod +x ./setup.sh
 ```sh
 ./setup.sh --hyprland-default
 ```
-- 🐲 Full kali linux setup
+- 🐲 Full Kali linux setup
 ```sh
 ./setup.sh --kali-linux
 ```
