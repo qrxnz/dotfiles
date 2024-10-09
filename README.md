@@ -74,6 +74,9 @@ soon ...
 ### 💧 Hyprland
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
 
+### 🍕 Tmux
+soon ...
+
 ## ⚒️ Installation
 
 ### 🐧 non-nixos machines
