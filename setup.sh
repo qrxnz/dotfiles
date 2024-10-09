@@ -16,6 +16,16 @@ elif [[ "$1" == "--kali-linux" ]]; then
     golang delve clang ccls gdb cargo
 
     mkdir -p ~/.local/bin/
+    mkdir -p ~/.local/share/fonts/
+
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+    
+    unzip JetBrainsMono.zip -d ~/.local/share/fonts/
+
+    rm ./JetBrainsMono.zip
+    
+    fc-cache -fv
+    
     curl -fsSL https://bun.sh/install | bash
     curl -sS https://starship.rs/install.sh | sh
     sh <(curl -L https://nixos.org/nix/install) --no-daemon
