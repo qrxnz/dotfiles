@@ -26,7 +26,7 @@ case $key in
     sudo apt update && sudo apt upgrade -y
 
     sudo apt-get install -y wget curl git thunar stow neovim podman zoxide fzf \
-    xsel xclip duf eza bat flameshot bspwm sxhkd polybar feh rofi kitty tmux picom \
+    xsel xclip duf eza bat flameshot feh kitty tmux picom \
     golang delve clang ccls gdb cargo
 
     mkdir -p ~/.local/bin/
