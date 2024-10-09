@@ -12,6 +12,10 @@
 
 soon ...
 
+### 🤓 VMs
+- 🐲 Full Kali linux setup
+![screenshot](./.github/assets/img/kali.png)
+
 ## ❗ Prerequisite
 
 ### 🔌 Plugin managers
