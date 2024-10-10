@@ -30,4 +30,12 @@
 
   # Experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # List packages installed in system profile. To search, run:
+  environment.systemPackages = with pkgs; [
+  vim
+  wget
+  ];
+
+  system.stateVersion = "24.11";
 }
