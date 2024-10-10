@@ -10,6 +10,9 @@
 
 ## 🖥️ Machines
 
+### ❄️ nixos
+- 🍃 mentay
+
 soon ...
 
 ### 🤓 VMs
