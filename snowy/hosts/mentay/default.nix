@@ -52,6 +52,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.flatpak.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -105,6 +106,9 @@ home-manager.users.qrxnz = { pkgs, ... }: {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
