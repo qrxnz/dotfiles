@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "catppuccin-bat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722864529,
+        "narHash": "sha256-s0CHTihXlBMCKmbBBb8dUhfgOOQu9PBCQ+uviy7o47w=",
+        "owner": "catppuccin",
+        "repo": "bat",
+        "rev": "d3feec47b16a8e99eabb34cdfbaa115541d374fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "bat",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -7,15 +23,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1728306985,
-        "narHash": "sha256-l/KpcWTv2SjxCnqFs5GYhvjeVYd40WQV4/F2+w9btd4=",
+        "lastModified": 1726989464,
+        "narHash": "sha256-Vl+WVTJwutXkimwGprnEtXc/s/s8sMuXzqXaspIGlwM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "3ac39b2a8b7cbfc0f96628d8a84867c885bc988b",
+        "rev": "2f23fa308a7c067e52dfcc30a0758f47043ec176",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
+        "ref": "release-24.05",
         "repo": "home-manager",
         "type": "github"
       }
@@ -38,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin-bat": "catppuccin-bat",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
