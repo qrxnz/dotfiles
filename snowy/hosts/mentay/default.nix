@@ -1,19 +1,16 @@
+
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
       ../../suites/common
       ../../suites/desktop
-      ../../home
       ../../modules/flatpak
       ../../modules/virtualisation/qemu
-      ../../modules/virtualisation/podman
-      ../../modules/virtualisation/waydroid
+      ./hardware-configuration.nix
     ];
-
-  networking.hostName = "mentay"; # Define your hostname.
+      networking.hostName = "mentay"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -68,5 +65,6 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-
 }
+
+

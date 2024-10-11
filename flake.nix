@@ -1,6 +1,7 @@
 {
   description = " qrxnz's NixOS configuration";
 
+  # the nixConfig here only affects the flake itself, not the system configuration!
   nixConfig = {
     # substituers will be appended to the default substituters when fetching packages
     # nix com    extra-substituters = [munity's cache server
@@ -13,7 +14,7 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -40,6 +41,7 @@
 
           modules = [
             ./snowy/hosts/mentay
+            ./snowy/users/${username}/nixos.nix
 
             home-manager.nixosModules.home-manager
             {
@@ -54,3 +56,4 @@
     };
   };
 }
+
