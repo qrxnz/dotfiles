@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../../home/core.nix
+    ../../home/vscode
   ];
 
   programs.git = {
