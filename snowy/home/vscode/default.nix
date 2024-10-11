@@ -24,9 +24,8 @@
       #
 
       ms-python.python # python
-      ms-vscode.vscode-typescript-next # js/ts
       golang.go # golang
-      llvm-vs-code-extensions.vscode-clangdS # c/c++
+      llvm-vs-code-extensions.vscode-clangd # c/c++
 
       #
       # Others
@@ -34,7 +33,6 @@
 
       vscodevim.vim # vim support for vscode
       yzhang.markdown-all-in-one # markdown shit
-      pixl-garden.bongocat # yes, I like cats
     ];
   };
 }
