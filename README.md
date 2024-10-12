@@ -1,7 +1,7 @@
 # dotfiles
 <p align="center">
   <a href="https://go-skill-icons.vercel.app/">
-    <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,vscodium,nixos,kali,docker,podman,hyprland,kitty,tmux," />
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,nixos,kali,docker,podman,hyprland,kitty,tmux," />
   </a>
 </p>
 
