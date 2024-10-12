@@ -4,6 +4,7 @@
   username,
   ...
 }: {
+      # Hyprland
       wayland.windowManager.hyprland = {
       
       # Whether to enable Hyprland wayland compositor
@@ -20,6 +21,7 @@
       systemd.enable = true;
   };
 
+   # Dependencies
    home.packages = [
       pkgs.wofi
       pkgs.mako
