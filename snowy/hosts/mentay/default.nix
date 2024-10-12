@@ -9,6 +9,7 @@
       ../../modules/flatpak
       ../../modules/virtualisation/qemu
       ../../modules/virtualisation/podman
+      ../../modules/virtualisation/waydroid
       ./hardware-configuration.nix
     ];
       networking.hostName = "mentay"; # Define your hostname.
