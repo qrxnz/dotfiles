@@ -8,6 +8,7 @@
       ../../suites/desktop
       ../../modules/flatpak
       ../../modules/virtualisation/qemu
+      ../../modules/virtualisation/podman
       ./hardware-configuration.nix
     ];
       networking.hostName = "mentay"; # Define your hostname.
