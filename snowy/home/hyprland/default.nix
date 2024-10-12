@@ -19,4 +19,7 @@
       # Whether to enable hyprland-session.target on hyprland startup
       systemd.enable = true;
   };
+
+  home.file.".config/hypr".source = ../../../files/hypr;
+  home.file.".config/hypr".recursive = true;
 }
