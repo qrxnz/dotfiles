@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   imports = [
     ../../home/core.nix
-    ../../home/kitty
-    ../../home/hyprland
+    ../../home/nvim # Editor
+    ../../home/kitty # Terminal
+    ../../home/hyprland # WM
   ];
 
   programs.git = {
