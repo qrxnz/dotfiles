@@ -20,6 +20,19 @@
       systemd.enable = true;
   };
 
+   home.packages = [
+      pkgs.wofi
+      pkgs.mako
+      pkgs.waybar
+      pkgs.wlogout
+      pkgs.wl-clipboard
+    ];
+
+  # Hyprland files
   home.file.".config/hypr".source = ../../../files/hypr;
   home.file.".config/hypr".recursive = true;
+  
+  # Waybar files
+  home.file.".config/waybar".source = ../../../files/waybar;
+  home.file.".config/waybar".recursive = true;
 }
