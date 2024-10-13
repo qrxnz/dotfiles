@@ -33,6 +33,7 @@
 
       vscodevim.vim # vim support for vscode
       yzhang.markdown-all-in-one # markdown shit
+      rangav.vscode-thunder-client # api shit
     ];
   };
 }
