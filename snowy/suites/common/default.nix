@@ -25,6 +25,7 @@
     LC_TIME = "pl_PL.UTF-8";
   };
 
+  # User config
   users.users.${username} = {
     isNormalUser = true;
     description = username;
