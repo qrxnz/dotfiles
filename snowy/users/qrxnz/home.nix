@@ -2,6 +2,7 @@
   imports = [
     ../../home/core.nix
     ../../home/nvim # Editor
+    ../../home/vscode # Editor
     ../../home/kitty # Terminal
     ../../home/hyprland # WM
   ];
