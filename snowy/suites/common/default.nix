@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -24,6 +24,12 @@
     LC_TELEPHONE = "pl_PL.UTF-8";
     LC_TIME = "pl_PL.UTF-8";
   };
+
+  users.users.${username} = {
+    isNormalUser = true;
+    description = username;
+    extraGroups = ["networkmanager" "wheel"];
+  } ;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
