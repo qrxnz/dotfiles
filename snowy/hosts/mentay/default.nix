@@ -16,12 +16,6 @@
   # Hostname
   networking.hostName = "mentay";
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "pl";
-    variant = "";
-  };
-
   # Install firefox.
   programs.firefox.enable = true;
 
