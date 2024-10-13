@@ -19,13 +19,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Hyprland
-  programs.hyprland.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";
