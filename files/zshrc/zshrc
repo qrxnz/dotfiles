@@ -45,6 +45,12 @@ alias tree="eza -l -a --icons --tree --ignore-glob='.git'"
 alias tre="eza -l -a --icons --tree --level 2 --ignore-glob='.git'"
 
 # bat (modern cat replacement)
+if command -v bat &> /dev/null; then
+  :
+else
+  alias bat="batcat"
+fi
+
 alias cat="bat -pp"
 alias less="bat --paging=always"
 
