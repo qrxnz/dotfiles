@@ -1,8 +1,8 @@
-weektodo
 plugins/
-.direnv/
+
+direnv/
 *.qcow2
 result*
+
 lazy-lock.json
 result/
-.direnv/
