@@ -5,8 +5,7 @@
   ...
 }: {
     home.packages = [ 
-      pkgs.kitty 
+      pkgs.syncthing
+      pkgs.fastfetch
     ];
-
-    home.file.".config/kitty/kitty.conf".source = ../../../files/kitty/kitty.conf;
 }
