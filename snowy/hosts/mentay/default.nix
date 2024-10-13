@@ -15,10 +15,6 @@
 
   # Hostname
   networking.hostName = "mentay";
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
 }
 
 
