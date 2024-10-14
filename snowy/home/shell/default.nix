@@ -96,7 +96,7 @@
         rr="ranger";
         cds="du -h --max-depth=1 .";
         www="sudo python3 -m http.server 80";
-        tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done";
+        tcp-server="bash -c 'cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done'";
        };
    };  
 
