@@ -1,7 +1,5 @@
 { pkgs, config, ... }: {
   users.users.qrxnz = {
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
-
-  programs.zsh.enable = true;
 }
