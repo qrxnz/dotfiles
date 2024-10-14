@@ -5,6 +5,13 @@
   username,
   ...
 }: {
+  home.packages = [ 
+    pkgs.eza
+    pkgs.duf
+    pkgs.ranger
+    pkgs.netcat-openbsd
+  ];
+
   programs = {
     nushell = { enable = true;
       # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
@@ -43,8 +50,56 @@
         nano = "nvim";
 
         vsc = "codium";
+        
+        # git
+        gaa="git add .";
+        gcm="git commit -m";
+        gsu="git submodule update --remote";
+        gsa="git submodule add";
+        gpush="git push -u origin";
+        gpull="git pull";
+        grb="git rebase";
+        grbc="git rebase --continue";
+        gch="git checkout";
+        grr="git review -R";
+
+        # eza (modern ls replacement)
+        ls="eza --icons";
+        ll="eza -l --icons";
+        l="eza -l -a --icons";
+        
+        # mental issues
+        lcs="clear";
+        cleare ="clear";
+        clea="clear";
+        cear="clear";
+        lcear="clear";
+        clera="clear";
+        celar="clear";
+        cler="clear";
+        claer="clear";
+        clearc="clear";
+        cleawr="clear";
+        caler="clear";
+        calar="clear";
+        cclear="clear";
+        rlear="clear";
+        rclear="clear";
+        rcle="clear";
+        rcler="clear";
+        cls="clear";
+        csl="clear";
+        
+        # other
+        t="tmux";
+        df="duf";
+        rr="ranger";
+        cds="du -h --max-depth=1 .";
+        www="sudo python3 -m http.server 80";
+        tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done";
        };
    };  
+
    carapace.enable = true;
    carapace.enableNushellIntegration = true;
 
