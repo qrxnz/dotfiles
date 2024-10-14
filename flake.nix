@@ -18,6 +18,8 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    neovim-flake.url = "github:qrxnz/neovim";
+
     catppuccin-bat = {
       url = "github:catppuccin/bat";
       flake = false;
