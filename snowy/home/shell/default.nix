@@ -9,6 +9,7 @@
     pkgs.eza
     pkgs.duf
     pkgs.ranger
+    pkgs.direnv
     pkgs.netcat-openbsd
   ];
 
