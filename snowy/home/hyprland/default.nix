@@ -29,6 +29,7 @@
       pkgs.swaybg
       pkgs.wlogout
       pkgs.wl-clipboard
+      pkgs.cinnamon.nemo
     ];
 
   # Hyprland files
