@@ -9,5 +9,7 @@
       pkgs.fastfetch
       
       pkgs.mpv
+      pkgs.cinnamon.nemo
     ];
+    
 }
