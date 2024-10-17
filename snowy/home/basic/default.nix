@@ -7,5 +7,7 @@
     home.packages = [ 
       pkgs.syncthing
       pkgs.fastfetch
+      
+      pkgs.mpv
     ];
 }
