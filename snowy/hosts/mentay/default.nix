@@ -15,6 +15,14 @@
 
   # Hostname
   networking.hostName = "mentay";
+
+  # Unsupported GPU Processing Mode Fix
+  hardware.opengl = {
+   enable = true;
+   extraPackages = with pkgs; [
+     rocmPackages.clr.icd
+   ];
+  };
 }
 
 
