@@ -7,6 +7,7 @@
     ../../home/vscode # Editor
     ../../home/kitty # Terminal
     ../../home/hyprland # WM
+    ../../home/creative-apps
   ];
 
   programs.git = {
