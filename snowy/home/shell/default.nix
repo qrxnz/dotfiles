@@ -8,6 +8,7 @@
   home.packages = [ 
     pkgs.eza
     pkgs.duf
+    pkgs.lsof
     pkgs.ranger
     pkgs.direnv
     pkgs.netcat-openbsd
@@ -95,6 +96,7 @@
         t="tmux";
         df="duf";
         rr="ranger";
+        up="bash -c 'lsof -i | grep LISTEN'";
         cds="du -h --max-depth=1 .";
         www="sudo python3 -m http.server 80";
         tcp-server="bash -c 'cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done'";
