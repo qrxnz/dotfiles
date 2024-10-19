@@ -8,6 +8,7 @@
     ../../home/kitty # Terminal
     ../../home/hyprland # WM
     ../../home/creative-apps
+    ../../home/hardware-stuff
   ];
 
   programs.git = {
