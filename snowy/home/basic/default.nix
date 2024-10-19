@@ -11,5 +11,4 @@
       pkgs.mpv
       pkgs.amberol
     ];
-    
 }
