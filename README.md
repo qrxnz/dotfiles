@@ -98,6 +98,10 @@ cd ~/.dotfiles &&\
 chmod +x ./setup.sh
 ```
 - 💧 Hyprland dotfiles
+
+> [!WARNING]
+> "Remember to install the dependencies listed in the 'Prerequisite' section on your distribution."
+
 ```sh
 ./setup.sh --hyprland-default
 ```
