@@ -14,6 +14,7 @@
 
       # logic analyzer shit
       pkgs.saleae-logic-2
+      pkgs.openhantek6022
     ];
     
 }
