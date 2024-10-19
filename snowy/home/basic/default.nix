@@ -9,6 +9,7 @@
       pkgs.fastfetch
       
       pkgs.mpv
+      pkgs.amberol
     ];
     
 }
