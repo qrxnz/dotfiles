@@ -31,4 +31,11 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+  # AppImage support
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
 }
