@@ -37,5 +37,4 @@
     enable = true;
     binfmt = true;
   };
-
 }
