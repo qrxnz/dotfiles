@@ -5,7 +5,7 @@
   username,
   ...
 }: {
-  home.packages = [ 
+  home.packages = [
     pkgs.eza
     pkgs.duf
     pkgs.lsof
@@ -18,7 +18,7 @@
     nushell = { enable = true;
       # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
       # configFile.source = ./.../config.nu;
-      # for editing directly to config.nu 
+      # for editing directly to config.nu
       extraConfig = ''
        let carapace_completer = {|spans|
        carapace $spans.0 nushell $spans | from json
@@ -32,14 +32,14 @@
         algorithm: "fuzzy"    # prefix or fuzzy
         external: {
         # set to false to prevent nushell looking into $env.PATH to find more suggestions
-            enable: true 
+            enable: true
         # set to lower can improve completion performance at the cost of omitting some options
-            max_results: 100 
-            completer: $carapace_completer # check 'carapace_completer' 
+            max_results: 100
+            completer: $carapace_completer # check 'carapace_completer'
           }
         }
-       } 
-       $env.PATH = ($env.PATH | 
+       }
+       $env.PATH = ($env.PATH |
        split row (char esep) |
        prepend /home/myuser/.apps |
        append /usr/bin/env
@@ -52,7 +52,7 @@
         nano = "nvim";
 
         vsc = "codium";
-        
+
         # git
         gaa="git add .";
         gcm="git commit -m";
@@ -69,7 +69,7 @@
         ls="eza --icons";
         ll="eza -l --icons";
         l="eza -l -a --icons";
-        
+
         # mental issues
         lcs="clear";
         cleare ="clear";
@@ -91,7 +91,11 @@
         rcler="clear";
         cls="clear";
         csl="clear";
-        
+
+
+        # NixOS
+        update="bash -c 'sudo nixos-rebuild switch --flake .#$HOSTNAME'";
+
         # other
         t="tmux";
         df="duf";
@@ -101,16 +105,16 @@
         www="sudo python3 -m http.server 80";
         tcp-server="bash -c 'cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done'";
        };
-   };  
+   };
 
    carapace.enable = true;
    carapace.enableNushellIntegration = true;
 
-   starship = { 
+   starship = {
     enable = true;
        settings = {
          add_newline = true;
-         #character = { 
+         #character = {
          #success_symbol = "[➜](bold green)";
          #error_symbol = "[➜](bold red)";
         #};
