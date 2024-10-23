@@ -89,7 +89,7 @@ Most of the keyboard shortcuts in my hyprland are compatible with the default bs
 ### 🍕 Tmux
 soon ...
 
-### 🐱 Neonim 
+### 🐱 Neovim 
 soon ...
 
 ## ⚒️ Installation
