@@ -2,3 +2,4 @@
 --ignore=.stowrc
 --ignore=.editorconfig
 --ignore=flake.nix
+--ignore=flake.lock
