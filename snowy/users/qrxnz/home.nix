@@ -6,6 +6,7 @@
     ../../home/nvim # Editor
     ../../home/vscode # Editor
     ../../home/kitty # Terminal
+    ../../home/tmux # Terminal multiplexer
     ../../home/hyprland # WM
     ../../home/creative-apps
     ../../home/hardware-stuff
