@@ -16,6 +16,12 @@
           set -g @dracula-show-battery false
           set -g @dracula-show-powerline true
           set -g @dracula-refresh-rate 10
+
+          # left icon
+          set -g @dracula-show-left-icon session
+
+          # modules
+          set -g @dracula-plugins "network-ping cpu-usage ram-usage"
         '';
       }
     ];
