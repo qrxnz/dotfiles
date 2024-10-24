@@ -25,6 +25,8 @@
    home.packages = [
       pkgs.wofi
       pkgs.mako
+      pkgs.grim
+      pkgs.swappy
       pkgs.waybar
       pkgs.swaybg
       pkgs.wlogout
