@@ -33,7 +33,7 @@
     nixosConfigurations = {
       mentay = let
         username = "qrxnz";
-        specialArgs = {inherit username;};
+        specialArgs = {inherit username inputs system;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
