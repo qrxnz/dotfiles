@@ -14,9 +14,15 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixvim = {
+      url = "github:qrxnz/snowvim";
+      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     catppuccin-bat = {
       url = "github:catppuccin/bat";
@@ -33,7 +39,7 @@
     nixosConfigurations = {
       mentay = let
         username = "qrxnz";
-        specialArgs = {inherit username inputs system;};
+        specialArgs = {inherit username inputs;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
