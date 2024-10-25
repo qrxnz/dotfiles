@@ -71,6 +71,11 @@ alias connect="kitty +kitten ssh"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias nano="nvim"
+
+# vscodium
+alias vs="codium"
+alias vsc="codium"
 
 # playwright (testing framework)
 alias pwt='bunx playwright test'
@@ -80,6 +85,10 @@ alias pwr='bunx playwright show-report'
 # tty upgrades
 alias uptty="echo '/usr/bin/script -qc /bin/bash /dev/null'| $CLIPBOARD"
 alias fixtty="stty raw -echo; fg; reset | $CLIPBOARD"
+
+# Nix
+alias x='nix run .'
+alias nd='nix develop'
 
 # hexyl (modern hexdump replacement)
 hexdump() {

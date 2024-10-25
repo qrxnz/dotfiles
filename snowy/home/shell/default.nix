@@ -51,6 +51,7 @@
         vim = "nvim";
         nano = "nvim";
 
+        vs = "codium";
         vsc = "codium";
 
         # git
@@ -93,8 +94,10 @@
         csl="clear";
 
 
-        # NixOS
-        update="bash -c 'sudo nixos-rebuild switch --flake .#$HOSTNAME'";
+        # Nix/NixOS
+        x="nix run.";
+        nd="nix develop";
+        nosr="bash -c 'sudo nixos-rebuild switch --flake .#$HOSTNAME'";
 
         # other
         t="tmux";
