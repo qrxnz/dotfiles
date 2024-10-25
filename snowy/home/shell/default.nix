@@ -95,7 +95,7 @@
 
 
         # Nix/NixOS
-        x="nix run.";
+        x="nix run .";
         nd="nix develop";
         nosr="bash -c 'sudo nixos-rebuild switch --flake .#$HOSTNAME'";
 
