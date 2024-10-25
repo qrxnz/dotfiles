@@ -26,6 +26,7 @@
       pkgs.wofi
       pkgs.mako
       pkgs.grim
+      pkgs.sway-contrib.grimshot
       pkgs.swappy
       pkgs.waybar
       pkgs.swaybg
