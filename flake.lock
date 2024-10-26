@@ -3,11 +3,11 @@
     "catppuccin-bat": {
       "flake": false,
       "locked": {
-        "lastModified": 1722864529,
-        "narHash": "sha256-s0CHTihXlBMCKmbBBb8dUhfgOOQu9PBCQ+uviy7o47w=",
+        "lastModified": 1729267055,
+        "narHash": "sha256-x1yqPCWuoBSx/cI94eA+AWwhiSA42cLNUOFJl7qjhmw=",
         "owner": "catppuccin",
         "repo": "bat",
-        "rev": "d3feec47b16a8e99eabb34cdfbaa115541d374fc",
+        "rev": "d2bbee4f7e7d5bac63c054e4d8eca57954b31471",
         "type": "github"
       },
       "original": {
@@ -173,11 +173,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1729864948,
-        "narHash": "sha256-CeGSqbN6S8JmzYJX/HqZjr7dMGlvHLLnJJarwB45lPs=",
+        "lastModified": 1729894599,
+        "narHash": "sha256-nL9nzNE5/re/P+zOv7NX6bRm5e+DeS1HIufQUJ01w20=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0c0268a3c80d30b989d0aadbd65f38d4fa27a9a0",
+        "rev": "93435d27d250fa986bfec6b2ff263161ff8288cb",
         "type": "github"
       },
       "original": {
@@ -314,11 +314,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1729887120,
-        "narHash": "sha256-gQnKH9mGf3sl8KUmollmSE1DU0hifigul6vbhouqMCE=",
+        "lastModified": 1729930895,
+        "narHash": "sha256-pqKRaCWPOQnzCgiKqcTFN4yg1MIJ62PtDnWkyAp2C38=",
         "owner": "qrxnz",
         "repo": "snowvim",
-        "rev": "12b86f05473f9681f759f20d206f30131e9609a2",
+        "rev": "9b9a839a81d7cb8d2e3cc513c9ab4772b572adc8",
         "type": "github"
       },
       "original": {
