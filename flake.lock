@@ -314,11 +314,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1729939441,
-        "narHash": "sha256-QSgfH+StsYd/CsbUT5euzaWwGZe6ElFZlT6GJOQs0us=",
+        "lastModified": 1729942880,
+        "narHash": "sha256-QFDoH3YvTXHAe59Nba857q5Uo+UcH4VYXSdNoNrWUZc=",
         "owner": "qrxnz",
         "repo": "snowvim",
-        "rev": "976719d205018f6e9834d3325eace96c2a83e70c",
+        "rev": "650b4c2663e4cd5650ca6338235bd5941d2f4246",
         "type": "github"
       },
       "original": {
