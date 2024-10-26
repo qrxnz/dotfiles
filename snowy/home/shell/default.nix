@@ -11,6 +11,7 @@
     pkgs.lsof
     pkgs.ranger
     pkgs.direnv
+    pkgs.zoxide
     pkgs.netcat-openbsd
   ];
 
