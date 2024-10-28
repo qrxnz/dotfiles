@@ -7,5 +7,5 @@
   ...
 }: {
   #
-  home.packages = [ inputs.nixvim.packages.x86_64-linux.default ];
+  home.packages = [ inputs.nveem.packages.x86_64-linux.default ];
 }

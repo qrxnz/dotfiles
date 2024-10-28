@@ -18,8 +18,8 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixvim = {
-      url = "github:qrxnz/snowvim";
+    nveem = {
+      url = "github:qrxnz/nveem";
       # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
       inputs.nixpkgs.follows = "nixpkgs";
     };
