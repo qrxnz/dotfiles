@@ -3,13 +3,16 @@
     ../../home/core.nix
     ../../home/basic
     ../../home/shell # Shell (zsh)
-    ../../home/nvim # Editor
-    ../../home/vscode # Editor
     ../../home/kitty # Terminal
     ../../home/tmux # Terminal multiplexer
     ../../home/hyprland # WM
     ../../home/creative-apps
-    ../../home/hardware-stuff
+
+    # Dev
+    ../../home/dev/nvim # Editor
+    ../../home/dev/vscode # Editor
+
+    ../../home/dev/hardware-stuff
   ];
 
   programs.git = {
