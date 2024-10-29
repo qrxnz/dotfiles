@@ -10,5 +10,6 @@
     pkgs.shfmt
     pkgs.mdformat
     pkgs.alejandra
+    pkgs.stylua
   ];
 }
