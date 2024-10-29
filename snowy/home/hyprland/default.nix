@@ -4,36 +4,35 @@
   username,
   ...
 }: {
-      # Hyprland
-      wayland.windowManager.hyprland = {
+  # Hyprland
+  wayland.windowManager.hyprland = {
+    # Whether to enable Hyprland wayland compositor
+    enable = true;
 
-      # Whether to enable Hyprland wayland compositor
-      enable = true;
+    # The hyprland package to use
+    package = pkgs.hyprland;
 
-      # The hyprland package to use
-      package = pkgs.hyprland;
+    # Whether to enable XWayland
+    xwayland.enable = true;
 
-      # Whether to enable XWayland
-      xwayland.enable = true;
-
-      # Optional
-      # Whether to enable hyprland-session.target on hyprland startup
-      systemd.enable = true;
+    # Optional
+    # Whether to enable hyprland-session.target on hyprland startup
+    systemd.enable = true;
   };
 
-   # Dependencies
-   home.packages = [
-      pkgs.wofi
-      pkgs.mako
-      pkgs.grim
-      pkgs.sway-contrib.grimshot
-      pkgs.swappy
-      pkgs.waybar
-      pkgs.swaybg
-      pkgs.wlogout
-      pkgs.wl-clipboard
-      pkgs.cinnamon.nemo
-    ];
+  # Dependencies
+  home.packages = [
+    pkgs.wofi
+    pkgs.mako
+    pkgs.grim
+    pkgs.sway-contrib.grimshot
+    pkgs.swappy
+    pkgs.waybar
+    pkgs.swaybg
+    pkgs.wlogout
+    pkgs.wl-clipboard
+    pkgs.cinnamon.nemo
+  ];
 
   # Gtk theme
   gtk.theme = {
@@ -47,10 +46,11 @@
           fetchSubmodules = true;
           hash = "sha256-q5/VcFsm3vNEw55zq/vcM11eo456SYE5TQA3g2VQjGc=";
         };
-      postUnpack = "";
-    }).override
+        postUnpack = "";
+      })
+      .override
       {
-        accents = [ "sky" ];
+        accents = ["sky"];
         variant = "mocha";
         size = "compact";
       };

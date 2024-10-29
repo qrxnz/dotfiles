@@ -24,5 +24,6 @@
     pkgs.go
     pkgs.gopls
     pkgs.delve # Go
+    pkgs.alejandra # Nix
   ];
 }
