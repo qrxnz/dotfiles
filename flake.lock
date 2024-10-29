@@ -61,11 +61,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1730194572,
-        "narHash": "sha256-MC3YZxcnnYeuYAajEhvvmGAXv5AqViysnHOS20C9Lb8=",
+        "lastModified": 1730204699,
+        "narHash": "sha256-6GXToTC1wUN6tUPPdjMjCvhlGi0PcmcUqCUv/JkVJsQ=",
         "owner": "qrxnz",
         "repo": "nveem",
-        "rev": "40b601a7deebd134939026b1658140bd63476635",
+        "rev": "bf25c461ff5464cfce7c55d085b1804042eb2150",
         "type": "github"
       },
       "original": {
