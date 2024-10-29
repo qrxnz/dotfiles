@@ -8,11 +8,13 @@
     ../../home/hyprland # WM
     ../../home/creative-apps
 
-    # Dev
+    # dev
+    ../../home/dev
+
     ../../home/dev/nvim # Editor
     ../../home/dev/vscode # Editor
 
-    ../../home/dev/hardware-stuff
+    ../../home/dev/hardware-stuff # Hardware shit
   ];
 
   programs.git = {
