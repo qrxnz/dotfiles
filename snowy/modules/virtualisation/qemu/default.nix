@@ -1,6 +1,9 @@
 #Qemu/KVM with virt-manager
-{ pkgs, user, ... }:
 {
+  pkgs,
+  user,
+  ...
+}: {
   environment = {
     systemPackages = with pkgs; [
       virt-manager
@@ -17,7 +20,7 @@
     spice-autorandr.enable = true;
     spice-vdagentd.enable = true;
   };
-  networking.firewall.trustedInterfaces = [ "virbr0" ];
+  networking.firewall.trustedInterfaces = ["virbr0"];
   programs.dconf.enable = true;
-  users.groups.libvirtd.members = [ "qrxnz" ];
+  users.groups.libvirtd.members = ["qrxnz"];
 }

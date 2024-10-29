@@ -1,14 +1,18 @@
-{ config, pkgs, username, ... }:
 {
+  config,
+  pkgs,
+  username,
+  ...
+}: {
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
-     governor = "powersave";
-     turbo = "never";
+      governor = "powersave";
+      turbo = "never";
     };
     charger = {
-     governor = "performance";
-     turbo = "auto";
+      governor = "performance";
+      turbo = "auto";
     };
   };
 }

@@ -6,7 +6,6 @@
   system,
   ...
 }: {
-
   home.packages = [
     # flake.nix
     #

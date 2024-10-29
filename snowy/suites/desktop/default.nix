@@ -1,12 +1,9 @@
-{
-  config,
-  ...
-}: {
+{config, ...}: {
   imports = [
     ./fonts.nix
   ];
 
-    # Hyprland
+  # Hyprland
   programs.hyprland.enable = true;
   services.xserver.displayManager.gdm.enable = true;
 
@@ -16,7 +13,7 @@
   # Wayland issue
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-    # Enable sound with pipewire.
+  # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {

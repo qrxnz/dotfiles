@@ -1,5 +1,9 @@
-{ config, pkgs, username, ... }:
 {
+  config,
+  pkgs,
+  username,
+  ...
+}: {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -36,13 +40,13 @@
     isNormalUser = true;
     description = username;
     extraGroups = ["networkmanager" "wheel"];
-  } ;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # Experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [

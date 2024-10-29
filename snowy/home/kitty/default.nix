@@ -4,9 +4,9 @@
   username,
   ...
 }: {
-    home.packages = [ 
-      pkgs.kitty 
-    ];
+  home.packages = [
+    pkgs.kitty
+  ];
 
-    home.file.".config/kitty/kitty.conf".source = ../../../files/kitty/kitty.conf;
+  home.file.".config/kitty/kitty.conf".source = ../../../files/kitty/kitty.conf;
 }

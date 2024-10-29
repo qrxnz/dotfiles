@@ -1,4 +1,5 @@
 # dotfiles
+
 <p align="center">
   <a href="https://go-skill-icons.vercel.app/">
     <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,vscodium,nixos,kali,docker,podman,hyprland,kitty,tmux," />
@@ -8,25 +9,30 @@
 ## 🖼️ Gallery
 
 ### 💧 Hyprland
+
 ![screenshot](./.github/assets/img/screenshot.jpg)
 
 ### 🐲 Kali linux
+
 ![screenshot](./.github/assets/img/kali.png)
 
 ## 🖥️ Machines
 
 ### ❄️ nixos
+
 - 🍃 mentay
 
 soon ...
 
 ### 🤓 VMs
+
 - 🐲 Kali
-![screenshot](./.github/assets/img/kali.png)
+  ![screenshot](./.github/assets/img/kali.png)
 
 ## ❗ Prerequisite
 
 ### 🔌 Plugin managers
+
 - [zplug](https://github.com/zplug/zplug)
 - [tpm](https://github.com/tmux-plugins/tpm)
 
@@ -35,7 +41,9 @@ soon ...
 soon ...
 
 #### 📝 Editor (neovim)
+
 - lsp
+
   - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
   - [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
   - [vuels](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#vuels)
@@ -47,10 +55,12 @@ soon ...
   - [basedpyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#basedpyright)
 
 - debug adapters
+
   - [delve](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#go-using-delve-directly)
-  - [codelldb](https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb))
+  - [codelldb](<https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)>)
 
 - formatters
+
   - clang-format
   - gofmt
   - sql-formatter
@@ -61,6 +71,7 @@ soon ...
   - prettier
 
 #### 💲 Shell (zsh)
+
 - [git](https://git-scm.com/)
 - [eza](https://github.com/eza-community/eza)
 - [bat](https://github.com/sharkdp/bat)
@@ -84,36 +95,44 @@ soon ...
 ## ⌨️ Keybinds
 
 ### 💧 Hyprland
+
 Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
 
 ### 🍕 Tmux
+
 soon ...
 
-### 🐱 Neovim 
+### 🐱 Neovim
+
 soon ...
 
 ## ⚒️ Installation
 
 ### 🐧 non-nixos machines
+
 ```sh
 git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
 cd ~/.dotfiles &&\
 chmod +x ./setup.sh
 ```
+
 - 💧 Hyprland dotfiles
 
-> [!WARNING]
+> \[!WARNING\]
 > Remember to install the dependencies listed in the 'Prerequisite' section on your distribution.
 
 ```sh
 ./setup.sh --hyprland-default
 ```
+
 - 🐲 Full Kali linux setup
+
 ```sh
 ./setup.sh --kali-linux
 ```
 
 ### ❄️ nixos machines
+
 soon ...
 
 ## 🗒️ Credits
@@ -121,6 +140,7 @@ soon ...
 ### 🎨 Inspiration
 
 I was inspired by:
+
 - [jazzpiazz](https://github.com/jazzpizazz/zsh-aliases)
 - [ptrcnull](https://github.com/ptrcnull/dotfiles)
 - [omerxx](https://github.com/omerxx/dotfiles)
@@ -128,7 +148,9 @@ I was inspired by:
 - [ryan4yin](https://github.com/ryan4yin/nix-config)
 
 ### 🐱 Theme
+
 I use [Catppuccin](https://catppuccin.com/) in every part of my config!
 
 ### ❤️ Special thanks
+
 To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
