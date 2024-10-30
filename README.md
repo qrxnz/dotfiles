@@ -8,13 +8,9 @@
 
 ## 🖼️ Gallery
 
-### 💧 Hyprland
-
-![screenshot](./.github/assets/img/screenshot.jpg)
-
-### 🐲 Kali linux
-
-![screenshot](./.github/assets/img/kali.png)
+| ![Hyprland Screenshot](./.github/assets/img/screenshot.jpg) | ![Kali Screenshot](./.github/assets/img/kali.png) |
+|:---:|:---:|
+| Hyprland | Kali |
 
 ## 🖥️ Machines
 
