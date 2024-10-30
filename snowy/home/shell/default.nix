@@ -8,6 +8,7 @@
 }: {
   home.packages = [
     pkgs.eza
+    pkgs.fzf
     pkgs.duf
     pkgs.lsof
     pkgs.ranger
@@ -113,6 +114,9 @@
 
     carapace.enable = true;
     carapace.enableNushellIntegration = true;
+
+    zoxide.enable = true;
+    zoxide.enableNushellIntegration = true;
 
     starship = {
       enable = true;
