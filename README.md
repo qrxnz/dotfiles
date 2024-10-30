@@ -18,12 +18,15 @@
 
 - 🍃 mentay
 
+- VMs
+
 soon ...
 
-### 🤓 VMs
+### 🐧 non-nixos machines
 
-- 🐲 Kali
-  ![screenshot](./.github/assets/img/kali.png)
+- VMs
+  - 🐲 Kali
+soon ...
 
 ## ⌨️ Keybinds
 
