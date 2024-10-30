@@ -25,7 +25,7 @@ soon ...
 ### 🐧 non-nixos machines
 
 - VMs
-  - 🐲 Kali
+  - 🐲 Kali  
 soon ...
 
 ## ⌨️ Keybinds
