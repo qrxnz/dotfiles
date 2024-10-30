@@ -25,69 +25,6 @@ soon ...
 - 🐲 Kali
   ![screenshot](./.github/assets/img/kali.png)
 
-## ❗ Prerequisite
-
-### 🔌 Plugin managers
-
-- [zplug](https://github.com/zplug/zplug)
-- [tpm](https://github.com/tmux-plugins/tpm)
-
-### 📦 Dependencies
-
-soon ...
-
-#### 📝 Editor (neovim)
-
-- lsp
-
-  - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
-  - [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
-  - [vuels](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#vuels)
-  - [emmet-ls](https://github.com/aca/emmet-ls)
-  - [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd)
-  - [tailwindcss-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tailwindcss)
-  - [gopls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls)
-  - [sqls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#sqls)
-  - [basedpyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#basedpyright)
-
-- debug adapters
-
-  - [delve](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#go-using-delve-directly)
-  - [codelldb](<https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)>)
-
-- formatters
-
-  - clang-format
-  - gofmt
-  - sql-formatter
-  - stylua
-  - alejandra
-  - black
-  - mdformat
-  - prettier
-
-#### 💲 Shell (zsh)
-
-- [git](https://git-scm.com/)
-- [eza](https://github.com/eza-community/eza)
-- [bat](https://github.com/sharkdp/bat)
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [tmux](https://github.com/tmux/tmux)
-- [kitty](https://sw.kovidgoyal.net/kitty/)
-- [wl-copy](https://github.com/bugaevc/wl-clipboard)
-- [neovim](https://github.com/neovim)
-- [direnv](https://direnv.net/)
-- [nmap](https://nmap.org/)
-- [metasploit](https://www.metasploit.com/)
-- [wfuzz](https://github.com/xmendez/wfuzz)
-- [hexyl](https://github.com/sharkdp/hexyl)
-- [seclists](https://github.com/danielmiessler/SecLists)
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-- [duf](https://github.com/muesli/duf)
-- [john the ripper](https://www.openwall.com/john/)
-- [starship](https://starship.rs/)
-- [nix](https://nixos.org/download/)
-
 ## ⌨️ Keybinds
 
 ### 💧 Hyprland
@@ -116,6 +53,64 @@ chmod +x ./setup.sh
 
 > \[!WARNING\]
 > Remember to install the dependencies listed in the 'Prerequisite' section on your distribution.
+
+<details>
+<summary>❗ Prerequisite</summary>
+
+- 🔌 Plugin managers
+  - [zplug](https://github.com/zplug/zplug)
+  - [tpm](https://github.com/tmux-plugins/tpm)
+
+- 📝 Editor (neovim)
+  - lsp
+
+    - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
+    - [typescript-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
+    - [vuels](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#vuels)
+    - [emmet-ls](https://github.com/aca/emmet-ls)
+    - [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd)
+    - [tailwindcss-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tailwindcss)
+    - [gopls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls)
+    - [sqls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#sqls)
+    - [basedpyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#basedpyright)
+
+  - debug adapters
+
+    - [delve](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#go-using-delve-directly)
+    - [codelldb](<https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)>)
+
+  - formatters
+
+    - clang-format
+    - gofmt
+    - sql-formatter
+    - stylua
+    - alejandra
+    - black
+    - mdformat
+    - prettier
+
+- 💲 Shell (zsh)
+  - [git](https://git-scm.com/)
+  - [eza](https://github.com/eza-community/eza)
+  - [bat](https://github.com/sharkdp/bat)
+  - [zoxide](https://github.com/ajeetdsouza/zoxide)
+  - [tmux](https://github.com/tmux/tmux)
+  - [kitty](https://sw.kovidgoyal.net/kitty/)
+  - [wl-copy](https://github.com/bugaevc/wl-clipboard)
+  - [neovim](https://github.com/neovim)
+  - [direnv](https://direnv.net/)
+  - [nmap](https://nmap.org/)
+  - [metasploit](https://www.metasploit.com/)
+  - [wfuzz](https://github.com/xmendez/wfuzz)
+  - [hexyl](https://github.com/sharkdp/hexyl)
+  - [seclists](https://github.com/danielmiessler/SecLists)
+  - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+  - [duf](https://github.com/muesli/duf)
+  - [john the ripper](https://www.openwall.com/john/)
+  - [starship](https://starship.rs/)
+  - [nix](https://nixos.org/download/)
+</details>
 
 ```sh
 ./setup.sh --hyprland-default
