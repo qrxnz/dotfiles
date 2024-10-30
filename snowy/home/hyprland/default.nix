@@ -27,6 +27,7 @@
     pkgs.grim
     pkgs.sway-contrib.grimshot
     pkgs.swappy
+    pkgs.slurp
     pkgs.waybar
     pkgs.swaybg
     pkgs.wlogout
