@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "catppuccin-bat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1729267055,
-        "narHash": "sha256-x1yqPCWuoBSx/cI94eA+AWwhiSA42cLNUOFJl7qjhmw=",
-        "owner": "catppuccin",
-        "repo": "bat",
-        "rev": "d2bbee4f7e7d5bac63c054e4d8eca57954b31471",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "bat",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -76,7 +60,6 @@
     },
     "root": {
       "inputs": {
-        "catppuccin-bat": "catppuccin-bat",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nveem": "nveem"

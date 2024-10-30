@@ -2,6 +2,8 @@
   pkgs,
   config,
   username,
+  system,
+  inputs,
   ...
 }: {
   home.packages = [
@@ -97,7 +99,6 @@
         # Nix/NixOS
         x = "nix run .";
         nd = "nix develop";
-        nosr = "bash -c 'sudo nixos-rebuild switch --flake .#$HOSTNAME'";
 
         # other
         t = "tmux";
