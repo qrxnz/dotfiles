@@ -8,9 +8,9 @@
 
 ## 🖼️ Gallery
 
-| ![Hyprland Screenshot](./.github/assets/img/screenshot.jpg) | ![Kali Screenshot](./.github/assets/img/kali.jpg) | ![Kali Screenshot](./.github/assets/img/vscode.jpg) |
-|:---:|:---:||:---:|
-| Hyprland | Kali | vscodiun |
+| ![Hyprland Screenshot](./.github/assets/img/screenshot.jpg) | ![Kali Screenshot](./.github/assets/img/kali.jpg) | ![Vscode Screenshot](./.github/assets/img/vscode.jpg) |
+|:---:|:---:|:---:|
+| Hyprland | Kali | vscodium |
 
 ## 🖥️ Machines
 
@@ -25,7 +25,7 @@ soon ...
 ### 🐧 non-nixos machines
 
 - VMs
-  - 🐲 Kali  
+  - 🐲 Kali
 soon ...
 
 ## ⌨️ Keybinds
