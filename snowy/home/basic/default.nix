@@ -5,10 +5,15 @@
   ...
 }: {
   home.packages = [
-    pkgs.syncthing
-    pkgs.fastfetch
-
+    # media
     pkgs.mpv
     pkgs.amberol
+
+    # remote desktop
+    pkgs.remmina
+
+    # others
+    pkgs.syncthing
+    pkgs.fastfetch
   ];
 }
