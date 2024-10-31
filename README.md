@@ -64,7 +64,7 @@ chmod +x ./setup.sh
   - [zplug](https://github.com/zplug/zplug)
   - [tpm](https://github.com/tmux-plugins/tpm)
 
-- 📝 Editor (neovim)
+- 📝 Neovim
   - lsp
 
     - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
