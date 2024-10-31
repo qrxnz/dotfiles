@@ -9,7 +9,7 @@
 ## 🖼️ Gallery
 
 | ![Hyprland Screenshot](./.github/assets/img/screenshot.jpg) | ![Kali Screenshot](./.github/assets/img/kali.jpg) | ![Kali Screenshot](./.github/assets/img/vscode.jpg) |
-|:---:|:---:|
+|:---:|:---:||:---:|
 | Hyprland | Kali | vscodiun |
 
 ## 🖥️ Machines
