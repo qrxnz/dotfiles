@@ -1,4 +1,8 @@
-{sshKeyPath, name, email}: ''
+{
+  sshKeyPath,
+  name,
+  email,
+}: ''
   [user]
   	name = ${name}
   	email = ${email}

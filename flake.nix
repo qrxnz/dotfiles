@@ -16,7 +16,7 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    nveem  = {
+    nveem = {
       url = "github:qrxnz/nveem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -50,7 +50,7 @@
       ];
 
       systems.modules.nixos = with inputs; [
-        ({inherit lib;})
+        {inherit lib;}
       ];
 
       systems.hosts.mentay.modules = with inputs; [];

@@ -26,7 +26,7 @@ soon ...
 
 - VMs
   - 🐲 Kali
-soon ...
+    soon ...
 
 ## ⌨️ Keybinds
 
@@ -61,10 +61,12 @@ chmod +x ./setup.sh
 <summary>❗ Prerequisite</summary>
 
 - 🔌 Plugin managers
+
   - [zplug](https://github.com/zplug/zplug)
   - [tpm](https://github.com/tmux-plugins/tpm)
 
 - 📝 Neovim
+
   - lsp
 
     - [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls)
@@ -94,6 +96,7 @@ chmod +x ./setup.sh
     - prettier
 
 - 💲 Shell (zsh)
+
   - [git](https://git-scm.com/)
   - [eza](https://github.com/eza-community/eza)
   - [bat](https://github.com/sharkdp/bat)
@@ -113,6 +116,7 @@ chmod +x ./setup.sh
   - [john the ripper](https://www.openwall.com/john/)
   - [starship](https://starship.rs/)
   - [nix](https://nixos.org/download/)
+
 </details>
 
 ```sh

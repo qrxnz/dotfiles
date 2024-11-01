@@ -28,7 +28,7 @@ in {
     };
 
     #environment.persist.directories = [
-      #"/etc/gdm"
+    #"/etc/gdm"
     #];
 
     environment.systemPackages = with pkgs; [
