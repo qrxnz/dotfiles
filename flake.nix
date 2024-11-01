@@ -16,6 +16,8 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    tmux.url = "github:qrxnz/tmux-flake";
+
     nveem = {
       url = "github:qrxnz/nveem";
       inputs.nixpkgs.follows = "nixpkgs";

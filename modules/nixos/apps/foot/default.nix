@@ -18,7 +18,7 @@ in {
     environment.systemPackages = [pkgs.foot];
 
     home.configFile."foot/foot.ini".text = ''
-      font=JetBrains Mono Nerd Font:size=12
+      font=JetBrains Mono Nerd Font:size=14
       pad=5x5
       [cursor]
       color=11111b f5e0dc

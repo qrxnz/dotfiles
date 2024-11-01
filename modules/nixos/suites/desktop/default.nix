@@ -16,6 +16,8 @@ in {
   config = mkIf cfg.enable {
     desktop.hyprland.enable = true;
 
+    apps.tmux.enable = true;
+
     apps.tools.gnupg.enable = true;
 
     suites.common.enable = true;
