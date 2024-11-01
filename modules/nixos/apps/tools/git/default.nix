@@ -32,11 +32,5 @@ in {
 
       g = "lazygit";
     };
-
-    home.configFile."git/config".text = import ./config.nix {
-      name = "qrxnz";
-      email = "send@qrxnz.dev";
-    };
-    home.configFile."lazygit/config.yml".source = ./lazygitConfig.yml;
   };
 }
