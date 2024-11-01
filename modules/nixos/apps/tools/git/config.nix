@@ -6,7 +6,6 @@
   [user]
   	name = ${name}
   	email = ${email}
-      signingkey = ${sshKeyPath}
   [pull]
   	rebase = true
   [init]
