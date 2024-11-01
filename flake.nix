@@ -1,5 +1,5 @@
 {
-  description = "";
+  description = "qrxnz's dotfiles";
 
   inputs = {
     # Core
