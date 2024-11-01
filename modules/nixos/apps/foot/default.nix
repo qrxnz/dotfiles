@@ -24,6 +24,7 @@ in {
       color=11111b f5e0dc
 
       [colors]
+      alpha=0.8
       foreground=cdd6f4
       background=1e1e2e
 

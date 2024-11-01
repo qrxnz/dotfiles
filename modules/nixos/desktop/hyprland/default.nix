@@ -15,16 +15,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # Desktop additions
-    #desktop.addons = {
-    #waybar.enable = true;
-    #swww.enable = true;
-    #wofi.enable = true;
-    #mako.enable = true;
-    #gtklock.enable = true;
-    #wlogout.enable = true;
-    #};
-
     apps.foot.enable = true;
     apps.kitty.enable = true;
 
@@ -40,9 +30,10 @@ in {
       slurp
       swappy
       waybar
-      imagemagick
+      swaybg
       killall
       pulseaudio
+      imagemagick
     ];
 
     # Hyprland configuration files
