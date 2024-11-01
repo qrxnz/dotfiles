@@ -1,6 +1,6 @@
 plugins/
 
-direnv/
+.direnv/
 *.qcow2
 result*
 
