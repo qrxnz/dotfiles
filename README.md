@@ -21,8 +21,11 @@
 - VMs
 
 soon ...
+
+🧰 ### features
+
 <details>
-<summary>🧰 features</summary>
+<summary>system managment</summary>
 
 - System management tool `sys`
 Rebuild (in flake directory)
