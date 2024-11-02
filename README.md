@@ -142,8 +142,9 @@ I was inspired by:
 - [jazzpiazz](https://github.com/jazzpizazz/zsh-aliases)
 - [ptrcnull](https://github.com/ptrcnull/dotfiles)
 - [omerxx](https://github.com/omerxx/dotfiles)
-- [IogaMaster](https://github.com/IogaMaster/neovim)
+- [IogaMaster](https://github.com/IogaMaster/dotfiles)
 - [ryan4yin](https://github.com/ryan4yin/nix-config)
+- [redyf](https://github.com/redyf/nixdots)
 
 ### 🐱 Theme
 
@@ -151,4 +152,4 @@ I use [Catppuccin](https://catppuccin.com/) in every part of my config!
 
 ### ❤️ Special thanks
 
-To [bashbunni](https://github.com/bashbunni/wallpapers) for the amazing wallpapers
+To [redyf](https://github.com/redyf/wallpapers) for the amazing wallpapers
