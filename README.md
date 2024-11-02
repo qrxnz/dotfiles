@@ -21,8 +21,8 @@
 - VMs
 
 soon ...
-
-#### 🧰 features
+<details>
+<summary>🧰 features</summary>
 
 - System management tool `sys`
 Rebuild (in flake directory)
@@ -42,6 +42,9 @@ Deploying to a server (in flake directory):
 ```sh
 sudo sys deploy HOSTNAME # or `d` as a shorthand
 ```
+
+</details>
+
 
 ### 🐧 non-nixos machines
 
