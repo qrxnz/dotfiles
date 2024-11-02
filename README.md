@@ -35,13 +35,13 @@ soon ...
 sudo sys rebuild # or `r` as a shorthand
 ```
 
-  - Testing an ephemeral config:
+  - Testing an ephemeral config
 
 ```sh
 sudo sys test # or `t` as a shorthand
 ```
 
-  - Deploying to a server (in flake directory):
+  - Deploying to a server (in flake directory)
 
 ```sh
 sudo sys deploy HOSTNAME # or `d` as a shorthand
