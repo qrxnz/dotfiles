@@ -56,6 +56,28 @@ in {
       grbc = "git rebase --continue";
       gch = "git checkout";
       grr = "git review -R";
+
+      # mental issues
+      lcs = "clear";
+      cleare = "clear";
+      clea = "clear";
+      cear = "clear";
+      lcear = "clear";
+      clera = "clear";
+      celar = "clear";
+      cler = "clear";
+      claer = "clear";
+      clearc = "clear";
+      cleawr = "clear";
+      caler = "clear";
+      calar = "clear";
+      cclear = "clear";
+      rclear = "clear";
+      rlear = "clear";
+      rcle = "clear";
+      rcler = "clear";
+      cls = "clear";
+      csl = "clear";
     };
 
     home.programs.zoxide = {
