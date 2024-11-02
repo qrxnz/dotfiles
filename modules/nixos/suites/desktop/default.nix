@@ -23,6 +23,7 @@ in {
     suites.common.enable = true;
 
     services.flatpak.enable = true;
+    services.syncthing.enable = true;
 
     services.xserver = {
       enable = true;
