@@ -57,6 +57,9 @@ in {
       gch = "git checkout";
       grr = "git review -R";
 
+      # nix
+      x = "nix run .";
+
       # mental issues
       lcs = "clear";
       cleare = "clear";
