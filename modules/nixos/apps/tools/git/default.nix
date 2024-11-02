@@ -30,21 +30,5 @@ in {
       email = "send@qrxnz.dev";
     };
     home.configFile."lazygit/config.yml".source = ./lazygitConfig.yml;
-
-    environment.shellAliases = {
-      # Git aliases
-      gaa = "git add .";
-      gcm = "git commit -m";
-      gsu = "git submodule update --remote";
-      gsa = "git submodule add";
-      gpush = "git push -u origin";
-      gpull = "git pull";
-      grb = "git rebase";
-      grbc = "git rebase --continue";
-      gch = "git checkout";
-      grr = "git review -R";
-
-      g = "lazygit";
-    };
   };
 }
