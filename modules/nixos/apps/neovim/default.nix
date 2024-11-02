@@ -26,5 +26,13 @@ in {
       pkgs.sumneko-lua-language-server
       pkgs.ripgrep
     ];
+
+    environment.shellAliases = {
+      # nvim aliases
+      v = "nvim";
+      vi = "nvim";
+      vim = "nvim";
+      nano = "nvim";
+    };
   };
 }

@@ -20,7 +20,7 @@ in {
     ];
 
     environment.shellAliases = {
-      # Git aliases
+      # tmux aliases
       t = "tmux";
     };
   };
