@@ -16,11 +16,11 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [pkgs.vscodium-fhs];
-  };
 
-  environment.shellAliases = {
-    # codium aliases
-    vs = "codium";
-    vsc = "codium";
+    environment.shellAliases = {
+      # codium aliases
+      vs = "codium";
+      vsc = "codium";
+    };
   };
 }
