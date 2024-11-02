@@ -18,5 +18,10 @@ in {
     environment.systemPackages = [
       inputs.tmux.packages.${pkgs.system}.default
     ];
+
+    environment.shellAliases = {
+      # Git aliases
+      t = "tmux";
+    };
   };
 }
