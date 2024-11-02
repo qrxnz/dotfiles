@@ -1,6 +1,3 @@
 [submodule "files/nvim"]
 	path = files/nvim
 	url = https://github.com/qrxnz/neovim.git
-[submodule "wallpapers"]
-	path = wallpapers
-	url = https://github.com/redyf/wallpapers.git
