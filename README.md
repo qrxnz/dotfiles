@@ -8,7 +8,7 @@
 
 ## 🖼️ Gallery
 
-| ![Hyprland Screenshot](./.github/assets/img/screenshot.jpg) | ![Kali Screenshot](./.github/assets/img/kali.jpg) | ![Vscode Screenshot](./.github/assets/img/vscode.jpg) |
+| ![Hyprland Screenshot](./.github/assets/img/hyprland-nixos-mentay.jpg) | ![Kali Screenshot](./.github/assets/img/kali.jpg) | ![Vscode Screenshot](./.github/assets/img/vscode.jpg) |
 |:---:|:---:|:---:|
 | Hyprland | Kali | vscodium |
 
@@ -35,20 +35,19 @@ soon ...
 sudo sys rebuild # or `r` as a shorthand
 ```
 
-  - Testing an ephemeral config
+- Testing an ephemeral config
 
 ```sh
 sudo sys test # or `t` as a shorthand
 ```
 
-  - Deploying to a server (in flake directory)
+- Deploying to a server (in flake directory)
 
 ```sh
 sudo sys deploy HOSTNAME # or `d` as a shorthand
 ```
 
 </details>
-
 
 ### 🐧 non-nixos machines
 
