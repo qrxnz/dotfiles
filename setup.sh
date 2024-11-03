@@ -32,7 +32,7 @@ elif [[ $1 == "--kali-linux" ]]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-  stow files --adopt --ignore=hyprland --ignore=waybar
+  stow files --adopt --ignore=hyprland --ignore=waybar --ignore=foot
 
   echo "source ~/.config/zshrc/zshrc" >~/.zshrc
   echo "source-file ~/.config/tmux/tmux.conf" >~/.tmux.conf
