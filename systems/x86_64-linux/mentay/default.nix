@@ -11,6 +11,8 @@
     # Any particular packages only for this host
   ];
 
+  hardware.rocm.enable = true;
+
   suites.common.enable = true; # Enables the basics, like audio, networking, ssh, etc.
   suites.desktop.enable = true; # Hyprland
 

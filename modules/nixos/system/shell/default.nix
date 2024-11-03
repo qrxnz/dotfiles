@@ -119,7 +119,7 @@ in {
         }
 
         def , [...packages] {
-            nix shell ($packages | each {|s| $"nixpkgs#($s)"})
+            NIXPKGS_ALLOW_UNFREE=1 nix shell ...($packages | each {|s| $"nixpkgs#($s)"}) --impure
         }
       '';
     };
