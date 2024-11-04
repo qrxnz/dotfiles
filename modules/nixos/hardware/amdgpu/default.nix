@@ -18,9 +18,6 @@ in {
       enable = true;
       enable32Bit = true;
 
-      driSupport = true;
-      driSupport32Bit = true;
-
       extraPackages = with pkgs; [
         amdvlk
         mesa.opencl
