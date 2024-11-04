@@ -39,6 +39,7 @@ in {
       glfw
       xclip
       xarchiver
+      pavucontrol
     ];
   };
 }
