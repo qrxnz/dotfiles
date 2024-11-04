@@ -17,6 +17,7 @@ in {
     environment.systemPackages = with pkgs; [
       # Video
       shotcut
+      obs-studio
       davinci-resolve
     ];
   };
