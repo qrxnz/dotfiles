@@ -14,11 +14,12 @@ in {
   };
 
   config = mkIf cfg.enable {
+    # Editors
     apps.neovim.enable = true;
     apps.vscodium.enable = true;
 
+    # Misc
     apps.tools.direnv.enable = true;
-
     apps.misc.enable = true;
 
     home.configFile."nix-init/config.toml".text = ''
@@ -27,6 +28,9 @@ in {
     '';
 
     environment.systemPackages = with pkgs; [
+      # Misc
+      remmina
+      waypipe
       licensor
 
       # Nix Utils
@@ -38,6 +42,9 @@ in {
       nixpkgs-hammering
       nixpkgs-review
       nurl
+
+      # Web
+      atac
     ];
   };
 }
