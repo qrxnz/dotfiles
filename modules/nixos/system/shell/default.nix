@@ -60,6 +60,10 @@ in {
       # nix
       x = "nix run .";
 
+      # Golang
+      gr = "go run";
+      gb = "go build .";
+
       # mental issues
       lcs = "clear";
       cleare = "clear";

@@ -82,6 +82,10 @@ alias pwt='bunx playwright test'
 alias pwc='bunx playwright codegen'
 alias pwr='bunx playwright show-report'
 
+# Golang
+alias gr='go run'
+alias gb='go build .'
+
 # tty upgrades
 alias uptty="echo '/usr/bin/script -qc /bin/bash /dev/null'| $CLIPBOARD"
 alias fixtty="stty raw -echo; fg; reset | $CLIPBOARD"
