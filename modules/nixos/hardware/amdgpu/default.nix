@@ -17,14 +17,16 @@ in {
     hardware.graphics = {
       enable = true;
       enable32Bit = true;
-    };
 
-    # OpenCL & Vulkan support
-    hardware.graphics.extraPackages = with pkgs; [
-      amdvlk
-      mesa.opencl
-      rocmPackages.clr.icd
-    ];
+      driSupport = true;
+      driSupport32Bit = true;
+
+      extraPackages = with pkgs; [
+        amdvlk
+        mesa.opencl
+        rocmPackages.clr.icd
+      ];
+    };
 
     # Others
     environment.systemPackages = with pkgs; [
