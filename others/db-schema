@@ -1,0 +1,6 @@
+CREATE TABLE users (
+    email VARCHAR(128) NOT NULL,
+    password text NOT NULL,
+    comment TEXT,
+    PRIMARY KEY (email)
+);
