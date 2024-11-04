@@ -7,9 +7,9 @@
 
   system.battery.enable = true; # Only for laptops, they will still work without it, just improves battery life
 
-  environment.systemPackages = with pkgs; [
-    # Any particular packages only for this host
-  ];
+  #environment.systemPackages = with pkgs; [
+  # Any particular packages only for this host
+  #];
 
   hardware.amdgpu.enable = true;
 
@@ -17,6 +17,8 @@
   suites.desktop.enable = true; # Hyprland
 
   suites.development.enable = true;
+
+  suites.creative.enable = true;
 
   virtualisation.kvm.enable = true; # virt manager/qemu
 

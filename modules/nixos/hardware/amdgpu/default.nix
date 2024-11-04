@@ -25,5 +25,11 @@ in {
       mesa.opencl
       rocmPackages.clr.icd
     ];
+
+    # Others
+    environment.systemPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
   };
 }
