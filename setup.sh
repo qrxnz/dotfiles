@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Hyprland Setup
 if [[ $1 == "--hyprland-default" ]]; then
   # Sync dotfiles
   stow files --adopt
@@ -10,6 +11,7 @@ if [[ $1 == "--hyprland-default" ]]; then
   cd $HOME
   echo "Installation Completed!"
 
+# Kali Linux Setup
 elif [[ $1 == "--kali-linux" ]]; then
   # Install dependencies
   sudo apt update && sudo apt upgrade -y
