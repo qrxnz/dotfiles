@@ -219,11 +219,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1730930150,
-        "narHash": "sha256-eyEEQc7qQhIwRWJL8sN1wkJlVAbrAQeJVYgwzb9DrSk=",
+        "lastModified": 1730931674,
+        "narHash": "sha256-BDy3PJc7BeF4Os9wX6SGgya644uNjyBdznZi1sMpmsI=",
         "owner": "qrxnz",
         "repo": "nveem",
-        "rev": "41851ae97b93064fdf30c712535aeeabae24c740",
+        "rev": "5e7aa9959305b109f2df7249370751259e413451",
         "type": "github"
       },
       "original": {
