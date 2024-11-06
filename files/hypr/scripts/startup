@@ -16,8 +16,8 @@ done
 # Lauch statusbar (waybar)
 ~/.config/hypr/scripts/statusbar &
 
+# Remmina
+remmina --icon &
+
 # Syncthing
 syncthing -no-browser &
-
-# WeekToDo
-~/.config/hypr/scripts/weektodo
