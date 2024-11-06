@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ $1 == "--hyprland-default" ]]; then
+  # Sync dotfiles
   stow files --adopt
 
   echo "source ~/.config/zshrc/zshrc" >~/.zshrc
@@ -10,14 +11,17 @@ if [[ $1 == "--hyprland-default" ]]; then
   echo "Installation Completed!"
 
 elif [[ $1 == "--kali-linux" ]]; then
+  # Install dependencies
   sudo apt update && sudo apt upgrade -y
   sudo apt-get install -y wget curl git thunar stow neovim podman zoxide fzf \
-    xsel xclip duf eza bat flameshot feh kitty tmux picom \
+    xsel xclip duf eza bat flameshot feh kitty tmux picom  xrdp\
     golang delve clang ccls gdb cargo
 
+  # Prepare directories
   mkdir -p ~/.local/bin/
   mkdir -p ~/.local/share/fonts/
 
+  # Download & Install font
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 
   unzip JetBrainsMono.zip -d ~/.local/share/fonts/
@@ -25,19 +29,36 @@ elif [[ $1 == "--kali-linux" ]]; then
   rm ./JetBrainsMono.zip
 
   fc-cache -fv
-
+  
+  # Install bun (js runtime)
   curl -fsSL https://bun.sh/install | bash
+
+  # Install starship
   curl -sS https://starship.rs/install.sh | sh
+
+  # Install nix
   sh <(curl -L https://nixos.org/nix/install) --no-daemon
+
+  # Install TPM (Tmux Plugin Manager)
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+  # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+  # Sync dotfiles
   stow files --adopt --ignore=hyprland --ignore=waybar --ignore=foot
 
   echo "source ~/.config/zshrc/zshrc" >~/.zshrc
   echo "source-file ~/.config/tmux/tmux.conf" >~/.tmux.conf
 
+  # Enable SSH
+  sudo systemctl enable ssh --now
+  
+  # Enable RDP
+  sudo systemctl enable xrdp --now
+  
   cd $HOME
+  
   echo "Installation Completed!"
 
 else
