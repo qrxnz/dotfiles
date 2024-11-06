@@ -19,6 +19,7 @@ in {
       bat
       nitch
       zoxide
+      ripgrep
       starship
     ];
 
