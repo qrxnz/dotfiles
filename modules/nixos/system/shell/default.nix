@@ -64,6 +64,8 @@ in {
       # Golang
       gr = "go run";
       gb = "go build .";
+      gmi = "go mod init";
+      gmt = "go mod tidy";
 
       # mental issues
       lcs = "clear";
