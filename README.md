@@ -8,9 +8,17 @@
 
 ## 🖼️ Gallery
 
-| ![Hyprland Screenshot](./.github/assets/img/hyprland-nixos-mentay.jpg) | ![Kali Screenshot](./.github/assets/img/kali.jpg) | ![Vscode Screenshot](./.github/assets/img/vscode.jpg) |
-|:---:|:---:|:---:|
-| Hyprland | Kali | vscodium |
+### 💧 Hyprland
+![Hyprland Screenshot](./.github/assets/img/hyprland-nixos-mentay.jpg)
+
+### 🐲 Kali
+![Kali Screenshot](./.github/assets/img/kali.jpg)
+
+### 📝 Vscodium
+![Vscode Screenshot](./.github/assets/img/vscode.jpg)
+
+### 🐱 Neovim
+![Neovim Screenshot](./.github/assets/img/neovim.jpg)
 
 ## 🖥️ Machines
 
@@ -92,7 +100,7 @@ chmod +x ./setup.sh
   - [zplug](https://github.com/zplug/zplug)
   - [tpm](https://github.com/tmux-plugins/tpm)
 
-- 📝 Neovim
+- 🐱 Neovim
 
   - lsp
 
