@@ -7,7 +7,7 @@
 </p>
 
 ## ✒️ Description
-> Linux dotfiles and NixOS configuration built with Snowfall. My setup is tailored for IT security and DevOps tasks.
+> Linux dotfiles and NixOS configuration built with Snowfall. My setup is tailored for IT security and DevOps tasks
 
 My configuration is tailored for tasks in the areas of DevOps and IT security. The key details I emphasized are reproducibility and a personalized experience to achieve an efficient and enjoyable workflow.
 
