@@ -75,7 +75,7 @@ in {
         group = "users";
 
         extraGroups =
-          ["wheel" "audio" "sound" "video" "networkmanager" "input" "tty" "docker" "libvirtd"]
+          ["wheel" "audio" "sound" "video" "networkmanager" "input" "tty" "libvirtd"]
           ++ cfg.extraGroups;
       }
       // cfg.extraOptions;
