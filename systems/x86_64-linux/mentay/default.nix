@@ -21,6 +21,7 @@
   suites.creative.enable = true;
 
   virtualisation.kvm.enable = true; # virt manager/qemu
+  virtualisation.docker-container.enable = true; # docker+lazy docker
 
   # ======================== DO NOT CHANGE THIS ========================
   system.stateVersion = "22.11";
