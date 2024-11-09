@@ -16,8 +16,8 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [
+      pkgs.arion
       pkgs.lazydocker
-      pkgs.docker-compose
     ];
 
     virtualisation.docker.enable = true;
