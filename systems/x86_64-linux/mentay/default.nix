@@ -22,6 +22,7 @@
 
   virtualisation.kvm.enable = true; # virt manager/qemu
   virtualisation.docker-container.enable = true; # docker+lazy docker
+  virtualisation.android.enable = true; # waydroid
 
   # ======================== DO NOT CHANGE THIS ========================
   system.stateVersion = "22.11";
