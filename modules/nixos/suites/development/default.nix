@@ -45,6 +45,9 @@ in {
 
       # Web
       atac
+
+      # DB
+      postgresql
     ];
   };
 }
