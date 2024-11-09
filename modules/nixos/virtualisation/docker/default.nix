@@ -17,6 +17,7 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = [
       pkgs.lazydocker
+      pkgs.docker-compose
     ];
 
     virtualisation.docker.enable = true;
