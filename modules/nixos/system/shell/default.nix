@@ -31,7 +31,7 @@ in {
       enableFishIntegration = true;
       enableNushellIntegration = true;
     };
-    home.configFile."starship.toml".source = ./starship.toml;
+    home.configFile."starship.toml".source = ../../../../files/starship.toml;
 
     environment.shellAliases = {
       # Ricing
