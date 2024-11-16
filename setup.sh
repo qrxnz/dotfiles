@@ -5,8 +5,8 @@ if [[ $1 == "--hyprland-default" ]]; then
   # Sync dotfiles
   stow files --adopt
 
-  echo "source ~/.config/zshrc/zshrc" >~/.zshrc
-  echo "source-file ~/.config/tmux/tmux.conf" >~/.tmux.conf
+  echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+  echo "source-file ~/.config/tmux/tmux.conf" > ~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
@@ -50,8 +50,8 @@ elif [[ $1 == "--kali-linux" ]]; then
   # Sync dotfiles
   stow files --adopt --ignore=hyprland --ignore=waybar --ignore=foot
 
-  echo "source ~/.config/zshrc/zshrc" >~/.zshrc
-  echo "source-file ~/.config/tmux/tmux.conf" >~/.tmux.conf
+  echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+  echo "source-file ~/.config/tmux/tmux.conf" > ~/.tmux.conf
 
   # Enable SSH
   sudo systemctl enable ssh --now
