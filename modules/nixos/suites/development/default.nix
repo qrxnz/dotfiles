@@ -45,6 +45,7 @@ in {
 
       # Web
       atac
+      burpsuite
 
       # DB
       postgresql
