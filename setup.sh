@@ -6,7 +6,6 @@ if [[ $1 == "--hyprland-default" ]]; then
   stow files --adopt
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
-  echo "source-file ~/.config/tmux/tmux.conf" > ~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
@@ -41,9 +40,6 @@ elif [[ $1 == "--kali-linux" ]]; then
   # Install nix
   sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
-  # Install TPM (Tmux Plugin Manager)
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
@@ -51,8 +47,7 @@ elif [[ $1 == "--kali-linux" ]]; then
   stow files --adopt --ignore=hyprland --ignore=waybar --ignore=foot
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
-  echo "source-file ~/.config/tmux/tmux.conf" > ~/.tmux.conf
-
+  
   # Enable SSH
   sudo systemctl enable ssh --now
   

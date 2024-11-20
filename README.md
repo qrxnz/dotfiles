@@ -173,6 +173,14 @@ chmod +x ./setup.sh
 
 soon ...
 
+### 🍕 Tmux
+
+If you want to use my tmux configuration, I recommend installing it through nix profile
+
+```sh
+nix profile install github:qrxnz/tmux-flake
+```
+
 ## 🗒️ Credits
 
 ### 🎨 Inspiration
