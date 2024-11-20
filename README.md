@@ -14,10 +14,10 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 ## 🖼️ Gallery
 
 <div style="display: flex;">
-    <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px;">
-    <img src="./.github/assets/img/kali.jpg" style="margin: 5px;">
-    <img src="./.github/assets/img/vscode.jpg" style="margin: 5px;"">
-    <img src="./.github/assets/img/neovim.jpg" style="margin: 5px;">
+    <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px; width: 45%;">
+    <img src="./.github/assets/img/kali.jpg" style="margin: 5px; width: 45%;">
+    <img src="./.github/assets/img/vscode.jpg" style="margin: 5px; width: 45%;">
+    <img src="./.github/assets/img/neovim.jpg" style="margin: 5px; width: 45%;">
 </div>
 
 ## 🖥️ Machines
