@@ -12,18 +12,12 @@
 My configuration is tailored for tasks in the areas of DevOps and IT security. The key details I emphasized are reproducibility and a personalized experience to achieve an efficient and enjoyable workflow.
 
 ## 🖼️ Gallery
-
-### 💧 Hyprland
-![Hyprland Screenshot](./.github/assets/img/hyprland-nixos-mentay.jpg)
-
-### 🐲 Kali
-![Kali Screenshot](./.github/assets/img/kali.jpg)
-
-### 📝 Vscodium
-![Vscode Screenshot](./.github/assets/img/vscode.jpg)
-
-### 🐱 Neovim
-![Neovim Screenshot](./.github/assets/img/neovim.jpg)
+<div style="display: flex;>
+    <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px;">
+    <img src="./.github/assets/img/kali.jpg" style="margin: 5px;">
+    <img src="./.github/assets/img/vscode.jpg" style="margin: 5px;"">
+    <img src="./.github/assets/img/neovim.jpg" style="margin: 5px;">
+</div>
 
 ## 🖥️ Machines
 
