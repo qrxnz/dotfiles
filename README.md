@@ -189,7 +189,7 @@ I was inspired by:
 - [ryan4yin](https://github.com/ryan4yin/nix-config)
 - [redyf](https://github.com/redyf/nixdots)
 
-### 🐱‍💻 Theme
+### 🐈 Theme
 
 I use [Catppuccin](https://catppuccin.com/) in every part of my config!
 
