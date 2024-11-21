@@ -35,7 +35,7 @@ soon ...
 <details>
 <summary>system managment</summary>
 
-- System management tool `sys`
+System management tool `sys`
 
 Rebuild (in flake directory)
 
