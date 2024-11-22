@@ -36,6 +36,9 @@ alias grbc='git rebase --continue'
 alias gch='git checkout'
 alias grr='git review -R'
 
+# apt - nala (apt frontend)
+alias apt='nala'
+
 # eza (modern ls replacement)
 alias ls="eza --icons"
 alias ll="eza -l --icons"
