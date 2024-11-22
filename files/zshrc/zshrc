@@ -331,6 +331,9 @@ zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 # Disable updates using the "frozen" tag
 zplug "k4rthik/git-cal", as:command, frozen:1
 
+# direnv
+zplug "ptavares/zsh-direnv"
+
 # Run a command after a plugin is installed/updated
 # Provided, it requires to set the variable like the following:
 # ZPLUG_SUDO_PASSWORD="********"
