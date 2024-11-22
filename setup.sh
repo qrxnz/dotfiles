@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 
 # Hyprland Setup
 if [[ $1 == "--hyprland-default" ]]; then
@@ -15,7 +15,7 @@ elif [[ $1 == "--kali-linux" ]]; then
   # Install dependencies
   sudo apt update && sudo apt upgrade -y
   sudo apt-get install -y wget curl git thunar stow neovim podman zoxide fzf \
-    xsel xclip duf eza bat flameshot feh kitty tmux picom  xrdp\
+    xsel xclip duf eza bat flameshot feh kitty tmux picom  xrdp nala\
     golang delve clang ccls gdb cargo
 
   # Prepare directories
