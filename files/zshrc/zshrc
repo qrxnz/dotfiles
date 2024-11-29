@@ -272,10 +272,6 @@ alias www="sudo python3 -m http.server 80"
 alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done"
 alias linpeas="curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -s --output lin.sh"
 
-ips() {
-  ip a show scope global | awk '/^[0-9]+:/ { sub(/:/,"",$2); iface=$2 } /^[[:space:]]*inet / { split($2, a, "/"); print "[\033[96m" iface"\033[0m] "a[1] }'
-}
-
 yescrypt-crack() {
     if [ -f "./passwd" ] && [ -f "./shadow" ]; then
         sudo unshadow passwd shadow > unshadow.txt
@@ -286,14 +282,6 @@ yescrypt-crack() {
     fi
 }
 
-op() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a port number (options)"
-    else
-      sudo firewall-cmd --zone=public --add-port="${@}"/tcp
-  fi
-}
 
 #
 # Paths & variables
