@@ -24,7 +24,7 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 ### ❄️ nixos
 
-- 🍃 mentay
+-  mentay
 
 - VMs
 
@@ -60,7 +60,7 @@ sudo sys deploy HOSTNAME # or `d` as a shorthand
 ### 🐧 non-nixos machines
 
 - VMs
-  - 🐲 Kali
+  - Kali
     soon ...
 
 ## ⌨️ Keybinds
@@ -80,7 +80,7 @@ cd ~/.dotfiles &&\
 chmod +x ./setup.sh
 ```
 
-- 💧 Hyprland dotfiles
+-  Hyprland dotfiles
 
 > \[!WARNING\]
 > Remember to install the dependencies listed in the 'Prerequisite' section on your distribution.
@@ -88,12 +88,12 @@ chmod +x ./setup.sh
 <details>
 <summary>❗ Prerequisite</summary>
 
-- 🔌 Plugin managers
+-  Plugin managers
 
   - [zplug](https://github.com/zplug/zplug)
   - [tpm](https://github.com/tmux-plugins/tpm)
 
-- 🐱 Neovim
+-  Neovim
 
   - lsp
 
@@ -123,7 +123,7 @@ chmod +x ./setup.sh
     - mdformat
     - prettier
 
-- 💲 Shell (zsh)
+-  Shell (zsh)
 
   - [git](https://git-scm.com/)
   - [eza](https://github.com/eza-community/eza)
@@ -151,7 +151,7 @@ chmod +x ./setup.sh
 ./setup.sh --hyprland-default
 ```
 
-- 🐲 Full Kali linux setup
+-  Full Kali linux setup
 
 ```sh
 ./setup.sh --kali-linux
