@@ -155,47 +155,6 @@ venom-exe() {
   fi
 }
 
-# revshells
-phprev () {
-  if [ "$#" -ne 2 ];
-    then
-      echo "[i] Usage: phprev ip port"
-    else
-      SHELL=`cat ~/.config/zshrc/zsh/revshells/phprev.php | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g`
-      echo $SHELL > rev.php
-  fi
-}
-
-pwshrev () {
-  if [ "$#" -ne 2 ];
-    then
-      echo "[i] Usage: pwshrev ip port"
-    else
-      SHELL=`cat ~/.config/zshrc/zsh/revshells/pwshrev.ps1 | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g | iconv -f utf8 -t utf16le | base64 -w 0`
-      echo "powershell -ec $SHELL" | $CLIPBOARD
-  fi
-}
-
-py3rev () {
-  if [ "$#" -ne 2 ];
-    then
-      echo "[i] Usage: py3rev ip port"
-    else
-      SHELL=`cat ~/.config/zshrc/zsh/revshells/py3rev.py | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g`
-      echo "$SHELL" | $CLIPBOARD
-  fi
-}
-
-shrev () {
-  if [ "$#" -ne 2 ];
-    then
-      echo "[i] Usage: shrev ip port"
-    else
-      SHELL=`cat ~/.config/zshrc/zsh/revshells/shrev.sh | sed s/x.x.x.x/$1/g | sed s/yyyy/$2/g`
-      echo "$SHELL" | $CLIPBOARD
-  fi
-}
-
 # discovery
 subdomainscan() {
   if [ $# -eq 0 ]
