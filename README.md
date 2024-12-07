@@ -86,7 +86,7 @@ chmod +x ./setup.sh
 > Remember to install the dependencies listed in the 'Prerequisite' section on your distribution.
 
 <details>
-<summary>❗ Prerequisite</summary>
+<summary>Prerequisite</summary>
 
 -  Plugin managers
 
