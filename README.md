@@ -168,6 +168,19 @@ If you want to use my tmux configuration, I recommend installing it through nix 
 ```sh
 nix profile install github:qrxnz/tmux-flake
 ```
+### 🐱 Neovim
+
+If you want to use my neovim configuration, I recommend installing it through nix profile
+
+```sh
+nix profile install github:qrxnz/nveem
+```
+
+Or you can install it directly
+
+```sh
+git clone https://github.com/qrxnz/nveem.git --depth=1 ~/.config/nvim/ && nvim
+```
 
 ## 🗒️ Credits
 
