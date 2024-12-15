@@ -63,13 +63,6 @@ sudo sys deploy HOSTNAME # or `d` as a shorthand
   - Kali
     soon ...
 
-## ⌨️ Keybinds
-
-### 💧 Hyprland
-
-Most of the keyboard shortcuts in my hyprland are compatible with the default bspwm shortcuts
-
-
 ## ⚒️ Installation
 
 ### 🐧 non-nixos machines
