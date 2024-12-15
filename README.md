@@ -33,9 +33,7 @@ soon ...
 ### 🧰 features
 
 <details>
-<summary>system managment</summary>
-
-System management tool `sys`
+<summary>System management tool `sys`</summary>
 
 Rebuild (in flake directory)
 
