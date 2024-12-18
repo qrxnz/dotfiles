@@ -90,14 +90,16 @@ chmod +x ./setup.sh
 
 soon ...
 
-### 🍕 Tmux
+### 👾 Others
+
+#### 🍕 Tmux
 
 If you want to use my tmux configuration, I recommend installing it through nix profile
 
 ```sh
 nix profile install github:qrxnz/tmux-flake
 ```
-### 🐱 Neovim
+#### 🐱 Neovim
 
 If you want to use my neovim configuration, I recommend installing it through nix profile
 
