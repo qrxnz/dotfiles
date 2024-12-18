@@ -74,7 +74,7 @@ chmod +x ./setup.sh
 -  Hyprland dotfiles
 
 > \[!WARNING\]
-> Remember to install the packages on your distribution.
+> Remember to install the necessary packages on your distribution.
 
 ```sh
 ./setup.sh --hyprland-default
