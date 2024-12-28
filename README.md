@@ -15,7 +15,6 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
     <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px; width: 45%;">
-    <img src="./.github/assets/img/kali.jpgg" style="margin: 5px; width: 45%;">
     <img src="./.github/assets/img/vscode.jpg" style="margin: 5px; width: 45%;">
     <img src="./.github/assets/img/neovim.jpg" style="margin: 5px; width: 45%;">
 </div>
