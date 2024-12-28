@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://go-skill-icons.vercel.app/">
-    <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,vscodium,nixos,kali,docker,podman,hyprland,tmux," />
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,vscodium,nixos,arch,docker,podman,hyprland,tmux," />
   </a>
 </p>
 
