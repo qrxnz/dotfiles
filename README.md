@@ -54,9 +54,7 @@ sudo sys deploy HOSTNAME # or `d` as a shorthand
 
 ### 🐧 non-nixos machines
 
-- VMs
-  - Kali
-    soon ...
+soon ...
 
 ## ⚒️ Installation
 
