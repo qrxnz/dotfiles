@@ -78,12 +78,6 @@ chmod +x ./setup.sh
 ./setup.sh --hyprland-default
 ```
 
--  Full Kali linux setup
-
-```sh
-./setup.sh --kali-linux
-```
-
 ### ❄️ nixos machines
 
 soon ...
