@@ -26,8 +26,6 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 -  mentay
 
-- VMs
-
 soon ...
 
 ### 🧰 features
