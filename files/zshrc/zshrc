@@ -26,7 +26,7 @@ fi
 
 # git
 alias gaa="git add ."
-alias gcm="git commit -m"
+alias gcm='gum confirm "Commit changes?" && git commit -m "$SUMMARY" -m "$DESCRIPTION"'
 alias gsu="git submodule update --remote"
 alias gsa="git submodule add"
 alias gpush="git push -u origin"
