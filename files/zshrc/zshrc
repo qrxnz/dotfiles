@@ -82,6 +82,10 @@ alias vsc="codium ."
 alias x='nix run .'
 alias nd='nix develop'
 
+# direnv
+alias da='direnv allow'
+alias dda='direnv disallow'
+
 # hexyl (modern hexdump replacement)
 hexdump() {
   if [ $# -eq 0 ]
