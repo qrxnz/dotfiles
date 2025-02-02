@@ -35,6 +35,7 @@ alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias gch='git checkout'
 alias grr='git review -R'
+alias gwl='git worktree list'
 
 # eza (modern ls replacement)
 alias ls="eza --icons"
