@@ -13,6 +13,9 @@ done
 # Lauch notification daemon (mako)
 ~/.config/hypr/scripts/notifications &
 
+# Wallpaper (swaybg)
+exec= swaybg --image ~/.dotfiles/wallpapers/catppuccin/blossom.png --mode fill &
+
 # Lauch statusbar (waybar)
 ~/.config/hypr/scripts/statusbar &
 
