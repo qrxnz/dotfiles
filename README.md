@@ -19,9 +19,7 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
     <img src="./.github/assets/img/neovim.jpg" style="margin: 5px; width: 45%;">
 </div>
 
-## 🖥️ Machines
-
-### ❄️ nixos
+## ❄️ NixOs Machines
 
 -  mentay
 
