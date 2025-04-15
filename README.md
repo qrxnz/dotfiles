@@ -50,10 +50,6 @@ sudo sys deploy HOSTNAME # or `d` as a shorthand
 
 </details>
 
-### 🐧 non-nixos machines
-
-soon ...
-
 ## ⚒️ Installation
 
 ### 🐧 non-nixos machines
