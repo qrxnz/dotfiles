@@ -25,5 +25,5 @@ remmina --icon &
 # Syncthing
 syncthing -no-browser &
 
-# Planify
-planify
+# Lunatask
+lunatask
