@@ -54,6 +54,8 @@ sudo sys deploy HOSTNAME # or `d` as a shorthand
 
 ### 🐧 non-nixos machines
 
+prerequisite: `git`, `stow`
+
 ```sh
 git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
 cd ~/.dotfiles &&\
