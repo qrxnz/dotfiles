@@ -62,7 +62,7 @@ chmod +x ./setup.sh
 
 #### 🐧 Linux
 
-Prerequisite: `stow`, `zsh`
+Prerequisite: `stow`, `zsh`, `curl`
 
 -  Hyprland dotfiles
 
@@ -75,7 +75,7 @@ Prerequisite: `stow`, `zsh`
 
 #### 🍏 MacOS
 
-Prerequisite: `homebrew`, `stow`
+Prerequisite: `homebrew`, `stow`, `curl`
 
 ```sh
 ./setup.sh --macos
