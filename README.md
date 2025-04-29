@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://go-skill-icons.vercel.app/">
-    <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,vscodium,nixos,arch,docker,podman,hyprland,tmux," />
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=git,neovim,vscodium,apple,nixos,linux,docker,podman,hyprland,tmux," />
   </a>
 </p>
 
@@ -52,15 +52,17 @@ sudo sys deploy HOSTNAME # or `d` as a shorthand
 
 ## ⚒️ Installation
 
-### 🐧 non-nixos machines
-
-Prerequisite: `git`, `stow`, `zsh`
+### 🐧🍏 non-nixos machines
 
 ```sh
 git clone --recursive https://github.com/qrxnz/dotfiles  ~/.dotfiles &&\
 cd ~/.dotfiles &&\
 chmod +x ./setup.sh
 ```
+
+#### 🐧 Linux
+
+Prerequisite: `stow`, `zsh`
 
 -  Hyprland dotfiles
 
@@ -69,6 +71,12 @@ chmod +x ./setup.sh
 
 ```sh
 ./setup.sh --hyprland-default
+```
+
+#### 🍏 MacOS
+
+```sh
+./setup.sh --macos
 ```
 
 ### ❄️ nixos machines
