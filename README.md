@@ -75,6 +75,8 @@ Prerequisite: `stow`, `zsh`
 
 #### 🍏 MacOS
 
+Prerequisite: `homebrew`, `stow`
+
 ```sh
 ./setup.sh --macos
 ```
