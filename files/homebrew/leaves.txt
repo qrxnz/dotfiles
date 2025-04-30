@@ -21,3 +21,4 @@ netcat
 fzf
 yt-dlp
 font-jetbrains-mono-nerd-font
+gdb
