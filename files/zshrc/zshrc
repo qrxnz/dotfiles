@@ -274,6 +274,14 @@ zplug load #--verbose
 source ~/.config/zshrc/zsh/theme/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 #
+# Homebrew
+#
+
+
+# init homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+#
 # Prompt
 #
 
@@ -286,6 +294,7 @@ eval "$(starship init zsh)"
 
 # init zoxide
 eval "$(zoxide init zsh)"
+
 
 #
 # Nix

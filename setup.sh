@@ -8,9 +8,6 @@ if [[ $1 == "--hyprland-default" ]]; then
   # Prepare directories
   mkdir -p ~/.local/bin/
   mkdir -p ~/.local/share/fonts/
-  
-  # Install nix
-  sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
@@ -30,12 +27,9 @@ if [[ $1 == "--hyprland-default" ]]; then
 elif [[ $1 == "--macos" ]]; then
   # Sync dotfiles
   stow files --adopt --ignore=hyprland --ignore=waybar --ignore=wlogoout
-  
+
   # Prepare directories
   mkdir -p ~/.local/bin/
-
-   # Install nix
-  sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
