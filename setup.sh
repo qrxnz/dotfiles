@@ -35,7 +35,7 @@ elif [[ $1 == "--macos" ]]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
   # homebrew pkgs
-  xargs brew install < leaves.txt
+  xargs brew install < ./files/homebrew/leaves.txt
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
 
