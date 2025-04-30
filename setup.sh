@@ -8,9 +8,6 @@ if [[ $1 == "--hyprland-default" ]]; then
   # Prepare directories
   mkdir -p ~/.local/bin/
   mkdir -p ~/.local/share/fonts/
-  
-  # Install nix
-  sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
@@ -34,14 +31,11 @@ elif [[ $1 == "--macos" ]]; then
   # Prepare directories
   mkdir -p ~/.local/bin/
 
-   # Install nix
-  sh <(curl -L https://nixos.org/nix/install) --no-daemon
-
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
   # homebrew pkgs
-  xargs brew install < leaves.txt
+  xargs brew install < ./files/homebrew/leaves.txt
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
 
