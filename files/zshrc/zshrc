@@ -194,6 +194,9 @@ export PATH="$PATH:$HOME/.cargo/bin/"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Add Docker Desktop for Mac (docker)
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
 # terminal
 export TERM=xterm-256color
 
