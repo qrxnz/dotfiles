@@ -17,6 +17,7 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
     <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px; width: 45%;">
     <img src="./.github/assets/img/vscode.jpg" style="margin: 5px; width: 45%;">
     <img src="./.github/assets/img/neovim.jpg" style="margin: 5px; width: 45%;">
+    <img src="./.github/assets/img/macos.jpg" style="margin: 5px; width: 45%;">
 </div>
 
 ## ❄️ NixOs Machines
