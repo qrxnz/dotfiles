@@ -34,8 +34,11 @@ elif [[ $1 == "--macos" ]]; then
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-  # homebrew pkgs
+  # Homebrew pkgs
   xargs brew install < ./files/homebrew/leaves.txt
+
+  # Rebuild batcat cache
+  bat cache --build
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
 
