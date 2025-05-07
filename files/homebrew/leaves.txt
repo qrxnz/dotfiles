@@ -24,3 +24,4 @@ font-jetbrains-mono-nerd-font
 gdb
 rtorrent
 orbstack
+nushell
