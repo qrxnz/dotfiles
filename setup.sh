@@ -45,7 +45,24 @@ elif [[ $1 == "--macos" ]]; then
   cd $HOME
   echo "Installation Completed!"
 
+# Shell only
+ elif [[ $1 == "--shell-only" ]]; then
+  # Sync dotfiles
+  stow files --adopt --ignore=homebrew --ignore=hyprland --ignore=waybar --ignore=wlogoout --kitty --foot
+
+
+  # Prepare directories
+  mkdir -p ~/.local/bin/
+
+  # Install zplug (ZSH Plugin Manager)
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zshr
+
+  echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+
+  cd $HOME
+  echo "Installation Completed!"
+
 else
-  echo "Invalid argument. Try: ./setup.sh --hyprland-default or ./setup.sh --macos"
+  echo "Invalid argument. Try: ./setup.sh --hyprland-default || ./setup.sh --shell-only || ./setup.sh --macos"
   exit 1
 fi
