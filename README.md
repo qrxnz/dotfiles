@@ -7,6 +7,7 @@
 </p>
 
 ## ✒️ Description
+
 > Linux dotfiles and NixOS configuration built with Snowfall. My setup is tailored for IT security and DevOps tasks
 
 My configuration is tailored for tasks in the areas of DevOps and IT security. The key details I emphasized are reproducibility and a personalized experience to achieve an efficient and enjoyable workflow.
@@ -22,7 +23,7 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 ## ❄️ NixOs Machines
 
--  mentay
+- mentay
 
 soon ...
 
@@ -65,13 +66,23 @@ chmod +x ./setup.sh
 
 Prerequisite: `stow`, `zsh`, `curl`
 
--  Hyprland dotfiles
+- Hyprland dotfiles
 
 > \[!WARNING\]
 > Remember to install the necessary packages on your distribution.
 
 ```sh
 ./setup.sh --hyprland-default
+
+```
+
+- Shell only dots
+
+> \[!WARNING\]
+> Remember to install the necessary packages on your distribution.
+
+```sh
+./setup.sh --shell-only
 ```
 
 #### 🍏 MacOS
@@ -95,6 +106,7 @@ If you want to use my tmux configuration, I recommend installing it through nix 
 ```sh
 nix profile install github:qrxnz/tmux-flake
 ```
+
 #### 🐱 Neovim
 
 If you want to use my neovim configuration, I recommend installing it through nix profile
