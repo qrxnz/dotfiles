@@ -55,7 +55,7 @@ elif [[ $1 == "--macos" ]]; then
   mkdir -p ~/.local/bin/
 
   # Install zplug (ZSH Plugin Manager)
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zshr
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
 
