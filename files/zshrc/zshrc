@@ -273,7 +273,9 @@ source ~/.config/zshrc/zsh/theme/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 
 # init homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)" &> /dev/null
+if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 #
 # Prompt
