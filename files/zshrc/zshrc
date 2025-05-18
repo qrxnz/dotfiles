@@ -171,6 +171,7 @@ alias cls="clear"
 alias csl="clear"
 
 # other
+alias o="orb"
 alias t="tmux"
 alias df="duf"
 alias rr="ranger"
@@ -272,7 +273,7 @@ source ~/.config/zshrc/zsh/theme/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 
 # init homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)" &> /dev/null
 
 #
 # Prompt
