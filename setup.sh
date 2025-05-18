@@ -48,7 +48,7 @@ elif [[ $1 == "--macos" ]]; then
 # Shell only
  elif [[ $1 == "--shell-only" ]]; then
   # Sync dotfiles
-  stow files --adopt --ignore=homebrew --ignore=hyprland --ignore=waybar --ignore=wlogoout --kitty --foot
+  stow files --adopt --ignore=homebrew --ignore=hyprland --ignore=waybar --ignore=wlogoout --ignore=kitty --ignore=foot
 
 
   # Prepare directories
