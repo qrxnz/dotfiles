@@ -26,3 +26,4 @@ rtorrent
 orbstack
 nushell
 ipatool
+hurl
