@@ -27,3 +27,4 @@ orbstack
 nushell
 ipatool
 hurl
+ipcalc
