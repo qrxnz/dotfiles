@@ -1,4 +1,4 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # Hyprland Setup
 if [[ $1 == "--hyprland-default" ]]; then
@@ -14,16 +14,13 @@ if [[ $1 == "--hyprland-default" ]]; then
 
   # Download & Install font
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
-
   unzip JetBrainsMono.zip -d ~/.local/share/fonts/
-
   rm ./JetBrainsMono.zip
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
 
   cd $HOME
   echo "Installation Completed!"
-fi
 
 elif [[ $1 == "--macos" ]]; then
   # Sync dotfiles
@@ -45,13 +42,10 @@ elif [[ $1 == "--macos" ]]; then
 
   cd $HOME
   echo "Installation Completed!"
-fi
 
-# Shell only
 elif [[ $1 == "--shell-only" ]]; then
   # Sync dotfiles
   stow files --adopt --ignore=homebrew --ignore=hyprland --ignore=waybar --ignore=wlogoout --ignore=kitty --ignore=foot
-
 
   # Prepare directories
   mkdir -p ~/.local/bin/
@@ -63,16 +57,13 @@ elif [[ $1 == "--shell-only" ]]; then
 
   cd $HOME
   echo "Installation Completed!"
-fi
 
-# Kali lincox only
 elif [[ $1 == "--kali-lincox" ]]; then
   cd kali-setup-bspwm &&\
-    chmod +x kali.sh root.sh ; ./kali.sh &&\
+    chmod +x kali.sh root.sh && ./kali.sh &&\
     sudo ./root.sh
-fi
 
 else
   echo "Invalid argument. Try: ./setup.sh --hyprland-default || ./setup.sh --shell-only || ./setup.sh --macos || ./setup.sh --kali-lincox"
   exit 1
-done
+fi
