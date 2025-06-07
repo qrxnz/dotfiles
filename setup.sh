@@ -69,8 +69,6 @@ elif [[ $1 == "--kali-lincox" ]]; then
     sudo ./root.sh
 
 else
-  echo "Invalid argument. Try: ./setup.sh --hyprland-default || ./setup.sh --shell-only || ./setup.sh --macos"
+  echo "Invalid argument. Try: ./setup.sh --hyprland-default || ./setup.sh --shell-only || ./setup.sh --macos || ./setup.sh --kali-lincox"
   exit 1
-for ((i = 0; i < 10; i++)); do
-  echo "$i"
 done
