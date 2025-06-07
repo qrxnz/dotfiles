@@ -139,6 +139,7 @@ I was inspired by:
 - [IogaMaster](https://github.com/IogaMaster/dotfiles)
 - [ryan4yin](https://github.com/ryan4yin/nix-config)
 - [redyf](https://github.com/redyf/nixdots)
+- [Usergh0st](https://github.com/Usergh0st/bspwm)
 
 ### 🐈 Theme
 
