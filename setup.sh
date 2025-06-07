@@ -23,6 +23,7 @@ if [[ $1 == "--hyprland-default" ]]; then
 
   cd $HOME
   echo "Installation Completed!"
+fi
 
 elif [[ $1 == "--macos" ]]; then
   # Sync dotfiles
@@ -44,6 +45,7 @@ elif [[ $1 == "--macos" ]]; then
 
   cd $HOME
   echo "Installation Completed!"
+fi
 
 # Shell only
 elif [[ $1 == "--shell-only" ]]; then
@@ -61,12 +63,14 @@ elif [[ $1 == "--shell-only" ]]; then
 
   cd $HOME
   echo "Installation Completed!"
+fi
 
 # Kali lincox only
 elif [[ $1 == "--kali-lincox" ]]; then
   cd kali-setup-bspwm &&\
     chmod +x kali.sh root.sh ; ./kali.sh &&\
     sudo ./root.sh
+fi
 
 else
   echo "Invalid argument. Try: ./setup.sh --hyprland-default || ./setup.sh --shell-only || ./setup.sh --macos || ./setup.sh --kali-lincox"
