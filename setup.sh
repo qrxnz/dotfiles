@@ -62,7 +62,15 @@ elif [[ $1 == "--shell-only" ]]; then
   cd $HOME
   echo "Installation Completed!"
 
+# Kali lincox only
+elif [[ $1 == "--kali-lincox" ]]; then
+  cd kali-setup-bspwm &&\
+    chmod +x kali.sh root.sh ; ./kali.sh &&\
+    sudo ./root.sh
+
 else
   echo "Invalid argument. Try: ./setup.sh --hyprland-default || ./setup.sh --shell-only || ./setup.sh --macos"
   exit 1
-fi
+for ((i = 0; i < 10; i++)); do
+  echo "$i"
+done

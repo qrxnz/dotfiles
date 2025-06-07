@@ -85,6 +85,12 @@ Prerequisite: `stow`, `zsh`, `curl`
 ./setup.sh --shell-only
 ```
 
+- Kali lincox
+
+```sh
+./setup.sh --kali-lincox
+```
+
 #### 🍏 MacOS
 
 Prerequisite: `homebrew`, `stow`, `curl`

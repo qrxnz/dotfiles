@@ -1,3 +1,6 @@
 [submodule "wallpapers"]
 	path = wallpapers
 	url = https://github.com/qrxnz/redyf-wallpapers.git
+[submodule "kali-bspwm-setup"]
+	path = kali-bspwm-setup
+	url = https://github.com/qrxnz/kali-bspwm-setup.git
