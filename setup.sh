@@ -59,7 +59,7 @@ elif [[ $1 == "--shell-only" ]]; then
   echo "Installation Completed!"
 
 elif [[ $1 == "--kali-lincox" ]]; then
-  cd kali-setup-bspwm &&\
+  cd kali-bspwm-setup &&\
     chmod +x kali.sh root.sh && ./kali.sh &&\
     sudo ./root.sh
 
