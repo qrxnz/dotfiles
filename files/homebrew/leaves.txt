@@ -28,3 +28,4 @@ nushell
 ipatool
 hurl
 ipcalc
+kew
