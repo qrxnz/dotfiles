@@ -48,6 +48,8 @@ fi
 alias cat="bat -pp"
 alias less="bat --paging=always"
 
+alias catn="/bin/cat"
+
 # zoxide (modern cd replacement)
 alias cd="z"
 
