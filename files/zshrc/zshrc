@@ -300,3 +300,16 @@ eval "$(zoxide init zsh)"
 
 # init nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
+
+#
+# Wise words
+#
+
+
+# Nelson Mandela
+if command -v gum &> /dev/null; then
+  gum style \
+	--foreground 212 --border-foreground 212 --border double \
+	--align center --width 50 --margin "1 2" --padding "2 4" \
+	'"Education is the most powerful weapon which you can use to change the world."' '~Nelson Mandela'
+fi
