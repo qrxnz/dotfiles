@@ -159,6 +159,13 @@ get() {
   fi
 }
 
+db-query() {
+  if [ $# -lt 2 ]; then
+    echo "Usage: <database_file> \"<sql_query>\""
+  fi
+  nu -c "open $1 | query db \"$2\""
+}
+
 # mental issues
 alias lcs="clear"
 alias cleare ="clear"
