@@ -149,6 +149,16 @@ yt2mp4() {
   fi
 }
 
+# nushell
+get() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a valid link (options)"
+    else
+      nu -c "http get '$1'"
+  fi
+}
+
 # mental issues
 alias lcs="clear"
 alias cleare ="clear"
