@@ -201,6 +201,7 @@ alias cds="du -h --max-depth=1 ."
 alias www="sudo python3 -m http.server 80"
 alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done"
 alias fcd='z $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf)'
+alias a="arsenal"
 
 spider() {
   if [ $# -eq 0 ]
