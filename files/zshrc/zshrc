@@ -193,11 +193,13 @@ alias csl="clear"
 # others
 alias o="orb"
 alias t="tmux"
+alias j="just"
 alias df="duf"
 alias rr="ranger"
 alias rel="source ~/.zshrc"
 alias gdb="gdb --quiet"
 alias cds="du -h --max-depth=1 ."
+alias pyreq="pip freeze > requirements.txt"
 alias www="sudo python3 -m http.server 80"
 alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done"
 alias fcd='z $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf)'
