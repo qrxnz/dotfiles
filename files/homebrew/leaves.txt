@@ -30,3 +30,5 @@ hurl
 ipcalc
 kew
 gau
+vscodium
+mactex
