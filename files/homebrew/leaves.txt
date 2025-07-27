@@ -32,3 +32,4 @@ kew
 gau
 vscodium
 mactex
+android-platform-tools
