@@ -33,3 +33,4 @@ gau
 vscodium
 mactex
 android-platform-tools
+glow
