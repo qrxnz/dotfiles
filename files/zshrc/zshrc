@@ -205,6 +205,7 @@ alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep
 alias fcd='z $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf)'
 alias a="arsenal"
 alias burl='curl -x http://127.0.0.1:8080/ -k'
+alias pdfr='zathura "$(gum choose *.pdf)"'
 
 spider() {
   if [ $# -eq 0 ]
