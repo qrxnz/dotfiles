@@ -35,3 +35,4 @@ mactex
 android-platform-tools
 glow
 gemini-cli
+bruno
