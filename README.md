@@ -32,19 +32,19 @@ soon ...
 <details>
 <summary>System management tool `sys`</summary>
 
-Rebuild (in flake directory)
+Rebuild (in flake directory):
 
 ```sh
 sudo sys rebuild # or `r` as a shorthand
 ```
 
-Testing an ephemeral config
+Testing an ephemeral config:
 
 ```sh
 sudo sys test # or `t` as a shorthand
 ```
 
-Deploying to a server (in flake directory)
+Deploying to a server (in flake directory):
 
 ```sh
 sudo sys deploy HOSTNAME # or `d` as a shorthand
@@ -93,9 +93,74 @@ Prerequisite: `homebrew`, `stow`, `curl`
 ./setup.sh --macos
 ```
 
-### ❄️ nixos machines
+### ❄️ NixOS Installation
 
-soon ...
+#### Disk Partitioning
+
+First, you need to partition your drive. The following commands will create a GPT partition table and set up partitions for your root, swap, and boot filesystems.
+
+- **Become root:**
+  Gain root privileges to manage the disks.
+
+  ```sh
+  sudo su
+  ```
+
+- **Partition the drive:**
+  This example uses `/dev/nvme0n1`. **Make sure to replace this with your actual drive.**
+  This creates three partitions:
+
+  - A `512MB` boot partition.
+  - An `8GB` swap partition.
+  - The rest of the disk for the root (`/`) partition.
+
+  ```sh
+  parted /dev/nvme0n1 -- mklabel gpt
+  parted /dev/nvme0n1 -- mkpart primary 512MB -8GB
+  parted /dev/nvme0n1 -- mkpart primary linux-swap -8GB 100%
+  parted /dev/nvme0n1 -- mkpart ESP fat32 1MB 512MB
+  parted /dev/nvme0n1 -- set 3 esp on
+  ```
+
+- **Format and mount partitions:**
+  Next, format the partitions with the appropriate filesystems and mount them.
+
+  ```sh
+  mkfs.ext4 -L nixos /dev/nvme0n1p1
+  mkswap -L swap /dev/nvme0n1p2
+  mkfs.fat -F 32 -n boot /dev/nvme0n1p3
+  mount /dev/disk/by-label/nixos /mnt
+  mkdir -p /mnt/boot
+  mount /dev/disk/by-label/boot /mnt/boot
+  swapon /dev/nvme0n1p2
+  ```
+
+#### Final Installation Steps
+
+Now you can clone the dotfiles and install NixOS.
+
+- **Clone the repository:**
+  Clone this repository into the `/mnt` directory.
+
+  ```sh
+  git clone --recursive https://github.com/qrxnz/dotfiles .dotfiles &&\
+  cd .dotfiles
+  ```
+
+- **Generate hardware configuration:**
+  Let NixOS generate a hardware configuration file for your system and then copy it into the systems directory of this flake. **Replace `hostname` with the desired hostname for your new system (e.g., `mentay`).**
+
+  ```sh
+  nixos-generate-config --root /mnt &&\
+  cp /mnt/etc/nixos/hardware-configuration.nix .dotfiles/systems/x86_64-linux/hostname/
+  ```
+
+- **Install NixOS:**
+  Finally, install NixOS using the flake. **Remember to replace `hostname` with the one you chose previously.**
+
+  ```sh
+  nixos-install --flake .#hostname
+  ```
 
 ### 👾 Others
 
