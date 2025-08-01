@@ -23,7 +23,7 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 - mentay 🍃
   - **WM:** Hyprland
-  - **Shell:** Zsh
+  - **Shell:** Nu
   - **Terminal:** Kitty
   - **Additional:** KVM, Docker, Waydroid, AMD GPU support, Development and Creative suites.
 
