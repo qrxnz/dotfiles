@@ -21,9 +21,11 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 ## ❄️ NixOs Machines
 
-- mentay
-
-soon ...
+- mentay 🍃
+  - **WM:** Hyprland
+  - **Shell:** Zsh
+  - **Terminal:** Kitty
+  - **Additional:** KVM, Docker, Waydroid, AMD GPU support, Development and Creative suites.
 
 ### 🧰 features
 
