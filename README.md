@@ -21,7 +21,7 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 ## ❄️ NixOs Machines
 
-- mentay 🍃 (Laptop AMD64)
+- mentay 🍃 (Laptop x86_64)
   - **WM:** Hyprland
   - **Shell:** Nu
   - **Terminal:** Kitty
