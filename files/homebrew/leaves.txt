@@ -36,3 +36,4 @@ android-platform-tools
 glow
 gemini-cli
 bruno
+bettercap
