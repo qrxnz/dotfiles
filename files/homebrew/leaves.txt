@@ -37,3 +37,4 @@ glow
 gemini-cli
 bruno
 bettercap
+tmux
