@@ -12,12 +12,17 @@ if [[ $1 == "--hyprland-default" ]]; then
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+  # Install tpm (Tmux Plugin Manager)
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
   # Download & Install font
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
   unzip JetBrainsMono.zip -d ~/.local/share/fonts/
   rm ./JetBrainsMono.zip
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+
+  echo "source-file ~/.config/tmux/conf" > ~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
@@ -32,6 +37,9 @@ elif [[ $1 == "--macos" ]]; then
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+  # Install tpm (Tmux Plugin Manager)
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
   # Homebrew pkgs
   xargs brew install < ./files/homebrew/leaves.txt
 
@@ -39,6 +47,8 @@ elif [[ $1 == "--macos" ]]; then
   bat cache --build
 
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+
+  echo "source-file ~/.config/tmux/conf" > ~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
@@ -53,7 +63,12 @@ elif [[ $1 == "--shell-only" ]]; then
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+  # Install tpm (Tmux Plugin Manager)
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
   echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+
+  echo "source-file ~/.config/tmux/conf" > ~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
