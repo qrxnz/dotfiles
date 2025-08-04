@@ -217,6 +217,34 @@ spider() {
   fi
 }
 
+apuntes() { #Viva España!
+  local search_dir=~/Sync/CloudSync
+
+  if [ ! -d "$search_dir" ]; then
+    echo "Error: Directory not found: $search_dir"
+    return 1
+  fi
+
+  local relative_path
+  relative_path=$(fd --type f --extension md --extension pdf . --base-directory "$search_dir" | gum choose --height 20)
+
+  if [[ -n "$relative_path" ]]; then
+    local full_path="$search_dir/$relative_path"
+
+    case "$full_path" in
+      *.md)
+        glow "$full_path"
+        ;;
+      *.pdf)
+        zathura "$full_path" >/dev/null 2>&1 &
+        ;;
+      *)
+        echo "Unsupported file type: $full_path"
+        ;;
+    esac
+  fi
+}
+
 #
 # Paths & variables
 #
