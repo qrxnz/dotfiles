@@ -218,7 +218,7 @@ spider() {
 }
 
 apuntes() { #Viva España!
-  local search_dir=~/Sync/CloudSync
+  local search_dir=~/CloudSync
 
   if [ ! -d "$search_dir" ]; then
     echo "Error: Directory not found: $search_dir"
