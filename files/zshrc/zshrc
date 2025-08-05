@@ -71,8 +71,8 @@ alias vim="nvim"
 alias nano="nvim"
 
 # vscodium
-alias vs="codium"
-alias vsc="codium ."
+alias vs="code"
+alias vsc="code ."
 
 # Nix
 alias x='nix run .'
