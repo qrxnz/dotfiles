@@ -38,3 +38,4 @@ gemini-cli
 bruno
 bettercap
 tmux
+radare2
