@@ -30,7 +30,6 @@ hurl
 ipcalc
 kew
 gau
-vscodium
 mactex
 android-platform-tools
 glow
@@ -39,3 +38,4 @@ bruno
 bettercap
 tmux
 radare2
+visual-studio-code
