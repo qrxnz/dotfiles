@@ -40,12 +40,6 @@ alias tree="eza -l -a --icons --tree --ignore-glob='.git'"
 alias tre="eza -l -a --icons --tree --level 2 --ignore-glob='.git'"
 
 # bat (modern cat replacement)
-if command -v bat &> /dev/null; then
-  :
-else
-  alias bat="batcat"
-fi
-
 alias cat="bat -pp"
 alias less="bat --paging=always"
 
@@ -207,6 +201,7 @@ alias a="arsenal"
 alias ai="gemini --sandbox"
 alias burl='curl -x http://127.0.0.1:8080/ -k'
 alias pdfr='zathura "$(gum choose *.pdf)"'
+alias cowsay='fortune literature | cowsay'
 
 spider() {
   if [ $# -eq 0 ]
