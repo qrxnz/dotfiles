@@ -14,9 +14,17 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 
 ## 🖼️ Gallery
 
+### 🍏 MacOS
+
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <img src="./.github/assets/img/macos.png" style="margin: 5px; width: 45%;">
+</div>
+
+
+### 🐧 Linux (Desktop)
+
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
     <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px; width: 45%;">
-    <img src="./.github/assets/img/macos.jpg" style="margin: 5px; width: 45%;">
 </div>
 
 ## ❄️ NixOs Machines
