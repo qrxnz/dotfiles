@@ -39,3 +39,5 @@ bettercap
 tmux
 radare2
 visual-studio-code
+noir
+dalfox
