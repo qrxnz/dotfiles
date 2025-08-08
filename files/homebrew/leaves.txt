@@ -2,7 +2,6 @@ starship
 bat
 eza
 neovim
-librewolf
 kitty
 ripgrep
 zoxide
