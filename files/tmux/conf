@@ -25,7 +25,7 @@ set -g @floax-bind 'p'
 
 # Dracula config
 set -g @dracula-show-left-icon ">(.__.)< | #S"
-set -g @dracula-plugins "cwd ssh-session network"
+set -g @dracula-plugins "cwd ssh-session"
 
 # Lower delay waiting for chord after escape key press.
 set -g escape-time 0
