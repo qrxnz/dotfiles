@@ -31,6 +31,46 @@ alias grr='git review -R'
 alias gwl='git worktree list'
 alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
 
+gs() { # Function for interactively switching between branches and PRs
+  # Check if the 'gh' command is available and if the user is logged in
+  if ! command -v gh &> /dev/null || ! gh auth status &> /dev/null; then
+    # If 'gh' is not available, show only local branches
+    local branch_only
+    branch_only=$(git branch --format='%(refname:short)' | gum choose --header "Select branch (GitHub CLI not available)")
+
+    if [ -n "$branch_only" ]; then
+      git switch "$branch_only"
+    fi
+    return
+  fi
+
+  # Combine the list of local branches and open Pull Requests
+  local selection
+  selection=$((git branch --format='%(refname:short)'; gh pr list --limit 40 --json number,title --jq '.[] | "pr#\(.number) \(.title)"') | \
+    gum choose --header "Select a branch or Pull Request" --height 20)
+
+  # Exit if nothing was selected (e.g., by pressing Esc)
+  if [ -z "$selection" ]; then
+    echo "Cancelled."
+    return
+  fi
+
+  # Check if the selected item is a Pull Request
+  if [[ $selection == pr#* ]]; then
+    # Extract the PR number from the string (e.g., from "pr#123 PR Title")
+    local pr_number
+    pr_number=$(echo "$selection" | sed -E 's/pr#([0-9]+).*/\1/')
+
+    # Switch to the branch associated with the given PR
+    echo "Checking out Pull Request #$pr_number..."
+    gh pr checkout "$pr_number"
+  else
+    # If it's not a PR, it's a regular branch
+    echo "Switching to branch '$selection'..."
+    git switch "$selection"
+  fi
+}
+
 # eza (modern ls replacement)
 alias ls="eza --icons"
 alias ll="eza -l --icons"
