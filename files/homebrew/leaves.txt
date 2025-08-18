@@ -45,3 +45,4 @@ subfinder
 gum
 gh
 gf
+charmbracelet/tap/crush
