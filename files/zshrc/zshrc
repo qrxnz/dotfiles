@@ -71,6 +71,9 @@ gs() { # Function for interactively switching between branches and PRs
   fi
 }
 
+
+alias repos='gh repo list --limit 100 --json name,owner --jq ".[] | \"\(.owner.login)/\(.name)\"" | gum filter --placeholder "Wybierz repozytorium..." | xargs gh repo view'
+
 # eza (modern ls replacement)
 alias ls="eza --icons"
 alias ll="eza -l --icons"
