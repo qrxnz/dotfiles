@@ -283,6 +283,15 @@ apuntes() { #Viva España!
   fi
 }
 
+tn() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a session name"
+    else
+      tmux new -s "${@}"
+  fi
+}
+
 #
 # Paths & variables
 #
