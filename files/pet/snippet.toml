@@ -42,7 +42,7 @@ tag = ["hackpet"]
 
 # hackpet :: find_subdomain_takeover_1.toml
 [[snippets]]
-command = "subfinder -d <domain> >> domains ; assetfinder -subs-only <domain> >> domains ; amass enum -norecursive -noalts -d <domain> >> domains ; NtHiM -f  | tee takeover"
+command = "subfinder -d <domain> >> domains ; assetfinder -subs-only <domain> >> domains ; amass enum -norecursive -noalts -d <domain> >> domains ; NtHiM -f domains  | tee takeover"
 description = "Find subdomain and takeover (with subfinder/amass/assetfinder/NtHiM)"
 output = ""
 tag = ["hackpet"]
