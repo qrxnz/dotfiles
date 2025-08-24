@@ -201,13 +201,6 @@ description = "Sort & Tested Domains from Recon.dev"
 output = ""
 tag = ["hackpet"]
 
-# hackpet :: subdomain_takeover.toml
-[[snippets]]
-command = "subfinder -d <target> >> domains ; assetfinder -subs-only <target> >> domains ; amass enum -norecursive -noalts -d <target> >> domains ; subjack -w domains -t 100 -timeout 30 -ssl -c ~/go/src/github.com/haccer/subjack/fingerprints.json -v 3 >> takeover ;"
-description = "Find Subdomains TakeOver"
-output = ""
-tag = ["hackpet"]
-
 # hackpet :: targets_urls_paramspider.toml
 [[snippets]]
 command = "cat <domains file> | xargs -I % python3 ~/tool/ParamSpider/paramspider.py -l high -o ./spidering/paramspider/% -d % ;"
