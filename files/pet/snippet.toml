@@ -42,8 +42,8 @@ tag = ["hackpet"]
 
 # hackpet :: find_subdomain_takeover_1.toml
 [[snippets]]
-command = "subfinder -d <domain> >> domains ; NtHiM -f domains  | tee takeover"
-description = "Find subdomain and takeover (with subfinder/NtHiM)"
+command = "subfinder -d <domain> >> domains ; cat domains | httprobe | tee realurls ; NtHiM -f realurls | tee takeover"
+description = "Find subdomain and takeover (with subfinder/httprobe/NtHiM)"
 output = ""
 tag = ["hackpet"]
 
