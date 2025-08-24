@@ -47,3 +47,4 @@ gh
 gf
 charmbracelet/tap/crush
 gitleaks
+amass
