@@ -48,3 +48,4 @@ gf
 charmbracelet/tap/crush
 gitleaks
 amass
+feroxbuster
