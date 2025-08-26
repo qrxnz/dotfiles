@@ -295,6 +295,19 @@ tn() {
   fi
 }
 
+leenks() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a file"
+    else
+      local input="$1"
+      local output="${input}-links"
+      awk '{for(i=1;i<=NF;i++) if ($i ~ /^https?:\/\//) print $i}' "$input" > "$output"
+  fi
+}
+
+
+
 #
 # Paths & variables
 #
