@@ -107,7 +107,6 @@ alias connect="kitty +kitten ssh"
 # neovim
 alias v="nvim"
 alias vi="nvim"
-alias vim="nvim"
 alias nano="nvim"
 
 # vscodium
