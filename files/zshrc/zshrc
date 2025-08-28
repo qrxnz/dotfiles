@@ -305,7 +305,16 @@ leenks() {
   fi
 }
 
-
+dff() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a file"
+    else
+      local input="$1"
+      local output="dalfox-${input}"
+      dalfox file "$input" > "$output"
+  fi
+}
 
 #
 # Paths & variables
@@ -430,8 +439,12 @@ eval "$(zoxide init zsh)"
 # Nix
 #
 
-# init nix
+# nix things
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
+
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
 
 #
 # Wise words
