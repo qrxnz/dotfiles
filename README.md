@@ -180,12 +180,6 @@ If you want to use my neovim configuration, I recommend installing it through ni
 nix profile install github:qrxnz/nveem
 ```
 
-Or you can install it directly
-
-```sh
-git clone https://github.com/qrxnz/nveem.git --depth=1 ~/.config/nvim/ && nvim
-```
-
 ## 🗒️ Credits
 
 ### 🎨 Inspiration
