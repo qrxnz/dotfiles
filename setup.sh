@@ -20,9 +20,9 @@ if [[ $1 == "--hyprland-default" ]]; then
   unzip JetBrainsMono.zip -d ~/.local/share/fonts/
   rm ./JetBrainsMono.zip
 
-  echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+  echo "source ~/.config/zshrc/zshrc" >~/.zshrc
 
-  echo "source-file ~/.config/tmux/conf" > ~/.tmux.conf
+  echo "source-file ~/.config/tmux/conf" >~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
@@ -41,14 +41,11 @@ elif [[ $1 == "--macos" ]]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
   # Homebrew pkgs
-  xargs brew install < ./files/homebrew/leaves.txt
+  xargs brew install <./files/homebrew/leaves.txt
 
-  # Rebuild batcat cache
-  bat cache --build
+  echo "source ~/.config/zshrc/zshrc" >~/.zshrc
 
-  echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
-
-  echo "source-file ~/.config/tmux/conf" > ~/.tmux.conf
+  echo "source-file ~/.config/tmux/conf" >~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
@@ -66,9 +63,9 @@ elif [[ $1 == "--shell-only" ]]; then
   # Install tpm (Tmux Plugin Manager)
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-  echo "source ~/.config/zshrc/zshrc" > ~/.zshrc
+  echo "source ~/.config/zshrc/zshrc" >~/.zshrc
 
-  echo "source-file ~/.config/tmux/conf" > ~/.tmux.conf
+  echo "source-file ~/.config/tmux/conf" >~/.tmux.conf
 
   cd $HOME
   echo "Installation Completed!"
