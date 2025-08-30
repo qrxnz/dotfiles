@@ -231,7 +231,6 @@ alias csl="clear"
 
 # others
 alias o="orb"
-alias t="tmux"
 alias j="just"
 alias df="duf"
 alias rr="ranger"
@@ -285,7 +284,13 @@ apuntes() { #Viva España!
   fi
 }
 
-tn() {
+
+tm() {
+	# Attach to the session named after the user, creating it if it doesn't exist.
+	tmux attach-session -t "$USER" &>/dev/null || tmux new-session -s "$USER"
+}
+
+tmn() {
   if [ $# -eq 0 ]
     then
       echo "[i] Usage: Enter a session name"
