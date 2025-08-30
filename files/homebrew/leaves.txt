@@ -7,7 +7,6 @@ ripgrep
 zoxide
 xh
 duf
-dog
 fd
 jq
 gnu-sed
@@ -49,3 +48,4 @@ charmbracelet/tap/crush
 gitleaks
 amass
 feroxbuster
+pixieditor
