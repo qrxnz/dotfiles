@@ -109,6 +109,23 @@ alias v="nvim"
 alias vi="nvim"
 alias nano="nvim"
 
+# tmux
+tm() {
+	# Attach to the session named after the user, creating it if it doesn't exist.
+	tmux attach-session -t "$USER" &>/dev/null || tmux new-session -s "$USER"
+}
+
+tmn() {
+  if [ $# -eq 0 ]
+    then
+      echo "[i] Usage: Enter a session name"
+    else
+      tmux new -s "${@}"
+  fi
+}
+
+alias tmd="tmux detach"
+
 # vscodium
 alias vs="code"
 alias vsc="code ."
@@ -281,21 +298,6 @@ apuntes() { #Viva España!
         echo "Unsupported file type: $full_path"
         ;;
     esac
-  fi
-}
-
-
-tm() {
-	# Attach to the session named after the user, creating it if it doesn't exist.
-	tmux attach-session -t "$USER" &>/dev/null || tmux new-session -s "$USER"
-}
-
-tmn() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a session name"
-    else
-      tmux new -s "${@}"
   fi
 }
 
