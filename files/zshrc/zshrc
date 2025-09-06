@@ -126,13 +126,10 @@ tmn() {
 
 alias tmd="tmux detach"
 
-# vscodium
-alias vs="code"
-alias vsc="code ."
-
-# Nix
+# nix
 alias x='nix run .'
 alias nd='nix develop'
+alias nfu='nix flake update'
 
 # direnv
 alias da='direnv allow'
@@ -263,15 +260,6 @@ alias burl='curl -x http://127.0.0.1:8080/ -k'
 alias pdfr='zathura "$(gum choose *.pdf)"'
 alias cowsay='fortune literature | cowsay'
 alias px='pet exec'
-
-spider() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a valid domain"
-    else
-      printf "${@}" | gau
-  fi
-}
 
 leenks() {
   if [ $# -eq 0 ]
