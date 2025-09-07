@@ -51,3 +51,4 @@ feroxbuster
 pixieditor
 act
 wget
+goreleaser
