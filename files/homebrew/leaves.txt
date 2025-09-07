@@ -49,3 +49,4 @@ gitleaks
 amass
 feroxbuster
 pixieditor
+act
