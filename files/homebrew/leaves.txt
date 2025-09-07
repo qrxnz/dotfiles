@@ -50,3 +50,4 @@ amass
 feroxbuster
 pixieditor
 act
+wget
