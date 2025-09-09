@@ -259,6 +259,7 @@ alias ai="gemini --sandbox"
 alias burl='curl -x http://127.0.0.1:8080/ -k'
 alias pdfr='zathura "$(gum choose *.pdf)"'
 alias cowsay='fortune literature | cowsay'
+alias t="yq '.tasks | keys | .[]' Taskfile.yml | gum choose | xargs task"
 alias px='pet exec'
 
 leenks() {
