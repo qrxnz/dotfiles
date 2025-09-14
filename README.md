@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://go-skill-icons.vercel.app/">
-    <img src="https://go-skill-icons.vercel.app/api/icons?i=bash,tmux,kitty,neovim,vscode,gemini,apple,nixos,linux,docker,qemu,hyprland" />
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=bash,tmux,kitty,neovim,gemini,apple,nixos,linux,docker,qemu,hyprland" />
   </a>
 </p>
 
@@ -19,7 +19,6 @@ My configuration is tailored for tasks in the areas of DevOps and IT security. T
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
     <img src="./.github/assets/img/macos.png" style="margin: 5px; width: 45%;">
 </div>
-
 
 ### 🐧 Linux (Desktop)
 
