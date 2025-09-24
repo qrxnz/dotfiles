@@ -54,3 +54,4 @@ wget
 goreleaser
 yq
 go-task
+gcalcli
