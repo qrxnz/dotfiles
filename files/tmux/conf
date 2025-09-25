@@ -21,7 +21,7 @@ set-option -g @ssh-split-r-key "R"
 
 wg_next_event="#(gcalcli --nocolor agenda | sed -n '2p')"
 
-set -g status-right "$wg_next_event"
+set -g status-right "📅 $wg_next_event 📅"
 
 # Floax config
 set -g @floax-bind 'p'
@@ -91,7 +91,7 @@ bind '"' split-window -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
 
 # Set status bar color
-set -g status-style 'bg=#e889cd'
+set -g status-style 'bg=#92B3F4'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
