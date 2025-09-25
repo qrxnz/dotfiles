@@ -51,7 +51,7 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # Bar position
 set-option -g status-position top
-set -g status-interval 1800
+set -g status-interval 600
 
 # Mouse on
 setw -g mouse on
