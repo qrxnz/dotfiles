@@ -1,0 +1,7 @@
+refactor(cli): remove unused Gemini CLI
+
+Removes all files and configurations related to the Gemini CLI, as it is no longer in use.
+
+- Deletes the `GEMINI.md` project overview.
+- Removes the `gemini-cli` package from the Homebrew leaves list.
+- Updates the `README.md` to remove the Gemini skill icon.
