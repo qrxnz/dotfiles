@@ -31,7 +31,6 @@ gau
 mactex
 android-platform-tools
 glow
-gemini-cli
 bruno
 bettercap
 tmux
