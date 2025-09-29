@@ -4,6 +4,7 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'omerxx/tmux-floax'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'pschmitt/tmux-ssh-split'
+set -g @plugin 'dracula/tmux'
 
 # SSH split config
 set-option -g @ssh-split-keep-cwd "true"
@@ -19,9 +20,12 @@ set-option -g @ssh-split-v-key "S"
 set-option -g @ssh-split-w-key "C"
 set-option -g @ssh-split-r-key "R"
 
+# Next event
 wg_next_event="#(gcalcli --nocolor agenda | sed -n '2p')"
 
-set -g status-right "📅 $wg_next_event 📅"
+# Dracula config
+set -g @dracula-show-left-icon "😺 | #S | 📅 $wg_next_event 📅"
+set -g @dracula-plugins "ssh-session"
 
 # Floax config
 set -g @floax-bind 'p'
@@ -89,9 +93,6 @@ setw -g aggressive-resize on
 bind c new-window -c "#{pane_current_path}"
 bind '"' split-window -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
-
-# Set status bar color
-set -g status-style 'bg=#92B3F4'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
