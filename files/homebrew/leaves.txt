@@ -53,3 +53,4 @@ goreleaser
 yq
 go-task
 gcalcli
+mickamy/tap/sql-tap
