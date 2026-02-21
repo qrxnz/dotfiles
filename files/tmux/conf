@@ -20,11 +20,8 @@ set-option -g @ssh-split-v-key "S"
 set-option -g @ssh-split-w-key "C"
 set-option -g @ssh-split-r-key "R"
 
-# Next event
-wg_next_event="#(gcalcli --nocolor agenda | sed -n '2p')"
-
 # Dracula config
-set -g @dracula-show-left-icon "😺 | #S | 📅 $wg_next_event 📅"
+set -g @dracula-show-left-icon "😺 | #S | computer goes brrrrrrrrrrr 😺"
 set -g @dracula-plugins "ssh-session"
 
 # Floax config
