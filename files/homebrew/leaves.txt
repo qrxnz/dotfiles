@@ -42,11 +42,9 @@ subfinder
 gum
 gh
 gf
-charmbracelet/tap/crush
 gitleaks
 amass
 feroxbuster
-pixieditor
 act
 wget
 goreleaser
