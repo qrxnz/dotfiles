@@ -52,3 +52,4 @@ yq
 go-task
 gcalcli
 mickamy/tap/sql-tap
+pipx
