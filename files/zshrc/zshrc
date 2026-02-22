@@ -261,6 +261,7 @@ alias pdfr='zathura "$(gum choose *.pdf)"'
 alias cowsay='fortune literature | cowsay'
 alias t="yq '.tasks | keys | .[]' Taskfile.yml | gum choose | xargs task"
 alias px='pet exec'
+alias sql='sqlit'
 
 leenks() {
   if [ $# -eq 0 ]
