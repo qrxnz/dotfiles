@@ -21,7 +21,7 @@ set-option -g @ssh-split-w-key "C"
 set-option -g @ssh-split-r-key "R"
 
 # Dracula config
-set -g @dracula-show-left-icon "😺 | #S | computer goes brrrrrrrrrrr 😺"
+set -g @dracula-show-left-icon "😺 | #S | #{newsboat_new_articles} 😺"
 set -g @dracula-plugins "ssh-session"
 
 # Floax config
@@ -85,11 +85,6 @@ setw -g clock-mode-style 24
 
 # Aggressively resize.
 setw -g aggressive-resize on
-
-# Set new panes to open in current directory
-bind c new-window -c "#{pane_current_path}"
-bind '"' split-window -c "#{pane_current_path}"
-bind % split-window -h -c "#{pane_current_path}"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
