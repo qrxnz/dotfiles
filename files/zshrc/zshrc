@@ -110,10 +110,11 @@ alias vi="nvim"
 alias nano="nvim"
 
 # tmux
-tm() {
-	# Attach to the session named after the user, creating it if it doesn't exist.
-	tmux attach-session -t "$USER" &>/dev/null || tmux new-session -s "$USER"
-}
+alias tm='tmux new-session -s main -d \; \
+    split-window -v \; \
+    select-layout "7cb6,169x44,0,0[169x7,0,0,0,169x36,0,8,2]" \; \
+    attach-session -t main \; \
+    select-pane -t 1'
 
 tmn() {
   if [ $# -eq 0 ]
