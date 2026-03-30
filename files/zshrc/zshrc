@@ -245,10 +245,39 @@ alias cls="clear"
 alias csl="clear"
 
 # Mac setup for pomo
-alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
-        -title 'Work Timer is up! Take a Break 😊'\
-        -appIcon '~/Pictures/pumpkin.png'\
-        -sound Crystal"
+work() {
+    while true; do
+        clear
+        local choice=$(gum choose '25m' '50m' 'All finished!')
+        
+        if [[ "$choice" == "All finished!" ]]; then
+            echo "Great job today! See you next time."
+            break
+        fi
+
+        local w_time b_time
+        if [[ "$choice" == "25m" ]]; then
+            w_time="25m"
+            b_time="5m"
+        else
+            w_time="50m"
+            b_time="10m"
+        fi
+
+        timer "$w_time" && terminal-notifier -message 'Pomodoro' \
+            -title 'Work Timer is up! Take a Break 😊' \
+            -appIcon '~/Pictures/pumpkin.png' \
+            -sound Crystal
+
+        echo "Break countdown ($b_time) will start in 5 seconds..."
+        sleep 5
+
+        timer "$b_time" && terminal-notifier -message 'Pomodoro' \
+            -title 'Break is over! Get back to work 😬' \
+            -appIcon '~/Pictures/pumpkin.png' \
+            -sound Crystal
+    done
+}
 
 alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
         -title 'Break is over! Get back to work 😬'\
