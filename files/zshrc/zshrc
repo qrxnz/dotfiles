@@ -116,17 +116,6 @@ alias tm='tmux new-session -s main -d \; \
     attach-session -t main \; \
     select-pane -t 1'
 
-tmn() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a session name"
-    else
-      tmux new -s "${@}"
-  fi
-}
-
-alias tmd="tmux detach"
-
 # nix
 alias x='nix run .'
 alias nd='nix develop'
@@ -244,51 +233,10 @@ alias rcler="clear"
 alias cls="clear"
 alias csl="clear"
 
-# Mac setup for pomo
-work() {
-    while true; do
-        clear
-        local choice=$(gum choose '25m' '50m' 'All finished!')
-        
-        if [[ "$choice" == "All finished!" ]]; then
-            echo "Great job today! See you next time."
-            break
-        fi
-
-        local w_time b_time
-        if [[ "$choice" == "25m" ]]; then
-            w_time="25m"
-            b_time="5m"
-        else
-            w_time="50m"
-            b_time="10m"
-        fi
-
-        timer "$w_time" && terminal-notifier -message 'Pomodoro' \
-            -title 'Work Timer is up! Take a Break 😊' \
-            -appIcon '~/Pictures/pumpkin.png' \
-            -sound Crystal
-
-        echo "Break countdown ($b_time) will start in 5 seconds..."
-        sleep 5
-
-        timer "$b_time" && terminal-notifier -message 'Pomodoro' \
-            -title 'Break is over! Get back to work 😬' \
-            -appIcon '~/Pictures/pumpkin.png' \
-            -sound Crystal
-    done
-}
-
-alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
-        -title 'Break is over! Get back to work 😬'\
-        -appIcon '~/Pictures/pumpkin.png'\
-        -sound Crystal"
-
 # others
 alias o="orb"
 alias j="just"
 alias df="duf"
-alias rr="ranger"
 alias rel="source ~/.zshrc"
 alias gdb="gdb --quiet"
 alias cds="du -h --max-depth=1 ."
@@ -298,33 +246,9 @@ alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep
 alias fcd='z $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf)'
 alias ai="gemini --sandbox"
 alias burl='curl -x http://127.0.0.1:8080/ -k'
-alias pdfr='zathura "$(gum choose *.pdf)"'
-alias cowsay='fortune literature | cowsay'
 alias t="yq '.tasks | keys | .[]' Taskfile.yml | gum choose | xargs task"
 alias px='pet exec'
 alias sql='sqlit'
-
-leenks() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a file"
-    else
-      local input="$1"
-      local output="${input}-links"
-      awk '{for(i=1;i<=NF;i++) if ($i ~ /^https?:\/\//) print $i}' "$input" > "$output"
-  fi
-}
-
-dff() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: Enter a file"
-    else
-      local input="$1"
-      local output="dalfox-${input}"
-      dalfox file "$input" > "$output"
-  fi
-}
 
 #
 # Paths & variables
