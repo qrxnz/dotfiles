@@ -1,18 +1,15 @@
 starship
 bat
 eza
-neovim
 kitty
 ripgrep
 zoxide
-xh
 duf
 fd
 jq
 gnu-sed
 htop
 lazygit
-ranger
 direnv
 hexyl
 netcat
@@ -24,9 +21,7 @@ rtorrent
 orbstack
 nushell
 ipatool
-hurl
 ipcalc
-kew
 gau
 mactex
 android-platform-tools
@@ -34,7 +29,6 @@ glow
 bruno
 bettercap
 tmux
-radare2
 noir
 dalfox
 knqyf263/pet/pet
@@ -50,6 +44,5 @@ wget
 goreleaser
 yq
 go-task
-gcalcli
 mickamy/tap/sql-tap
 pipx
