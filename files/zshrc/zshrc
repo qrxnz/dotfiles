@@ -144,27 +144,6 @@ header() {
   fi
 }
 
-# nmap
-nmap-default() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: nmap-default ip (options)"
-    else
-      [ ! -d "./nmap" ] && echo "[i] Creating $(pwd)/nmap..." && mkdir nmap
-      sudo nmap -sCV -T4 --min-rate 10000 "${@}" -v -oA nmap/tcp_default
-  fi
-}
-
-nmap-udp() {
-  if [ $# -eq 0 ]
-    then
-      echo "[i] Usage: nmap-udp ip (options)"
-    else
-      [ ! -d "./nmap" ] && echo "[i] Creating $(pwd)/nmap..." && mkdir nmap
-      sudo nmap -sUCV -T4 --min-rate 10000 "${@}" -v -oA nmap/udp_default
-  fi
-}
-
 # yt-dlp
 yt2wav() {
   if [ $# -eq 0 ]
