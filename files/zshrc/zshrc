@@ -110,11 +110,7 @@ alias vi="nvim"
 alias nano="nvim"
 
 # tmux
-alias tm='tmux new-session -s main -d \; \
-    split-window -v \; \
-    select-layout "7cb6,169x44,0,0[169x7,0,0,0,169x36,0,8,2]" \; \
-    attach-session -t main \; \
-    select-pane -t 1'
+alias tm='tmux new-session -s main'
 
 # nix
 alias x='nix run .'
