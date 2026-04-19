@@ -111,6 +111,8 @@ alias nano="nvim"
 
 # tmux
 alias tm='tmux new-session -s main'
+alias tmd='tmux new-session -A -s "${PWD##*/}"'
+alias tma='tmux attach'
 
 # nix
 alias x='nix run .'
