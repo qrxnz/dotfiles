@@ -6,29 +6,13 @@ includes = ["*.nix"]
 
 [formatter.shell]
 command = "shfmt"
-options = [
-  "-i",
-  "2",
-  "-s",
-  "-w",
-]
-includes = [
-  "*.sh",
-  "files/hypr/scripts/*",
-  "files/zshrc/zshrc",
-]
+options = ["-i", "2", "-s", "-w"]
+includes = ["*.sh", "files/hypr/scripts/*"]
 
 [formatter.prettier]
 command = "prettier"
 options = ["--write"]
-includes = [
-  "*.css",
-  "*.json",
-  "*.jsonc",
-  "*.yaml",
-  "*.yml",
-  "*.md",
-]
+includes = ["*.css", "*.json", "*.jsonc", "*.yaml", "*.yml", "*.md"]
 
 [formatter.toml]
 command = "taplo"

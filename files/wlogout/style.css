@@ -30,15 +30,24 @@ button:hover {
 
 /** ********** Icons ********** **/
 #lock {
-  background-image: image(url("icons/lock.png"), url("/usr/share/wlogout/icons/lock.png"));
+  background-image: image(
+    url("icons/lock.png"),
+    url("/usr/share/wlogout/icons/lock.png")
+  );
 }
 
 #logout {
-  background-image: image(url("icons/logout.png"), url("/usr/share/wlogout/icons/logout.png"));
+  background-image: image(
+    url("icons/logout.png"),
+    url("/usr/share/wlogout/icons/logout.png")
+  );
 }
 
 #suspend {
-  background-image: image(url("icons/suspend.png"), url("/usr/share/wlogout/icons/suspend.png"));
+  background-image: image(
+    url("icons/suspend.png"),
+    url("/usr/share/wlogout/icons/suspend.png")
+  );
 }
 
 #hibernate {
@@ -49,9 +58,15 @@ button:hover {
 }
 
 #shutdown {
-  background-image: image(url("icons/shutdown.png"), url("/usr/share/wlogout/icons/shutdown.png"));
+  background-image: image(
+    url("icons/shutdown.png"),
+    url("/usr/share/wlogout/icons/shutdown.png")
+  );
 }
 
 #reboot {
-  background-image: image(url("icons/reboot.png"), url("/usr/share/wlogout/icons/reboot.png"));
+  background-image: image(
+    url("icons/reboot.png"),
+    url("/usr/share/wlogout/icons/reboot.png")
+  );
 }

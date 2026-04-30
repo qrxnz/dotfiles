@@ -6,13 +6,13 @@ LAYOUT="$HOME/.config/wlogout/layout"
 STYLE="$HOME/.config/wlogout/style.css"
 
 if [[ ! $(pidof wlogout) ]]; then
-	wlogout --layout ${LAYOUT} --css ${STYLE} \
-		--column-spacing 20 \
-		--row-spacing 20 \
-		--margin-top 200 \
-		--margin-bottom 200 \
-		--margin-left 150 \
-		--margin-right 150
+  wlogout --layout ${LAYOUT} --css ${STYLE} \
+    --column-spacing 20 \
+    --row-spacing 20 \
+    --margin-top 200 \
+    --margin-bottom 200 \
+    --margin-left 150 \
+    --margin-right 150
 else
-	pkill wlogout
+  pkill wlogout
 fi

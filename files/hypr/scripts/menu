@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ ! $(pidof anyrun) ]]; then
-	anyrun
+  anyrun
 else
-	pkill anyrun
+  pkill anyrun
 fi

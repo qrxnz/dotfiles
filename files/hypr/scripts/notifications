@@ -5,5 +5,5 @@
 CONFIG="$HOME/.config/mako/config"
 
 if [[ ! $(pidof mako) ]]; then
-	mako --config ${CONFIG}
+  mako --config ${CONFIG}
 fi
