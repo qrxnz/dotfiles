@@ -1,13 +1,3 @@
-
-[GHEGist]
-  Public = false
-  access_token = ""
-  auto_sync = false
-  base_url = ""
-  file_name = ""
-  gist_id = ""
-  upload_url = ""
-
 [General]
   Backend = "gist"
   Cmd = []
@@ -19,19 +9,3 @@
   SnippetDirs = []
   SnippetFile = "/Users/qrxnz/.config/pet/snippet.toml"
   SortBy = ""
-
-[Gist]
-  Public = false
-  access_token = ""
-  auto_sync = false
-  file_name = "pet-snippet.toml"
-  gist_id = ""
-
-[GitLab]
-  ID = ""
-  Url = ""
-  Visibility = "private"
-  access_token = ""
-  auto_sync = false
-  file_name = "pet-snippet.toml"
-  skip_ssl = false
