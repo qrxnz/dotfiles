@@ -6,5 +6,6 @@ pkgs.mkShell {
     alejandra
     python310Packages.mdformat
     shfmt
+    nodePackages.prettier
   ];
 }

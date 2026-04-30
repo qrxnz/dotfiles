@@ -17,3 +17,11 @@ options = [
         "2",
 ]
 includes = ["*.sh"]
+
+[formatter.yaml]
+command = "prettier"
+options = ["--write"]
+includes = [
+  "*.yaml",
+  "*.yml"
+]
