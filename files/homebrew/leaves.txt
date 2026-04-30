@@ -46,3 +46,5 @@ go-task
 mickamy/tap/sql-tap
 pipx
 open-ocd
+lima
+colima
