@@ -1,27 +1,36 @@
+# treefmt.toml for qrxnz's dotfiles
+
 [formatter.nix]
 command = "alejandra"
 includes = ["*.nix"]
 
-[formatter.markdown]
-command = "mdformat"
-includes = [
-         "*.md",
-]
-
 [formatter.shell]
 command = "shfmt"
 options = [
-        "-s",
-        "-w",
-        "-i",
-        "2",
+  "-i",
+  "2",
+  "-s",
+  "-w",
 ]
-includes = ["*.sh"]
+includes = [
+  "*.sh",
+  "files/hypr/scripts/*",
+  "files/zshrc/zshrc",
+]
 
-[formatter.yaml]
+[formatter.prettier]
 command = "prettier"
 options = ["--write"]
 includes = [
+  "*.css",
+  "*.json",
+  "*.jsonc",
   "*.yaml",
-  "*.yml"
+  "*.yml",
+  "*.md",
 ]
+
+[formatter.toml]
+command = "taplo"
+options = ["format"]
+includes = ["*.toml"]
