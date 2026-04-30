@@ -4,8 +4,8 @@ pkgs.mkShell {
     treefmt
 
     alejandra
-    python310Packages.mdformat
     shfmt
+    taplo
     nodePackages.prettier
   ];
 }
