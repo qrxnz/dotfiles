@@ -167,7 +167,7 @@ Now you can clone the dotfiles and install NixOS.
 
 #### 🐱 Neovim
 
-If you want to use my neovim configuration, I recommend installing it through nix profile
+If you want to use my neovim configuration, I recommend installing it through nix profile:
 
 ```sh
 nix profile install github:qrxnz/nveem
