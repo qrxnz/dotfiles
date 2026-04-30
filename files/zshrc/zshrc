@@ -133,12 +133,12 @@ hexdump() {
   fi
 }
 
-header() {
+fr() {
   if [ $# -eq 0 ]
     then
       echo "[i] Usage: path to file (options)"
     else
-      hexyl "${@}" | head -n 20
+      file "${@}" && hexyl "${@}" | head -n 10
   fi
 }
 
