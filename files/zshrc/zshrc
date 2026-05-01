@@ -211,7 +211,6 @@ alias cls="clear"
 alias csl="clear"
 
 # others
-alias o="orb"
 alias j="just"
 alias df="duf"
 alias rel="source ~/.zshrc"
@@ -221,7 +220,7 @@ alias pyreq="pip freeze > requirements.txt"
 alias www="sudo python3 -m http.server 80"
 alias tcp-server="cd /tmp/ && while :; do nc -l -p 4444 | tee  output.log; sleep 1; done"
 alias fcd='z $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf)'
-alias ai="gemini --sandbox"
+alias ai="codex --sandbox workspace-write"
 alias burl='curl -x http://127.0.0.1:8080/ -k'
 alias t="yq '.tasks | keys | .[]' Taskfile.yml | gum choose | xargs task"
 alias px='pet exec'
