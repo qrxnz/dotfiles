@@ -111,6 +111,22 @@ alias tm='tmux new-session -s main'
 alias tmd='tmux new-session -A -s "${PWD##*/}"'
 alias tma='tmux attach'
 
+tvg() {
+  local repo session
+
+  repo="$(tv git-repos --source-output '{}' --keybindings 'enter="confirm_selection"')" || return
+  [ -z "$repo" ] && return
+
+  session="${repo:t}"
+
+  if [ -n "$TMUX" ]; then
+    tmux has-session -t "=$session" 2> /dev/null || tmux new-session -d -s "$session" -c "$repo"
+    tmux switch-client -t "=$session"
+  else
+    tmux new-session -A -s "$session" -c "$repo"
+  fi
+}
+
 # nix
 alias x='nix run .'
 alias nd='nix develop'
