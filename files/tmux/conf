@@ -21,7 +21,7 @@ set-option -g @ssh-split-w-key "C"
 set-option -g @ssh-split-r-key "R"
 
 # Dracula config
-set -g @dracula-show-left-icon "😺 | #S | #{newsboat_new_articles} 😺"
+set -g @dracula-show-left-icon "😺 #S (#{server_sessions}) 😺"
 set -g @dracula-plugins "ssh-session"
 
 # Floax config
