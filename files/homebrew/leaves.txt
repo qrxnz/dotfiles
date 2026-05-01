@@ -25,7 +25,6 @@ gau
 mactex
 android-platform-tools
 glow
-bruno
 bettercap
 tmux
 noir
