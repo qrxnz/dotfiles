@@ -47,3 +47,4 @@ pipx
 open-ocd
 lima
 colima
+television
