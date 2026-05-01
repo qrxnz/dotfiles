@@ -111,7 +111,7 @@ alias tm='tmux new-session -A -s main'
 alias tmd='tmux new-session -A -s "${PWD##*/}"'
 alias tma='tmux attach'
 
-tvg() {
+tmg() {
   local repo session
 
   repo="$(tv git-repos --source-output '{}' --keybindings 'enter="confirm_selection"')" || return
