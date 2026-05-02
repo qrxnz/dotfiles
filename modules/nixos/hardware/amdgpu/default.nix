@@ -19,7 +19,6 @@ in {
       enable32Bit = true;
 
       extraPackages = with pkgs; [
-        amdvlk
         mesa.opencl
         rocmPackages.clr.icd
       ];
@@ -27,7 +26,7 @@ in {
 
     # Others
     environment.systemPackages = with pkgs; [
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
     ];
   };

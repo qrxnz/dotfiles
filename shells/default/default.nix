@@ -6,6 +6,6 @@ pkgs.mkShell {
     alejandra
     shfmt
     taplo
-    nodePackages.prettier
+    prettier
   ];
 }

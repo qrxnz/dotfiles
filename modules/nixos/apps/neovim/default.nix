@@ -19,11 +19,11 @@ in {
       EDITOR = "nvim";
     };
     environment.systemPackages = [
-      inputs.nveem.packages.${pkgs.system}.default
+      inputs.nveem.packages.${pkgs.stdenv.hostPlatform.system}.default
 
       pkgs.lazygit
       pkgs.stylua
-      pkgs.sumneko-lua-language-server
+      pkgs.lua-language-server
       pkgs.ripgrep
     ];
 

@@ -22,7 +22,6 @@
 
     nveem = {
       url = "github:qrxnz/nveem";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

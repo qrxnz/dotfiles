@@ -31,7 +31,7 @@ in {
       # Misc
       remmina
       waypipe
-      licensor
+      addlicense
 
       # Nix Utils
       nix-index

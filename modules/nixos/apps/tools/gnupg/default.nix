@@ -14,7 +14,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [pkgs.pinentry pkgs.pinentry-curses];
+    environment.systemPackages = [pkgs.pinentry-curses];
 
     services.pcscd.enable = true;
     #programs.gnupg.agent = {

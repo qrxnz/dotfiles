@@ -16,7 +16,7 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [
-      inputs.tmux.packages.${pkgs.system}.default
+      inputs.tmux.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     environment.shellAliases = {
