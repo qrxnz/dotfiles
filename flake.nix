@@ -1,63 +1,25 @@
 {
-  description = "qrxnz's dotfiles";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs = {
-    # Core
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    snowfall-lib = {
-      url = "github:snowfallorg/lib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixos-generators.url = "github:nix-community/nixos-generators";
-    nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
-
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-
-    catppuccin.url = "github:catppuccin/nix";
-
-    tmux.url = "github:qrxnz/tmux-flake";
-
-    nveem = {
-      url = "github:qrxnz/nveem";
-    };
-  };
-
-  outputs = inputs: let
-    lib = inputs.snowfall-lib.mkLib {
-      inherit inputs;
-      src = ./.;
-
-      snowfall = {
-        meta = {
-          name = "dotfiles";
-          title = "dotfiles";
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+      in {
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            treefmt
+            shfmt
+            alejandra
+            prettier
+            taplo
+          ];
         };
-
-        namespace = "custom";
-      };
-    };
-  in
-    lib.mkFlake {
-      inherit inputs;
-      src = ./.;
-
-      channels-config = {
-        allowUnfree = true;
-      };
-
-      overlays = with inputs; [
-        # neovim.overlays.default
-      ];
-
-      systems.modules.nixos = with inputs; [
-        {inherit lib;}
-      ];
-
-      systems.hosts.mentay.modules = with inputs; [];
-
-      templates = import ./templates {};
-    };
+      }
+    );
 }
