@@ -20,7 +20,6 @@ rtorrent
 nushell
 ipatool
 ipcalc
-mactex
 android-platform-tools
 glow
 bettercap
@@ -30,7 +29,6 @@ gum
 gh
 gf
 gitleaks
-feroxbuster
 act
 wget
 goreleaser
