@@ -1,11 +1,5 @@
 # dotfiles
 
-<p align="center">
-  <a href="https://go-skill-icons.vercel.app/">
-    <img src="https://go-skill-icons.vercel.app/api/icons?i=bash,tmux,kitty,neovim,apple,nixos,linux,docker,qemu,hyprland" />
-  </a>
-</p>
-
 My configuration is tailored for tasks in the areas of DevOps and IT security. The key details I emphasized are reproducibility and a personalized experience to achieve an efficient and enjoyable workflow.
 
 ### 🍏 MacOS
