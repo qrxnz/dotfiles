@@ -21,8 +21,9 @@ Prerequisite: `stow`, `zsh`, `curl`
 > \[!WARNING\]
 > Remember to install the necessary packages on your distribution.
 
-````sh
+```sh
 ./setup.sh --linux
+```
 
 ### 🍏 MacOS
 
@@ -30,7 +31,7 @@ Prerequisite: `homebrew`, `stow`, `curl`
 
 ```sh
 ./setup.sh --macos
-````
+```
 
 ### 👾 Others
 
