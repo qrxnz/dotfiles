@@ -41,3 +41,4 @@ lima
 colima
 television
 hettysoft/tap/hetty
+qemu
