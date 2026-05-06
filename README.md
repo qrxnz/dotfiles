@@ -83,4 +83,4 @@ I use [Catppuccin](https://catppuccin.com/) in every part of my config!
 
 ### ❤️ Special thanks
 
-To [redyf](https://github.com/redyf/wallpapers) for the amazing wallpapers & [IogaMaster](https://github.com/IogaMaster) for [snowfall-starter](https://github.com/IogaMaster/snowfall-starter)
+To [redyf](https://github.com/redyf/wallpapers) for the amazing wallpapers!
