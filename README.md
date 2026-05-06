@@ -2,16 +2,8 @@
 
 My configuration is tailored for tasks in the areas of DevOps and IT security. The key details I emphasized are reproducibility and a personalized experience to achieve an efficient and enjoyable workflow.
 
-### 🍏 MacOS
-
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
     <img src="./.github/assets/img/macos.png" style="margin: 5px; width: 45%;">
-</div>
-
-### 🐧 Linux (Desktop)
-
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-    <img src="./.github/assets/img/hyprland-nixos-mentay.jpg" style="margin: 5px; width: 45%;">
 </div>
 
 ## ⚒️ Installation
@@ -22,36 +14,23 @@ cd ~/.dotfiles &&\
 chmod +x ./setup.sh
 ```
 
-#### 🐧 Linux
+### 🐧 Linux
 
 Prerequisite: `stow`, `zsh`, `curl`
 
-- Hyprland dotfiles
-
 > \[!WARNING\]
 > Remember to install the necessary packages on your distribution.
 
-```sh
-./setup.sh --hyprland-default
+````sh
+./setup.sh --linux
 
-```
-
-- Shell only dots
-
-> \[!WARNING\]
-> Remember to install the necessary packages on your distribution.
-
-```sh
-./setup.sh --shell-only
-```
-
-#### 🍏 MacOS
+### 🍏 MacOS
 
 Prerequisite: `homebrew`, `stow`, `curl`
 
 ```sh
 ./setup.sh --macos
-```
+````
 
 ### 👾 Others
 
