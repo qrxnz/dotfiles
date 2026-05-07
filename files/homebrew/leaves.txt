@@ -42,3 +42,4 @@ colima
 television
 hettysoft/tap/hetty
 qemu
+opencode
