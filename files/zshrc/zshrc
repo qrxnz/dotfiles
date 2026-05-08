@@ -120,7 +120,13 @@ tmg() {
   session="${repo:t}"
 
   if [ -n "$TMUX" ]; then
-    tmux has-session -t "=$session" 2> /dev/null || tmux new-session -d -s "$session" -c "$repo"
+    if ! tmux has-session -t "=$session" 2> /dev/null; then
+      tmux set-hook -gu after-new-session
+      tmux new-session -d -x "$(tmux display-message -p '#{client_width}')" -y "$(tmux display-message -p '#{client_height}')" -s "$session" -c "$repo" && \
+        tmux split-window -h -l 64 -t "=$session:1" -c "$repo" && \
+        tmux select-pane -t "=$session:1.1"
+      tmux set-hook -g after-new-session 'split-window -h -l 64; select-pane -t :.1'
+    fi
     tmux switch-client -t "=$session"
   else
     tmux new-session -A -s "$session" -c "$repo"
