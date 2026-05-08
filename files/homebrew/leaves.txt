@@ -43,3 +43,4 @@ television
 hettysoft/tap/hetty
 qemu
 opencode
+vhs
