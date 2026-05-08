@@ -42,7 +42,6 @@ set -g base-index 1
 setw -g pane-base-index 1
 
 # Match the current default workspace: editor on the left, shell on the right.
-set-hook -g after-new-window 'split-window -h -l 64; select-pane -t :.1'
 set-hook -g after-new-session 'split-window -h -l 64; select-pane -t :.1'
 
 # Use h, j, k, l for movement between panes.
