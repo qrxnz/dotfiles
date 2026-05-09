@@ -45,3 +45,4 @@ qemu
 opencode
 vhs
 newman
+lima-additional-guestagents
