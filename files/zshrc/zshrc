@@ -121,9 +121,7 @@ tmg() {
 
   if [ -n "$TMUX" ]; then
     if ! tmux has-session -t "=$session" 2> /dev/null; then
-      tmux set-hook -gu after-new-session
       tmux new-session -d -s "$session" -c "$repo"
-      tmux set-hook -g after-new-session 'split-window -h -l 64; select-pane -t :.1'
     fi
     tmux switch-client -t "=$session"
   else
