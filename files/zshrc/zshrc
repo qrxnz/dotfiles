@@ -97,10 +97,6 @@ alias ....="z ../../.."
 alias .....="z ../../../.."
 alias ......="z ../../../../.."
 
-# kitty terminal
-alias icat="kitty +kitten icat"
-alias connect="kitty +kitten ssh"
-
 # neovim
 alias v="nvim"
 alias vi="nvim"
@@ -148,7 +144,7 @@ hexdump() {
   fi
 }
 
-fr() {
+info() {
   if [ $# -eq 0 ]
     then
       echo "[i] Usage: path to file (options)"
@@ -227,6 +223,7 @@ alias csl="clear"
 
 # others
 alias j="just"
+alias o ="once"
 alias df="duf"
 alias rel="source ~/.zshrc"
 alias gdb="gdb --quiet"
