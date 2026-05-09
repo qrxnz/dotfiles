@@ -44,3 +44,4 @@ hettysoft/tap/hetty
 qemu
 opencode
 vhs
+newman
