@@ -265,6 +265,9 @@ export BAT_THEME="Catppuccin Mocha"
 # nix config
 export NIX_CONF_DIR=$HOME/.config/nix
 
+# colima
+export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+
 #
 # Zplug
 #
