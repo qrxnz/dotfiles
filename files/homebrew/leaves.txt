@@ -46,3 +46,4 @@ opencode
 vhs
 newman
 lima-additional-guestagents
+docker-buildx
