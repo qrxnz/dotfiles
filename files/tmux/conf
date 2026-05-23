@@ -5,6 +5,12 @@ set -g @plugin 'omerxx/tmux-floax'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'pschmitt/tmux-ssh-split'
 set -g @plugin 'dracula/tmux'
+set -g @plugin 'olimorris/tmux-pomodoro-plus'
+
+# Pomodoro config
+set -g @pomodoro_toggle 'g'                    # Start/pause a Pomodoro/break
+set -g @pomodoro_cancel 'G'                    # Cancel the current session
+set -g @pomodoro_skip '_'                      # Skip a Pomodoro/break
 
 # SSH split config
 set-option -g @ssh-split-keep-cwd "true"
@@ -22,7 +28,7 @@ set-option -g @ssh-split-r-key "R"
 
 # Dracula config
 set -g @dracula-show-left-icon "😺 #S (#{server_sessions}) 😺"
-set -g @dracula-plugins "ssh-session"
+set -g @dracula-plugins "ssh-session pomodoro"
 
 # Floax config
 set -g @floax-bind 'p'
@@ -88,3 +94,4 @@ setw -g aggressive-resize on
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
+set -g status-right "#(~/.tmux/plugins/tmux-pomodoro-plus/scripts/pomodoro.sh) #[fg=#282a36]#[bg=#50fa7b] #(~/.tmux/plugins/tmux/scripts/ssh_session.sh false) "
