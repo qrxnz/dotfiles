@@ -48,3 +48,4 @@ newman
 lima-additional-guestagents
 docker-buildx
 lazydocker
+sqlc
