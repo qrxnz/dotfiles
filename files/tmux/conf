@@ -17,7 +17,7 @@ set -g @pomodoro_break_mins 5                  # The duration of the break after
 set -g @pomodoro_intervals 4                   # The number of intervals before a longer break is started
 set -g @pomodoro_long_break_mins 25            # The duration of the long break
 set -g @pomodoro_repeat 'on'
-set -g @pomodoro_sound 'Inst-1lofi-sh_t-79bpm-cmaj' # Sound for desktop notifications (Run `ls /System/Library/Sounds` for a list of sounds to use on Mac)
+set -g @pomodoro_sound 'Glass'              # Sound for desktop notifications (Run `ls /System/Library/Sounds` for a list of sounds to use on Mac)
                                                # (On Linux add `on` to use the `beep` program or add your custom beeping command)
 set -g @pomodoro_notifications 'on'
 
@@ -67,7 +67,7 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # Bar position
 set-option -g status-position top
-set -g status-interval 600
+set -g status-interval 5
 
 # Mouse on
 setw -g mouse on
