@@ -33,6 +33,8 @@ alias gch='git checkout'
 alias grr='git review -R'
 alias gwl='git worktree list'
 alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
+alias repos='gh repo list --limit 100 --json name,owner --jq ".[] | \"\(.owner.login)/\(.name)\"" | gum filter --placeholder "Choose repository..." | xargs gh repo view'
+
 
 gs() { # Function for interactively switching between branches and PRs
   # Check if the 'gh' command is available and if the user is logged in
