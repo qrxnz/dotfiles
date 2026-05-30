@@ -50,3 +50,4 @@ docker-buildx
 lazydocker
 sqlc
 kitlangton/tap/ghui
+newsboat
