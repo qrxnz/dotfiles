@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
 # Linux Setup
 if [[ $1 == "--linux" ]]; then
   # Sync dotfiles
@@ -8,6 +10,9 @@ if [[ $1 == "--linux" ]]; then
   # Prepare directories
   mkdir -p ~/.local/bin/
   mkdir -p ~/.local/share/fonts/
+  mkdir -p ~/.newsboat/
+
+  cp "$SCRIPT_DIR/rss/urls" ~/.newsboat/urls
 
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
@@ -33,6 +38,9 @@ elif [[ $1 == "--macos" ]]; then
 
   # Prepare directories
   mkdir -p ~/.local/bin/
+  mkdir -p ~/.newsboat/
+
+  cp "$SCRIPT_DIR/rss/urls" ~/.newsboat/urls
 
   # Install zplug (ZSH Plugin Manager)
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
