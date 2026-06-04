@@ -130,9 +130,8 @@ tmg() {
     tmux new-session -d -s "$session" -c "$repo" "nvim"
 
     local win_id
-    win_id=$(tmux new-window -t "$session" -c "$repo" -P -F '#{window_id}')
+    win_id=$(tmux new-window -t "$session" -c "$repo" -P -F '#{window_id}' "opencode")
     tmux split-window -h -t "$win_id" -c "$repo"
-    tmux send-keys -t "$win_id.0" "opencode" Enter
   fi
 
   if [ -n "$TMUX" ]; then
