@@ -126,13 +126,19 @@ tmg() {
 
   session="${repo:t}"
 
+  if ! tmux has-session -t "=$session" 2> /dev/null; then
+    tmux new-session -d -s "$session" -c "$repo" "nvim"
+
+    local win_id
+    win_id=$(tmux new-window -t "$session" -c "$repo" -P -F '#{window_id}')
+    tmux split-window -h -t "$win_id" -c "$repo"
+    tmux send-keys -t "$win_id.0" "opencode" Enter
+  fi
+
   if [ -n "$TMUX" ]; then
-    if ! tmux has-session -t "=$session" 2> /dev/null; then
-      tmux new-session -d -s "$session" -c "$repo"
-    fi
     tmux switch-client -t "=$session"
   else
-    tmux new-session -A -s "$session" -c "$repo"
+    tmux attach -t "=$session"
   fi
 }
 
