@@ -1,6 +1,4 @@
-# config.nu
 # Nushell Configuration File
-# Mapped from .zshrc and ~/.config/zshrc/zshrc
 
 #
 # Theme (Catppuccin Mocha)
@@ -129,7 +127,7 @@ $env.config.hooks = (
           $env.config.hooks.env_change.PWD?
           | default []
           | append {
-            condition: { |before, after| ($after | path join ".envrc" | path exists) or ($before | path join ".envrc" | path exists) }
+            condition: { |before, after| (not ($after | is-empty) and ($after | path join ".envrc" | path exists)) or (not ($before | is-empty) and ($before | path join ".envrc" | path exists)) }
             code: { |before, after|
               if (which direnv | is-empty) == false {
                 let exports = (do { direnv export json } | complete)
@@ -161,8 +159,8 @@ def repos [] {
     print "Error: 'gh' and 'gum' are required for this command."
     return
   }
-  gh repo list --limit 100 --json name,owner --jq ".[] | \"\\(.owner.login)/\\(.name)\"" 
-  | gum filter --placeholder "Choose repository..." 
+  gh repo list --limit 100 --json name,owner --jq ".[] | \"\\(.owner.login)/\\(.name)\""
+  | gum filter --placeholder "Choose repository..."
   | xargs gh repo view
 }
 
@@ -231,7 +229,7 @@ def tmg [] {
   let has_session = (do { tmux has-session -t $"=($session)" } | complete | get exit_code) == 0
   if not $has_session {
     tmux new-session -d -s $session -c $repo "nvim"
-    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "opencode" | str trim)
+    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "agy --sandbox" | str trim)
     tmux split-window -h -t $win_id -c $repo
     tmux new-window -t $session -c $repo "gh dash"
   }
@@ -240,15 +238,6 @@ def tmg [] {
     tmux switch-client -t $"=($session)"
   } else {
     tmux attach -t $"=($session)"
-  }
-}
-
-# Modern hexdump replacement using hexyl
-def hexdump [...args: string] {
-  if ($args | is-empty) {
-    print "[i] Usage: path to file (options)"
-  } else {
-    hexyl ...$args
   }
 }
 
@@ -294,17 +283,6 @@ def yt2mp4 [...args: string] {
   }
 }
 
-# HTTP GET utility
-# Note: Renamed from 'get' to 'http-get' to avoid clashing with Nushell's built-in 'get' command.
-def http-get [url: string] {
-  http get $url
-}
-
-# Database query helper using Nushell open and query db
-def db-query [db_file: path, query: string] {
-  open $db_file | query db $query
-}
-
 # Save pip requirements to file
 def pyreq [] {
   pip freeze | save -f requirements.txt
@@ -316,14 +294,6 @@ def tcp-server [] {
   loop {
     do { ^nc -l -p 4444 | ^tee output.log }
     sleep 1sec
-  }
-}
-
-# Fuzzy cd using fd and fzf
-def --env fcd [] {
-  let target = (fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf | str trim)
-  if ($target | is-not-empty) {
-    z $target
   }
 }
 
@@ -424,8 +394,7 @@ alias gr = go run .
 alias nw = newsboat
 alias rel = exec nu
 alias gdb = gdb --quiet
-alias cds = du -h --max-depth=1 .
 alias www = sudo python3 -m http.server 80
-alias ai = opencode
+alias ai = agy --sandbox
 alias purl = curl -x http://127.0.0.1:8080/ -k
 alias sql = sqlit
