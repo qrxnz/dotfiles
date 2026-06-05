@@ -23,6 +23,7 @@ SAVEHIST="$HISTSIZE"
 # git
 alias gaa="git add ."
 alias gcm='git commit -m'
+alias gd="git diff --cached"
 alias gsu="git submodule update --remote"
 alias gsa="git submodule add"
 alias gpush="git push -u origin"
