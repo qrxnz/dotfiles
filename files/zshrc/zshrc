@@ -132,6 +132,8 @@ tmg() {
     local win_id
     win_id=$(tmux new-window -t "$session" -c "$repo" -P -F '#{window_id}' "opencode")
     tmux split-window -h -t "$win_id" -c "$repo"
+
+    tmux new-window -t "$session" -c "$repo" "gh dash"
   fi
 
   if [ -n "$TMUX" ]; then
