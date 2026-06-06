@@ -119,30 +119,25 @@ $env.config.hooks = (
   $env.config.hooks?
   | default {}
   | merge {
-    env_change: (
-      $env.config.hooks.env_change?
-      | default {}
-      | merge {
-        PWD: (
-          $env.config.hooks.env_change.PWD?
-          | default []
-          | append {
-            if (which direnv | is-empty) { return }
-            let direnv_out = (direnv export json | from json | default {})
-            if ($direnv_out | is-not-empty) {
-              let env_to_load = if ("PATH" in $direnv_out) and ($direnv_out.PATH != null) {
-                $direnv_out | merge { PATH: ($direnv_out.PATH | split row (char esep)) }
-              } else {
-                $direnv_out
-              }
-              load-env $env_to_load
+    pre_prompt: (
+      $env.config.hooks.pre_prompt?
+      | default []
+      | append {||
+        if (which direnv | is-empty) {
+            return
+        }
+        try {
+            direnv export json | from json | default {} | load-env
+            if 'PATH' in $env {
+                $env.PATH = ($env.PATH | split row (char esep))
             }
-          }
-        )
+        } catch {}
       }
     )
   }
 )
+
+$env.DIRENV_LOG_FORMAT = ""
 
 #
 # External Integrations (Starship & Zoxide)
