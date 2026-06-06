@@ -357,16 +357,13 @@ alias gwl = git worktree list
 alias glog = git log --graph --topo-order --pretty="%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N" --abbrev-commit
 
 # Zoxide (modern cd replacement)
-# Note: We do NOT alias 'cd' to 'z' in Nushell.
-# In Nushell, zoxide integrates natively via directory change hooks (env_change.PWD),
-# so the built-in 'cd' automatically registers directories. Aliasing 'cd' to 'z'
-# would cause infinite recursion. Use the built-in 'cd' to change directories,
-# and use 'z' or 'zi' to jump using zoxide.
-alias .. = z ..
-alias ... = z ../..
-alias .... = z ../../..
-alias ..... = z ../../../..
-alias ...... = z ../../../../../
+# In Nushell, we hook cd to zoxide using `--cmd cd` in env.nu.
+
+alias .. = cd ..
+alias ... = cd ../..
+alias .... = cd ../../..
+alias ..... = cd ../../../..
+alias ...... = cd ../../../../../
 
 # Neovim
 alias v = nvim

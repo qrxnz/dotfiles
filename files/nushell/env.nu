@@ -114,7 +114,7 @@ if (which starship | is-not-empty) {
 # Initialize zoxide
 let zoxide_init_path = ($cache_dir | path join "zoxide_init.nu")
 if (which zoxide | is-not-empty) {
-    zoxide init nushell | save -f $zoxide_init_path
+    zoxide init nushell --cmd cd | save -f $zoxide_init_path
 } else {
     # Write empty file to prevent Nushell parse errors
     "" | save -f $zoxide_init_path
