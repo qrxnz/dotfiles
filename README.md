@@ -16,7 +16,7 @@ chmod +x ./setup.sh
 
 ### 🐧 Linux
 
-Prerequisite: `stow`, `zsh`, `curl`
+Prerequisite: `stow`, `zsh`, `curl`, `nushell`
 
 > \[!WARNING\]
 > Remember to install the necessary packages on your distribution.
