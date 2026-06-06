@@ -165,8 +165,8 @@ def repos [] {
     print "Error: 'gh' and 'gum' are required for this command."
     return
   }
-  gh repo list --limit 100 --json name,owner --jq ".[] | \"\\(.owner.login)/\\(.name)\"" 
-  | gum filter --placeholder "Choose repository..." 
+  gh repo list --limit 100 --json name,owner --jq ".[] | \"\\(.owner.login)/\\(.name)\""
+  | gum filter --placeholder "Choose repository..."
   | xargs gh repo view
 }
 
@@ -355,18 +355,6 @@ alias gch = git checkout
 alias grr = git review -R
 alias gwl = git worktree list
 alias glog = git log --graph --topo-order --pretty="%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N" --abbrev-commit
-
-# Eza (modern ls replacement)
-alias ls = eza --icons
-alias ll = eza -l --icons
-alias l = eza -l -a --icons
-alias tree = eza -l -a --icons --tree --ignore-glob=".git"
-alias tre = eza -l -a --icons --tree --level 2 --ignore-glob=".git"
-
-# Bat (modern cat replacement)
-alias cat = bat -pp
-alias less = bat --paging=always
-alias catn = /bin/cat
 
 # Zoxide (modern cd replacement)
 # Note: We do NOT alias 'cd' to 'z' in Nushell.
