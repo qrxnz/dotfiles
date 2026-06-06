@@ -235,7 +235,7 @@ def tmg [] {
   let has_session = (do { tmux has-session -t $"=($session)" } | complete | get exit_code) == 0
   if not $has_session {
     tmux new-session -d -s $session -c $repo "nvim"
-    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "opencode" | str trim)
+    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "agy" | str trim)
     tmux split-window -h -t $win_id -c $repo
     tmux new-window -t $session -c $repo "gh dash"
   }
@@ -418,6 +418,6 @@ alias rel = exec nu
 alias gdb = gdb --quiet
 alias cds = du -h --max-depth=1 .
 alias www = sudo python3 -m http.server 80
-alias ai = opencode
+alias ai = agy
 alias purl = curl -x http://127.0.0.1:8080/ -k
 alias sql = sqlit
