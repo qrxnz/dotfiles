@@ -14,9 +14,6 @@ if [[ $1 == "--linux" ]]; then
 
   cp "$SCRIPT_DIR/rss/urls" ~/.newsboat/urls
 
-  # Install zplug (ZSH Plugin Manager)
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
   # Install tpm (Tmux Plugin Manager)
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -34,16 +31,13 @@ if [[ $1 == "--linux" ]]; then
 
 elif [[ $1 == "--macos" ]]; then
   # Sync dotfiles
-  stow files --adopt --ignore=hyprland --ignore=waybar --ignore=wlogoout
+  stow files --adopt
 
   # Prepare directories
   mkdir -p ~/.local/bin/
   mkdir -p ~/.newsboat/
 
   cp "$SCRIPT_DIR/rss/urls" ~/.newsboat/urls
-
-  # Install zplug (ZSH Plugin Manager)
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
   # Install tpm (Tmux Plugin Manager)
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
