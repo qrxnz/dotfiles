@@ -1,6 +1,4 @@
 starship
-bat
-eza
 kitty
 ripgrep
 zoxide
