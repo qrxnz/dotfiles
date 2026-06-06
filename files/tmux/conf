@@ -47,9 +47,6 @@ set -g @floax-bind 'p'
 # Lower delay waiting for chord after escape key press.
 set -g escape-time 0
 
-# Set default shell to Nushell
-set-option -g default-shell /opt/homebrew/bin/nu
-
 # Change the prefix from C-b to C-s to make it easier to type.
 set -g prefix C-s
 unbind C-b
