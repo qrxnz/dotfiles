@@ -182,7 +182,7 @@ def gs [] {
       print "No local branches found."
       return
     }
-    let selection = ($branches | gum choose --header "Select branch (GitHub CLI not available)")
+    let selection = ($branches | to text | gum choose --header "Select branch (GitHub CLI not available)")
     if ($selection | is-not-empty) {
       git switch $selection
     }
@@ -192,7 +192,7 @@ def gs [] {
   # Combine local branches and open PRs
   let branches = (git branch --format='%(refname:short)' | lines)
   let prs_raw = (gh pr list --limit 40 --json number,title --jq '.[] | "pr#\\(.number) \\(.title)"' | lines)
-  let selection = ($branches | append $prs_raw | gum choose --header "Select a branch or Pull Request" --height 20 | str trim)
+  let selection = ($branches | append $prs_raw | to text | gum choose --header "Select a branch or Pull Request" --height 20 | str trim)
 
   if ($selection | is-empty) {
     print "Cancelled."
