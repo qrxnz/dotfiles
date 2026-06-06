@@ -26,7 +26,7 @@ if ("/opt/homebrew/bin/brew" | path exists) {
     )
     
     $env.INFOPATH = (
-        $env | get -o INFOPATH | default [] 
+        $env.INFOPATH? | default []
         | split row (char esep) 
         | prepend "/opt/homebrew/share/info" 
         | uniq
@@ -46,7 +46,7 @@ $env.PATH = (
 
 # Go configuration
 $env.GOPATH = $"($env.HOME)/go"
-if ($env | get -o GOROOT | is-not-empty) {
+if ($env.GOROOT? | is-not-empty) {
     $env.PATH = ($env.PATH | append $"($env.GOROOT)/bin")
 }
 

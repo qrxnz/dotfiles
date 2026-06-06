@@ -1,4 +1,6 @@
+# config.nu
 # Nushell Configuration File
+# Mapped from .zshrc and ~/.config/zshrc/zshrc
 
 #
 # Theme (Catppuccin Mocha)
@@ -119,25 +121,33 @@ $env.config.hooks = (
   $env.config.hooks?
   | default {}
   | merge {
-    pre_prompt: (
-      $env.config.hooks.pre_prompt?
-      | default []
-      | append {||
-        if (which direnv | is-empty) {
-            return
-        }
-        try {
-            direnv export json | from json | default {} | load-env
-            if 'PATH' in $env {
-                $env.PATH = ($env.PATH | split row (char esep))
+    env_change: (
+      $env.config.hooks.env_change?
+      | default {}
+      | merge {
+        PWD: (
+          $env.config.hooks.env_change.PWD?
+          | default []
+          | append {
+            condition: { |before, after|
+              let before_exists = if ($before | is-empty) { false } else { $before | path join ".envrc" | path exists }
+              let after_exists = if ($after | is-empty) { false } else { $after | path join ".envrc" | path exists }
+              $before_exists or $after_exists
             }
-        } catch {}
+            code: { |before, after|
+              if (which direnv | is-empty) == false {
+                let exports = (do { direnv export json } | complete)
+                if $exports.exit_code == 0 and ($exports.stdout | is-not-empty) {
+                  $exports.stdout | from json | default {} | load-env
+                }
+              }
+            }
+          }
+        )
       }
     )
   }
 )
-
-$env.DIRENV_LOG_FORMAT = ""
 
 #
 # External Integrations (Starship & Zoxide)
@@ -155,8 +165,8 @@ def repos [] {
     print "Error: 'gh' and 'gum' are required for this command."
     return
   }
-  gh repo list --limit 100 --json name,owner --jq ".[] | \"\\(.owner.login)/\\(.name)\""
-  | gum filter --placeholder "Choose repository..."
+  gh repo list --limit 100 --json name,owner --jq ".[] | \"\\(.owner.login)/\\(.name)\"" 
+  | gum filter --placeholder "Choose repository..." 
   | xargs gh repo view
 }
 
@@ -177,7 +187,7 @@ def gs [] {
       print "No local branches found."
       return
     }
-    let selection = ($branches | to text | gum choose --header "Select branch (GitHub CLI not available)")
+    let selection = ($branches | gum choose --header "Select branch (GitHub CLI not available)")
     if ($selection | is-not-empty) {
       git switch $selection
     }
@@ -187,7 +197,7 @@ def gs [] {
   # Combine local branches and open PRs
   let branches = (git branch --format='%(refname:short)' | lines)
   let prs_raw = (gh pr list --limit 40 --json number,title --jq '.[] | "pr#\\(.number) \\(.title)"' | lines)
-  let selection = ($branches | append $prs_raw | to text | gum choose --header "Select a branch or Pull Request" --height 20 | str trim)
+  let selection = ($branches | append $prs_raw | gum choose --header "Select a branch or Pull Request" --height 20 | str trim)
 
   if ($selection | is-empty) {
     print "Cancelled."
@@ -225,7 +235,7 @@ def tmg [] {
   let has_session = (do { tmux has-session -t $"=($session)" } | complete | get exit_code) == 0
   if not $has_session {
     tmux new-session -d -s $session -c $repo "nvim"
-    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "agy --sandbox" | str trim)
+    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "opencode" | str trim)
     tmux split-window -h -t $win_id -c $repo
     tmux new-window -t $session -c $repo "gh dash"
   }
@@ -234,6 +244,15 @@ def tmg [] {
     tmux switch-client -t $"=($session)"
   } else {
     tmux attach -t $"=($session)"
+  }
+}
+
+# Modern hexdump replacement using hexyl
+def hexdump [...args: string] {
+  if ($args | is-empty) {
+    print "[i] Usage: path to file (options)"
+  } else {
+    hexyl ...$args
   }
 }
 
@@ -279,6 +298,17 @@ def yt2mp4 [...args: string] {
   }
 }
 
+# HTTP GET utility
+# Note: Renamed from 'get' to 'http-get' to avoid clashing with Nushell's built-in 'get' command.
+def http-get [url: string] {
+  http get $url
+}
+
+# Database query helper using Nushell open and query db
+def db-query [db_file: path, query: string] {
+  open $db_file | query db $query
+}
+
 # Save pip requirements to file
 def pyreq [] {
   pip freeze | save -f requirements.txt
@@ -290,6 +320,14 @@ def tcp-server [] {
   loop {
     do { ^nc -l -p 4444 | ^tee output.log }
     sleep 1sec
+  }
+}
+
+# Fuzzy cd using fd and fzf
+def --env fcd [] {
+  let target = (fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .direnv | fzf | str trim)
+  if ($target | is-not-empty) {
+    z $target
   }
 }
 
@@ -317,6 +355,18 @@ alias gch = git checkout
 alias grr = git review -R
 alias gwl = git worktree list
 alias glog = git log --graph --topo-order --pretty="%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N" --abbrev-commit
+
+# Eza (modern ls replacement)
+alias ls = eza --icons
+alias ll = eza -l --icons
+alias l = eza -l -a --icons
+alias tree = eza -l -a --icons --tree --ignore-glob=".git"
+alias tre = eza -l -a --icons --tree --level 2 --ignore-glob=".git"
+
+# Bat (modern cat replacement)
+alias cat = bat -pp
+alias less = bat --paging=always
+alias catn = /bin/cat
 
 # Zoxide (modern cd replacement)
 # Note: We do NOT alias 'cd' to 'z' in Nushell.
@@ -378,7 +428,8 @@ alias gr = go run .
 alias nw = newsboat
 alias rel = exec nu
 alias gdb = gdb --quiet
+alias cds = du -h --max-depth=1 .
 alias www = sudo python3 -m http.server 80
-alias ai = agy --sandbox
+alias ai = opencode
 alias purl = curl -x http://127.0.0.1:8080/ -k
 alias sql = sqlit

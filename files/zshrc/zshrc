@@ -390,3 +390,8 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 fi
+
+# Launch Nushell if interactive and not disabled by NO_NU
+if [[ -o interactive ]] && [[ -z "$NO_NU" ]] && command -v nu >/dev/null 2>&1; then
+    exec nu --config "$HOME/.config/nushell/config.nu" --env-config "$HOME/.config/nushell/env.nu"
+fi
