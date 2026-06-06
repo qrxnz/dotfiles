@@ -127,14 +127,15 @@ $env.config.hooks = (
           $env.config.hooks.env_change.PWD?
           | default []
           | append {
-            condition: { |before, after| (not ($after | is-empty) and ($after | path join ".envrc" | path exists)) or (not ($before | is-empty) and ($before | path join ".envrc" | path exists)) }
-            code: { |before, after|
-              if (which direnv | is-empty) == false {
-                let exports = (do { direnv export json } | complete)
-                if $exports.exit_code == 0 and ($exports.stdout | is-not-empty) {
-                  $exports.stdout | from json | default {} | load-env
-                }
+            if (which direnv | is-empty) { return }
+            let direnv_out = (direnv export json | from json | default {})
+            if ($direnv_out | is-not-empty) {
+              let env_to_load = if ("PATH" in $direnv_out) and ($direnv_out.PATH != null) {
+                $direnv_out | merge { PATH: ($direnv_out.PATH | split row (char esep)) }
+              } else {
+                $direnv_out
               }
+              load-env $env_to_load
             }
           }
         )
