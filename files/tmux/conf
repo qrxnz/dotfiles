@@ -3,23 +3,11 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'omerxx/tmux-floax'
 set -g @plugin 'tmux-plugins/tmux-yank'
-set -g @plugin 'pschmitt/tmux-ssh-split'
-set -g @plugin 'dracula/tmux'
-set -g @plugin 'olimorris/tmux-pomodoro-plus'
+set -g @plugin 'rose-pine/tmux'
+set -g @rose_pine_variant 'dawn'
 
-# Pomodoro config
-set -g @pomodoro_toggle 'g'                    # Start/pause a Pomodoro/break
-set -g @pomodoro_cancel 'G'                    # Cancel the current session
-set -g @pomodoro_skip '_'                      # Skip a Pomodoro/break
-
-set -g @pomodoro_mins 25                       # The duration of the Pomodoro
-set -g @pomodoro_break_mins 5                  # The duration of the break after the Pomodoro completes
-set -g @pomodoro_intervals 4                   # The number of intervals before a longer break is started
-set -g @pomodoro_long_break_mins 25            # The duration of the long break
-set -g @pomodoro_repeat 'on'
-set -g @pomodoro_sound 'Glass'              # Sound for desktop notifications (Run `ls /System/Library/Sounds` for a list of sounds to use on Mac)
-                                               # (On Linux add `on` to use the `beep` program or add your custom beeping command)
-set -g @pomodoro_notifications 'on'
+# Default shell
+set-option -g default-shell /bin/zsh
 
 # SSH split config
 set-option -g @ssh-split-keep-cwd "true"
@@ -34,10 +22,6 @@ set-option -g @ssh-split-h-key "|"
 set-option -g @ssh-split-v-key "S"
 set-option -g @ssh-split-w-key "C"
 set-option -g @ssh-split-r-key "R"
-
-# Dracula config
-set -g @dracula-show-left-icon "😺 #S (#{server_sessions}) 😺"
-set -g @dracula-plugins "ssh-session pomodoro"
 
 # Floax config
 set -g @floax-bind 'p'
@@ -104,4 +88,3 @@ setw -g aggressive-resize on
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
-set -g status-right "#(~/.tmux/plugins/tmux-pomodoro-plus/scripts/pomodoro.sh) #[fg=#282a36]#[bg=#50fa7b] #(~/.tmux/plugins/tmux/scripts/ssh_session.sh false) "
