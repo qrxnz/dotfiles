@@ -185,7 +185,7 @@ def repos [] {
 
 # Clone GitHub repository easily
 def clone [repo: string] {
-  git clone $"git@github.com:($repo).git"
+  git clone --recursive $"git@github.com:($repo).git"
 }
 
 # Interactive branch & PR switcher
