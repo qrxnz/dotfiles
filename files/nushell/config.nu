@@ -3,92 +3,105 @@
 # Mapped from .zshrc and ~/.config/zshrc/zshrc
 
 #
-# Theme (Catppuccin Mocha)
+# Theme (Rosé Pine Dawn)
 #
-let base = "#1e1e2e"
-let mantle = "#181825"
-let crust = "#11111b"
-let text = "#cdd6f4"
-let subtext0 = "#a6adc8"
-let subtext1 = "#bac2de"
-let overlay0 = "#6c7086"
-let overlay1 = "#7f849c"
-let overlay2 = "#9399b2"
-let surface0 = "#313244"
-let surface1 = "#45475a"
-let surface2 = "#585b70"
-let blue = "#89b4fa"
-let lavender = "#b4befe"
-let sapphire = "#74c7ec"
-let sky = "#89dceb"
-let teal = "#94e2d5"
-let green = "#a6e3a1"
-let yellow = "#f9e2af"
-let peach = "#fab387"
-let maroon = "#eba0ac"
-let red = "#f38ba8"
-let mauve = "#cba6f7"
-let pink = "#f5c2e7"
-let flamingo = "#f2cdcd"
-let rosewater = "#f5e0dc"
+let base = "#faf4ed"
+let surface = "#fffaf3"
+let overlay = "#f2e9e1"
+let muted = "#9893a5"
+let subtle = "#797593"
+let text = "#575279"
+let love = "#b4637a"
+let gold = "#ea9d34"
+let rose = "#d7827e"
+let pine = "#286983"
+let foam = "#56949f"
+let iris = "#907aa9"
 
 let color_config = {
-    separator: $overlay0
-    leading_trailing_space_bg: { fg: $overlay0 }
-    header: { fg: $blue, attr: b }
-    empty: $blue
-    bool: { fg: $peach }
-    int: { fg: $peach }
-    filesize: { fg: $teal }
-    duration: { fg: $teal }
-    date: { fg: $mauve }
-    range: { fg: $mauve }
-    float: { fg: $peach }
-    string: { fg: $green }
-    nothing: $overlay0
-    binary: { fg: $teal }
+    separator: $text
+    leading_trailing_space_bg: { attr: 'n' }
+    header: { fg: $rose, attr: b }
+    empty: $foam
+    bool: {|| if $in { $pine } else { $gold } }
+    int: $iris
+    filesize: {|e|
+        if $e == 0b {
+            $text
+        } else if $e < 1mb {
+            $pine
+        } else {
+            { fg: $foam }
+        }
+    }
+    duration: $gold
+    date: {|| (date now) - $in |
+        if $in < 1hr {
+            { fg: $text, attr: b }
+        } else if $in < 6hr {
+            $text
+        } else if $in < 1day {
+            $gold
+        } else if $in < 3day {
+            $rose
+        } else if $in < 1wk {
+            { fg: $rose, attr: b }
+        } else if $in < 6wk {
+            $pine
+        } else if $in < 52wk {
+            $foam
+        } else { 'dark_gray' }
+    }
+    range: $gold
+    float: $text
+    string: $rose
+    nothing: $text
+    binary: $iris
     cell-path: $text
-    row_index: { fg: $subtext0 }
-    record: $text
-    list: $text
-    block: $text
-    hints: $overlay0
-    search_result: { fg: $mantle, bg: $yellow }
-    shape_and: { fg: $mauve, attr: b }
-    shape_arrow: { fg: $mauve, attr: b }
-    shape_bool: { fg: $peach }
-    shape_custom: { fg: $green }
-    shape_datetime: { fg: $mauve }
-    shape_directory: { fg: $blue }
-    shape_external: { fg: $teal }
-    shape_external_resolved: { fg: $sky, attr: b }
-    shape_externalarg: { fg: $green }
-    shape_filepath: { fg: $blue }
-    shape_flag: { fg: $blue, attr: b }
-    shape_float: { fg: $peach }
-    shape_garbage: { fg: $red, attr: u }
-    shape_glob_interpolation: { fg: $teal }
-    shape_globpattern: { fg: $teal }
-    shape_int: { fg: $peach }
-    shape_internalcall: { fg: $sky, attr: b }
-    shape_keyword: { fg: $mauve, attr: b }
-    shape_list: { fg: $text }
-    shape_literal: { fg: $blue }
-    shape_match_pattern: { fg: $green }
-    shape_matching_brackets: { bg: $surface2 }
-    shape_nothing: { fg: $overlay0 }
-    shape_operator: { fg: $mauve }
-    shape_or: { fg: $mauve, attr: b }
-    shape_pipe: { fg: $mauve, attr: b }
-    shape_range: { fg: $mauve }
-    shape_record: { fg: $text }
-    shape_redirection: { fg: $mauve, attr: b }
-    shape_signature: { fg: $green, attr: b }
-    shape_string: { fg: $green }
-    shape_string_interpolation: { fg: $teal }
-    shape_table: { fg: $blue }
-    shape_variable: { fg: $lavender }
-    shape_vardecl: { fg: $lavender }
+    row_index: { fg: $rose, attr: b }
+    record: $pine
+    list: $pine
+    block: $foam
+    hints: $muted
+    search_result: { fg: $base, bg: $text }
+    shape_and: { fg: $iris, attr: b }
+    shape_arrow: { fg: $iris, attr: b }
+    shape_binary: { fg: $iris, attr: b }
+    shape_block: { fg: $foam, attr: b }
+    shape_bool: $pine
+    shape_closure: { fg: $pine, attr: b }
+    shape_custom: $rose
+    shape_datetime: { fg: $pine, attr: b }
+    shape_directory: $pine
+    shape_external: $pine
+    shape_external_resolved: $pine
+    shape_externalarg: { fg: $rose, attr: b }
+    shape_filepath: $pine
+    shape_flag: { fg: $foam, attr: b }
+    shape_float: { fg: $text, attr: b }
+    shape_garbage: { fg: "#FFFFFF", bg: "#FF0000", attr: b }
+    shape_glob_interpolation: { fg: $pine, attr: b }
+    shape_globpattern: { fg: $pine, attr: b }
+    shape_int: { fg: $iris, attr: b }
+    shape_internalcall: { fg: $pine, attr: b }
+    shape_keyword: { fg: $iris, attr: b }
+    shape_list: { fg: $pine, attr: b }
+    shape_literal: $foam
+    shape_match_pattern: $rose
+    shape_matching_brackets: { attr: 'u' }
+    shape_nothing: $text
+    shape_operator: $gold
+    shape_or: { fg: $iris, attr: b }
+    shape_pipe: { fg: $iris, attr: b }
+    shape_range: { fg: $gold, attr: b }
+    shape_record: { fg: $pine, attr: b }
+    shape_redirection: { fg: $iris, attr: b }
+    shape_signature: { fg: $rose, attr: b }
+    shape_string: $rose
+    shape_string_interpolation: { fg: $pine, attr: b }
+    shape_table: { fg: $foam, attr: b }
+    shape_variable: $iris
+    shape_vardecl: { fg: $foam, attr: u }
 }
 
 #
