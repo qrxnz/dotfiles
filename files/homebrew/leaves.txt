@@ -8,13 +8,10 @@ jq
 gnu-sed
 htop
 direnv
-hexyl
 netcat
 fzf
 yt-dlp
-font-jetbrains-mono-nerd-font
 gdb
-rtorrent
 nushell
 ipatool
 ipcalc
@@ -22,7 +19,6 @@ android-platform-tools
 glow
 bettercap
 tmux
-noir
 gum
 gh
 gf
@@ -48,4 +44,3 @@ docker-buildx
 lazydocker
 sqlc
 kitlangton/tap/ghui
-newsboat
