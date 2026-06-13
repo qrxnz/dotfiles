@@ -234,31 +234,6 @@ def tmd [] {
 }
 
 # Manage tmux sessions interactively using tv
-def tmg [] {
-  if (which tv | is-empty) {
-    print "Error: 'tv' is required for tmg."
-    return
-  }
-  let repo = (do { tv git-repos --source-output '{}' --keybindings 'enter="confirm_selection"' } | str trim)
-  if ($repo | is-empty) {
-    return
-  }
-  let session = ($repo | path basename)
-
-  let has_session = (do { tmux has-session -t $"=($session)" } | complete | get exit_code) == 0
-  if not $has_session {
-    tmux new-session -d -s $session -c $repo "nvim"
-    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "agy" | str trim)
-    tmux split-window -h -t $win_id -c $repo
-    tmux new-window -t $session -c $repo "gh dash"
-  }
-
-  if ($env.TMUX? | is-not-empty) {
-    tmux switch-client -t $"=($session)"
-  } else {
-    tmux attach -t $"=($session)"
-  }
-}
 
 # Modern hexdump replacement using hexyl
 def hexdump [...args: string] {
@@ -309,12 +284,6 @@ def yt2mp4 [...args: string] {
   } else {
     yt-dlp -S res,ext:mp4:m4a --recode mp4 ...$args
   }
-}
-
-# HTTP GET utility
-# Note: Renamed from 'get' to 'http-get' to avoid clashing with Nushell's built-in 'get' command.
-def http-get [url: string] {
-  http get $url
 }
 
 # Database query helper using Nushell open and query db
@@ -428,6 +397,6 @@ alias rel = exec nu
 alias gdb = gdb --quiet
 alias cds = du -h --max-depth=1 .
 alias www = sudo python3 -m http.server 80
-alias ai = agy
+alias ai = opencode
 alias purl = curl -x http://127.0.0.1:8080/ -k
 alias sql = sqlit
