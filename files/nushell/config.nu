@@ -233,32 +233,6 @@ def tmd [] {
   tmux new-session -A -s $session_name
 }
 
-# Manage tmux sessions interactively using tv
-
-# Modern hexdump replacement using hexyl
-def hexdump [...args: string] {
-  if ($args | is-empty) {
-    print "[i] Usage: path to file (options)"
-  } else {
-    hexyl ...$args
-  }
-}
-
-# Print file info and show hexyl head
-def info [...args: string] {
-  if ($args | is-empty) {
-    print "[i] Usage: path to file (options)"
-  } else {
-    let file_out = (do { file ...$args } | complete)
-    if $file_out.exit_code == 0 {
-      print $file_out.stdout
-      hexyl ...$args | head -n 10
-    } else {
-      print -e $file_out.stderr
-    }
-  }
-}
-
 # Extract wav audio from YouTube using yt-dlp
 def yt2wav [...args: string] {
   if ($args | is-empty) {
@@ -392,7 +366,6 @@ alias j = just
 alias o = once
 alias df = duf
 alias gr = go run .
-alias nw = newsboat
 alias rel = exec nu
 alias gdb = gdb --quiet
 alias cds = du -h --max-depth=1 .
