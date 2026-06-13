@@ -1,6 +1,3 @@
-[submodule "others/rss"]
-	path = others/rss
-	url = https://github.com/qrxnz/rss
 [submodule "others/wallpapers"]
 	path = others/wallpapers
 	url = https://github.com/qrxnz/redyf-wallpapers
