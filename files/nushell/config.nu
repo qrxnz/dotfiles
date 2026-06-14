@@ -212,9 +212,9 @@ def gs [] {
 }
 
 # Manage tmux sessions interactively using tv
-def tmg [] {
+def prj [] {
   if (which tv | is-empty) {
-    print "Error: 'tv' is required for tmg."
+    print "Error: 'tv' is required for prj."
     return
   }
   let repo = (do { tv git-repos --source-output '{}' --keybindings 'enter="confirm_selection"' } | str trim)
@@ -226,8 +226,6 @@ def tmg [] {
   let has_session = (do { tmux has-session -t $"=($session)" } | complete | get exit_code) == 0
   if not $has_session {
     tmux new-session -d -s $session -c $repo "nvim"
-    let win_id = (tmux new-window -t $session -c $repo -P -F '#{window_id}' "agy" | str trim)
-    tmux split-window -h -t $win_id -c $repo
     tmux new-window -t $session -c $repo "gh dash"
   }
 
