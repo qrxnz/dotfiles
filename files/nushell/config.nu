@@ -3,20 +3,20 @@
 # Mapped from .zshrc and ~/.config/zshrc/zshrc
 
 #
-# Theme (Rosé Pine Dawn)
+# Theme (Rosé Pine)
 #
-let base = "#faf4ed"
-let surface = "#fffaf3"
-let overlay = "#f2e9e1"
-let muted = "#9893a5"
-let subtle = "#797593"
-let text = "#575279"
-let love = "#b4637a"
-let gold = "#ea9d34"
-let rose = "#d7827e"
-let pine = "#286983"
-let foam = "#56949f"
-let iris = "#907aa9"
+let base = "#191724"
+let surface = "#1f1d2e"
+let overlay = "#26233a"
+let muted = "#6e6a86"
+let subtle = "#908caa"
+let text = "#e0def4"
+let love = "#eb6f92"
+let gold = "#f6c177"
+let rose = "#ebbcba"
+let pine = "#31748f"
+let foam = "#9ccfd8"
+let iris = "#c4a7e7"
 
 let color_config = {
     separator: $text
@@ -133,32 +133,16 @@ $env.config.history = (
 $env.config.hooks = (
   $env.config.hooks?
   | default {}
-  | merge {
-    env_change: (
-      $env.config.hooks.env_change?
-      | default {}
-      | merge {
-        PWD: (
-          $env.config.hooks.env_change.PWD?
-          | default []
-          | append {
-            condition: { |before, after|
-              let before_exists = if ($before | is-empty) { false } else { $before | path join ".envrc" | path exists }
-              let after_exists = if ($after | is-empty) { false } else { $after | path join ".envrc" | path exists }
-              $before_exists or $after_exists
-            }
-            code: { |before, after|
-              if (which direnv | is-empty) == false {
-                let exports = (do { direnv export json } | complete)
-                if $exports.exit_code == 0 and ($exports.stdout | is-not-empty) {
-                  $exports.stdout | from json | default {} | load-env
-                }
-              }
-            }
+  | upsert env_change {
+    PWD: [
+      {
+        code: { |before, after|
+          if (which direnv | is-not-empty) {
+            direnv export json | from json | default {} | load-env
           }
-        )
+        }
       }
-    )
+    ]
   }
 )
 
