@@ -269,6 +269,22 @@ def yt2mp4 [...args: string] {
   }
 }
 
+# Download a YouTube video into a tmp folder and play it with mpv
+def yt-mpv [...args: string] {
+  if ($args | is-empty) {
+    print "[i] Usage: Enter a valid link (options)"
+  } else {
+    let tmp_dir = ($nu.temp-dir | path join "yt-mpv")
+    mkdir $tmp_dir
+    let file = (
+      yt-dlp -S res,ext:mp4:m4a --recode mp4 -P $tmp_dir -o "%(title)s.%(ext)s" --print after_move:filepath ...$args
+      | lines
+      | last
+    )
+    mpv $file
+  }
+}
+
 # Database query helper using Nushell open and query db
 def db-query [db_file: path, query: string] {
   open $db_file | query db $query
