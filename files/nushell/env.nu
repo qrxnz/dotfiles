@@ -59,8 +59,22 @@ $env.BAT_THEME = "Catppuccin Mocha"
 # Nix configuration path
 $env.NIX_CONF_DIR = $"($env.HOME)/.config/nix"
 
-# Colima / Docker configuration
-$env.DOCKER_HOST = $"unix://($env.HOME)/.colima/default/docker.sock"
+# Colima / Lima / Docker configuration
+# Point DOCKER_HOST at whichever container VM backend is actually running:
+# colima first (its own lima instance), then a standalone lima "docker" VM.
+# Re-run `update-docker-host` (or start a new shell) after switching backends.
+def --env update-docker-host [] {
+    let colima_sock = $"($env.HOME)/.colima/default/docker.sock"
+    let lima_sock = $"($env.HOME)/.lima/docker/sock/docker.sock"
+    if ($colima_sock | path exists) {
+        $env.DOCKER_HOST = $"unix://($colima_sock)"
+    } else if ($lima_sock | path exists) {
+        $env.DOCKER_HOST = $"unix://($lima_sock)"
+    } else if ($env.DOCKER_HOST? | is-not-empty) {
+        hide-env DOCKER_HOST
+    }
+}
+update-docker-host
 
 # Function to source POSIX shell scripts (e.g. for Nix) and load their environment variables
 def --env source-sh-env [script_path: string] {
